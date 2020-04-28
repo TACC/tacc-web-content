@@ -7,6 +7,17 @@ It was created Nov 2019 by [Wesley B.][user-wb] so that the CMD (Communication, 
 _The "CMS" referenced in this document, as of 2019, is [Liferay Portal 6.1.20 CE][lr-version]._
 
 
+[lr-web-content]: https://portal.liferay.dev/docs/6-1/user/-/knowledge_base/u/web-content-management "Liferay Portal: Web Content Management"
+[lr-version]: https://liferay.dev/blogs/-/blogs/liferay-portal-6-1-ce-ga2-release "Liferay Portal Enterprise Edition 6.1.20 EE"
+
+[user-wb]: https://github.com/tacc-wbomar "Wesley B. of Communications, Media & Design"
+
+[cp-pages]: https://www.tacc.utexas.edu/group/control_panel/manage?p_p_id=156&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&doAsGroupId=1084364 "Control Panel > Website > Pages > Public Pages"
+[cp-website]: https://www.tacc.utexas.edu "TACC Public Website"
+
+[doc-conflicts]: ./docs/content-conflicts.md "Example Content Conflicts"
+
+
 ## Web Content History
 
 ### Version Control Usage
@@ -33,7 +44,7 @@ See [`./content/README.md`](./content/README.md).
 
 ### Requirements
 
-- Node.js 12 or LTS (whichever version is later)
+- Node.js 12 or LTS (whichever version is greater)
 - all NPM Packages (see [`package.json`](./package.json))
 
 ### Setup
@@ -68,26 +79,10 @@ See [`./content/README.md`](./content/README.md).
 
         ```npm run build```
 
-### Template Utility Usage
+### Usage
 
-1. Find/Create relevant utility as a child directory of `src/`.
-2. Update utility source files as necessary.
-3. Build new web content using the build command documented within the utility.
-4. Test, save, commit, and push the final working content.
-    - _I.e. follow "Web Content History" > "Usage" for built content._
+See [How To - Legacy TACC - Markup Generation Utility](https://confluence.tacc.utexas.edu/x/AYGDC).
 
-### Development
+### Create New Utility
 
-See [`./src/README.md`](./src/README.md).
-
-
-
-[lr-web-content]: https://portal.liferay.dev/docs/6-1/user/-/knowledge_base/u/web-content-management "Liferay Portal: Web Content Management"
-[lr-version]: https://liferay.dev/blogs/-/blogs/liferay-portal-6-1-ce-ga2-release "Liferay Portal Enterprise Edition 6.1.20 EE"
-
-[cp-pages]: https://www.tacc.utexas.edu/group/control_panel/manage?p_p_id=156&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&doAsGroupId=1084364 "Control Panel > Website > Pages > Public Pages"
-[cp-website]: https://www.tacc.utexas.edu "TACC Public Website"
-
-[doc-conflicts]: ./docs/content-conflicts.md "Example Content Conflicts"
-
-[user-wb]: https://tacc.utexas.edu/about/directory/wesley-bomar "Wesley B. of Communications, Media & Design"
+See [How To - Legacy TACC - Markup Generation Utility](https://confluence.tacc.utexas.edu/x/AYGDC).
