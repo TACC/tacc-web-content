@@ -1,9 +1,2 @@
-# Dynamically created directories
-node_modules/
-dist/
-
-# Dynamically created temporary templates
-_*
-
 # Operating System files
 .DS_Store

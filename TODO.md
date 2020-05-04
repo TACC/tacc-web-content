@@ -2,8 +2,7 @@
 
 ## Documentation
 
-1. Move some `README.md` content to Confluence:
-    - Move `README.md` "TACC Website Content - Markup Templating": "Setup" to Confluence as a basic intro to a Node project.
+1. Move some `README.md` content to Confluence.
 
 ## Styles
 
