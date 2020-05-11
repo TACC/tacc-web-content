@@ -1,3 +1,137 @@
+<style id="style--weteachcs-content" type="text/css">
+/* TODO: Use this scope instead of `style` tags */
+/* WARN: Duplicated in:
+        - `epic/research/presentations-and-publications`
+        - `epic/weteachcs/about`
+        - `epic/weteachcs/about/projects`
+        - `epic/weteachcs/certification`
+        - `epic/weteachcs/goals-and-outcomes`
+        - `epic/funders-and-project-partners`
+        - `epic/code.org`
+*/
+/*
+WeTeach CS - Content (would be a `s-` i.e. "Scope" namespace)
+
+Any stakeholder-provided content on a WeTeach page. Later,
+
+> **Extra Information**
+>
+> The WeTeach CS website receives enough edits (as of 2019-10/11) to merit candidacy for testing out changes to generic scope styling of stakeholder-provided content through scope styles.
+
+Markup:
+<!--<div class="weteachcs-content">-->
+<section class="weteachcs-content">
+    <h3>About</h3>
+    <div><pre>(introductory content or media)</pre></div>
+    <h4>What We Do to Things</h4>
+    <dl>
+        <dt>Make Bigger</dt>
+            <dd>We increase things.</dd>
+        <dt>Make Better</dt>
+            <dd>We improve things.</dd>
+        <dt>Make Stronger</dt>
+            <dd>We strengthen things.</dd>
+    </dl>
+    <h4>What We Do for People</h4>
+    <p>We teach them things.</p>
+    <h5>What We Do for Specific People</h5>
+    <p>We certify them to teach things.</p>
+</section>
+<!--</div>-->
+
+Style guide: components.weteachcs
+*/
+.weteachcs-content h4,
+.weteachcs-content h5 {
+    margin-top: 20px;
+}
+.weteachcs-content dt {
+    display: list-item;
+}
+.weteachcs-content dt small {
+    font-weight: normal;
+    font-size: 100%;
+}</style>
+<style id="style--weteachcs-card" type="text/css">
+/* TODO: Use this component instead of `style` tags */
+/* WARN: Duplicated in:
+        - `epic/research/presentations-and-publications`
+        - `epic/weteachcs`
+        - `epic/weteachcs/certification`
+        - `epic/weteachcs/goals-and-outcomes`
+        - `epic/weteachcs/code.org`
+*/
+    /*
+    WeTeach CS - Card
+
+    An independent piece of figure/text content that can be an item of a greater context.
+
+    > The `weteachcs-card--highlight` style was previously manually added via inline styles: `background-color: #f1f1f1; margin: 30px 0px 20px 0px; padding:20px;`.
+
+    .weteachcs-card--highlight - This card should draw more attention (can be combined with `weteachcs-card--understate`).
+    .weteachcs-card--understate - This card should draw less attention (can be combined with `weteachcs-card--highlight`).
+    .weteachcs-card--chart - This card shows a chart figure and a caption.
+
+    Markup:
+    <article class="weteachcs-card weteachcs-card--{{modifier}}">
+        <!-- FAQ: The media could also be the `__figure`, but do not apply media-specific CSS to the core component styles -->
+        <div class="weteachcs-card__figure">
+            <img class="weteachcs-card__media"  data-cke-saved-src="…" src="…" />
+        </div>
+        <div class="weteachcs-card__content">
+            <h3 class="weteachcs-card__title">TACC</h3>
+            <!-- FAQ: The `<time>` could also be the `__datetime`, but do not apply `<time>`-specific CSS to the core component styles -->
+            <h5 class="weteachcs-card__datetime">
+                <time datetime="2020-06-22">June 22, 2020</time>
+            </h5>
+            <p>Description of an amazing event at that date.</p>
+            <a  data-cke-saved-href="…" href="…" target="_blank">Learn more about the event.</a>
+        </div>
+    </article>
+
+    Style guide: components.weteachcs.card
+    */
+    .weteachcs-card {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .weteachcs-card + .weteachcs-card {
+        margin-top: 30px;
+    }
+
+    .weteachcs-card--highlight {
+        padding: 20px;
+        background-color: #f1f1f1;
+        font-size: 16px;
+    }
+    /* FAQ: Remove default bottom margin of the last `p` within a
+            `weteachcs-card--highlight`, so space around card content is equal. */
+    .weteachcs-card--highlight *:last-child { margin-bottom: 0; }
+    /* FAQ: Remove default top margin of any headings that begin a
+            `weteachcs-card--highlight`, so space around card content is equal. */
+    .weteachcs-card--highlight *:first-child { margin-top: 0; }
+
+    .weteachcs-card--understate {
+        padding: 20px;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    .weteachcs-card--highlight.weteachcs-card--understate {
+        font-size: 14px;
+        letter-spacing: normal;
+    }
+
+    .weteachcs-card__title {
+        margin-top: 0;
+    }
+
+    .weteachcs-card--chart .weteachcs-card__media {
+        /* Use a border style that exists on the page */
+        /* SEE: .portlet-navigation .nav-menu > .layouts a */
+        border: 1px solid #ddd;
+    }</style>
 <style id="style--weteachcs-cta" type="text/css">
 /* TODO: Use this component instead of `style` tags */
 /* WARN: Duplicated in:
@@ -26,44 +160,95 @@ Style guide: components.weteachcs.cta
     font-weight: bold;
     font-variant: small-caps;
 }</style>
-<h3>
-	Code.org</h3>
-<div style="background-color: #f1f1f1; margin: 0px 0px 20px 0px; padding:20px;">
-	<div class="row">
-		<div class="col-sm-3">
-			<img class="img-responsive" src="/documents/1084364/1761473/codedotorg.png/" style="margin:4px 0px 0px 0px; padding:0px;" /></div>
-		<div class="col-sm-9">
-			<h4>
-				WeTeach_CS Code.org Regional Partners</h4>
-			<p style="font-size:16px; margin-bottom:5px;">
-				<i>"Regional Partners are carrying on the teacher recruitment, professional learning, and district management work that Code.org began, and as such, they are now the power users of Code.org tools and processes and are best suited to offer valuable feedback and input."</i></p>
-			<p style="text-align: right; margin:0px;">
-				-Code.org</p>
-		</div>
-	</div>
-</div>
-<h4 style="margin-top:20px;">
-	CS Fundamentals</h4>
-<p>
-	Computer science is foundational knowledge for all students in the 21st century. But a lot of schools don't teach it, especially at the elementary level. But now you can. With the help of <a href="http://code.org/" target="_blank">Code.org</a>, WeTeach_CS is providing a no-cost, one day workshop for K-5 teachers interested in teaching computer science. Over 80,000 teachers have participated in a workshop and the majority say it's the best PD they've ever attended. You will receive: In-person instruction including an intro to computer science, pedagogy, an overview of the online curriculum, teacher dashboard, and strategies for teaching "unplugged" classroom activities. In addition, you will receive: printed curriculum guide, certificate of completion, and fun Code.org swag. This session is designed for teachers, librarians, instructional coaches, and administrators grades K-5 to learn about Code.org resources and how to begin to integrate computer science into your future curriculum. This is a BYOD session, please bring your fully charged laptop, tablet or iPad and a power cord.</p>
-<p>
-	<b>Elementary School Teachers</b><br />
-	We welcome elementary school teachers to sign up year-round for our no-cost, high-quality one-day professional development workshops for Computer Science Fundamentals courses from an experienced computer science facilitator.</p>
-<h4 style="margin-top:20px;">
-	<a href="https://code.org/professional-development-workshops" target="_blank">Find a Code.org CS Fundamentals workshop near you</a></h4>
-<p>
-	Type in your zip code on the Code.org site to find existing workshops in your area. If none appear you can request your own workshop, as long as you have 12 attendees, by contacting your Regional Partner through the yellow button below the map or <a href="https://studio.code.org/pd/regional_partner_contact/new" target="_blank">clicking here</a>.</p>
-<h4 style="margin-top:20px;">
-	CS Discoveries</h4>
-<p>
-	Computer Science Discoveries is appropriate for 6-10th-grade students and can be taught as a semester or year-long introductory course (3-5 hours per week of instruction for 9+ weeks). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. The course inspires students as they build their own websites, apps, games, and physical computing devices.</p>
-<p>
-	<a class="weteachcs-cta" href="https://utakeit.tacc.utexas.edu/Code-org-2020-CSD-5day/" target="_blank">Apply Here</a><p>
-<h4 style="margin-top:20px;">
-	CS Principles</h4>
-<p>
-	Computer Science Principles introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.</p>
-<p>
-	If you are interested in either of these courses please fill out the Code.org application to participate in the 2019-20 cohort.</p>
-<p>
-	<a class="weteachcs-cta" href="https://utakeit.tacc.utexas.edu/Code-org-2020-CSP-5day/" target="_blank">Apply Here</a><p>
+<style id="style--weteachcs-quote" type="text/css">
+    /* TODO: Use this component instead of `style` tags */
+    /*
+    WeTeach CS - Quote
+
+    A quotation, with an optional source/author/speaker.
+
+    Markup:
+    <blockquote class="weteachcs-quote">
+        <p class="weteachcs-quote__content">Regional Partners are carrying on the teacher recruitment, professional learning, and district management work that Code.org began, and as such, they are now the power users of Code.org tools and processes and are best suited to offer valuable feedback and input.</p>
+        <footer class="weteachcs-quote__source">Code.org</footer>
+    </blockquote>
+
+    Style guide: components.weteachcs.quote
+    */
+    .weteachcs-quote__content {
+        margin-bottom: 5px;
+
+        font-size: 16px;
+        font-style: italic;
+    }
+    .weteachcs-quote__content::before,
+    .weteachcs-quote__content::after {
+        content: '"';
+    }
+    .weteachcs-quote__source {
+        text-align: right;
+    }
+    .weteachcs-quote__source::before {
+        content: '—';
+        margin-right: 0.3em;
+    }
+
+    /* Override `tacc-new-theme/css/main.css` */
+    blockquote.weteachcs-quote {
+        padding: unset;
+        margin: unset;
+        font-size: unset;
+        border-left: unset;
+    }
+    footer.weteachcs-quote__source,
+    small.weteachcs-quote__source {
+        line-height: unset;
+        color: unset;
+    }
+    .weteachcs-quote__source a {
+        color: unset;
+    }
+</style>
+<section class="weteachcs-content">
+    <h3>
+        Code.org</h3>
+    <div class="weteachcs-card weteachcs-card--highlight">
+        <div class="row">
+            <div class="col-sm-3">
+                <img class="img-responsive weteachcs-card__media" src="/documents/1084364/1761473/codedotorg.png/" /></div>
+            <div class="col-sm-9">
+                <h4>
+                    WeTeach_CS Code.org Regional Partners</h4>
+                <blockquote class="weteachcs-quote">
+                    <p class="weteachcs-quote__content">Regional Partners are carrying on the teacher recruitment, professional learning, and district management work that Code.org began, and as such, they are now the power users of Code.org tools and processes and are best suited to offer valuable feedback and input.</p>
+                    <footer class="weteachcs-quote__source"><a href="https://code.org/">Code.org</a></footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+    <h4>
+        CS Fundamentals</h4>
+    <p>
+        Computer science is foundational knowledge for all students in the 21st century. But a lot of schools don't teach it, especially at the elementary level. But now you can. With the help of <a href="http://code.org/" target="_blank">Code.org</a>, WeTeach_CS is providing a no-cost, one day workshop for K-5 teachers interested in teaching computer science. Over 80,000 teachers have participated in a workshop and the majority say it's the best PD they've ever attended. You will receive: In-person instruction including an intro to computer science, pedagogy, an overview of the online curriculum, teacher dashboard, and strategies for teaching "unplugged" classroom activities. In addition, you will receive: printed curriculum guide, certificate of completion, and fun Code.org swag. This session is designed for teachers, librarians, instructional coaches, and administrators grades K-5 to learn about Code.org resources and how to begin to integrate computer science into your future curriculum. This is a BYOD session, please bring your fully charged laptop, tablet or iPad and a power cord.</p>
+    <p>
+        <b>Elementary School Teachers</b><br />
+        We welcome elementary school teachers to sign up year-round for our no-cost, high-quality one-day professional development workshops for Computer Science Fundamentals courses from an experienced computer science facilitator.</p>
+    <h4>
+        <a href="https://code.org/professional-development-workshops" target="_blank">Find a Code.org CS Fundamentals workshop near you</a></h4>
+    <p>
+        Type in your zip code on the Code.org site to find existing workshops in your area. If none appear you can request your own workshop, as long as you have 12 attendees, by contacting your Regional Partner through the yellow button below the map or <a href="https://studio.code.org/pd/regional_partner_contact/new" target="_blank">clicking here</a>.</p>
+    <h4>
+        CS Discoveries</h4>
+    <p>
+        Computer Science Discoveries is appropriate for 6-10th-grade students and can be taught as a semester or year-long introductory course (3-5 hours per week of instruction for 9+ weeks). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. The course inspires students as they build their own websites, apps, games, and physical computing devices.</p>
+    <p>
+        <a class="weteachcs-cta" href="https://utakeit.tacc.utexas.edu/Code-org-2020-CSD-5day/" target="_blank">Apply Here<span class="sr-only"> for WeTeach_CS "CS Discoveries"</span></a><p>
+    <h4>
+        CS Principles</h4>
+    <p>
+        Computer Science Principles introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.</p>
+    <p>
+        If you are interested in either of these courses please fill out the Code.org application to participate in the 2019-20 cohort.</p>
+    <p>
+        <a class="weteachcs-cta" href="https://utakeit.tacc.utexas.edu/Code-org-2020-CSP-5day/" target="_blank">Apply Here<span class="sr-only"> for WeTeach_CS "CS Principles"</span></a></a><p>
+</section>
