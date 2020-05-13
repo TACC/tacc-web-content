@@ -1,34 +1,166 @@
-<div style="background-color: #f1f1f1; margin: 0px 0px 20px 0px; padding:20px;">
-	<div class="row">
-		<div class="col-sm-4">
-			<img class="img-responsive" src="/documents/1084364/1761473/EPIC-4c-2020-logo.svg" style="margin:4px 0px 0px 0px; padding:0px;" /></div>
-		<div class="col-sm-8">
-			<p style="font-size:16px;">
-				EPIC's mission is to broaden participation in K20 computing pathways through research, outreach, professional development, and policy advocacy. To achieve this mission, we partner with school districts, institutions of higher education, industry leaders, and federal, state and local government entities who are also dedicated to expanding access and opportunity for traditionally underrepresented students in computing. EPIC also provides evaluation and technology services to external entities to help advance their STEM education research and outreach.</p>
-		</div>
-	</div>
-</div>
-<h4>
-	Components of EPIC include:</h4>
-<!--<div class="row">
-<div class="col-sm-6">-->
-<p>
-	<b><a href="/epic/weteachcs">WeTeach_CS</a></b><br />
-	The WeTeach_CS project trains K-12 educators to improve high quality CS experiences for a broad and diverse range of students. WeTeach_CS is increasing the number of CS certified high school teachers, increasing the number of high schools offering CS courses, increasing the number and diversity of students enrolled in CS courses, and expanding access to computational thinking, coding and programming experiences for all students in K-8. WeTeach_CS educates, empowers and inspires K-12 teachers to realize the vision of CSforAll.</p>
-<p>
-	<b><a href="/epic/research">Research</a></b><br />
-	EPIC supports several research projects related to broadening participation in CS education.</p>
-<!--</div>
-<div class="col-sm-6">
-<a href="/documents/1084364/1761473/epic-team-1000.jpg/" target="_blank"><img style="margin-bottom:0px; border:none;" src="/documents/1084364/1761473/epic-team-1000.jpg/" class="img-responsive" /></a>
-<p style="margin-top:3px; font-size:12px;"><i>The EPIC team at TACC. [click for a larger version]</i></p>
-</div>
-</div>-->
-<p>
-	<b><a href="/epic/stem-evaluation-services">STEM Evaluation Services</a></b><br />
-	EPIC's STEM Evaluation Services division assists researchers and practitioners with rigorous, high-quality external evaluation services that are customized to serve the unique needs of every client. Our team has extensive experience designing and conducting research and evaluations with a wide variety of clients, including PreK-12 school systems, higher education, non-profit organizations, corporations, and government agencies.</p>
-<p>
-	<b><a href="/epic/technology-services">Technology Services</a></b><br />
-	EPIC's Technology Services division designs and supports a variety of custom web applications to assist in operational processes needed to run an effective research, service, governmental, or non-profit organization. We work with partners and clients to create secure web forms, payment gateways, registration systems, and web-based compliance reporting systems. Our applications are secured using enterprise-level security standards and updated regularly. Below are examples of projects our team currently services.</p>
-<p>
-	<img class="img-responsive" src="/documents/1084364/1761473/epic-team-1000.jpg/" style="border:none; margin:20px 0px;" /></p>
+<style id="style--weteachcs-content" type="text/css">
+/* TODO: Use this scope instead of `style` tags */
+/* WARN: Duplicated in:
+		- `epic`
+		- `epic/research/presentations-and-publications`
+		- `epic/weteachcs/about`
+		- `epic/weteachcs/about/projects`
+		- `epic/weteachcs/certification`
+		- `epic/weteachcs/goals-and-outcomes`
+		- `epic/funders-and-project-partners`
+		- `epic/code.org`
+*/
+/*
+WeTeach CS - Content (would be a `s-` i.e. "Scope" namespace)
+
+Any stakeholder-provided content on a WeTeach page. Later,
+
+> **Extra Information**
+>
+> The WeTeach CS website receives enough edits (as of 2019-10/11) to merit candidacy for testing out changes to generic scope styling of stakeholder-provided content through scope styles.
+
+Markup:
+<!--<div class="weteachcs-content">-->
+<section class="weteachcs-content">
+	<h3>About</h3>
+	<div><pre>(introductory content or media)</pre></div>
+	<h4>What We Do to Things</h4>
+	<dl>
+		<dt>Make Bigger</dt>
+			<dd>We increase things.</dd>
+		<dt>Make Better</dt>
+			<dd>We improve things.</dd>
+		<dt>Make Stronger</dt>
+			<dd>We strengthen things.</dd>
+	</dl>
+	<h4>What We Do for People</h4>
+	<p>We teach them things.</p>
+	<h4>What We Do for Specific People</h4>
+	<p>We certify them to teach things.</p>
+</section>
+<!--</div>-->
+
+Style guide: components.weteachcs
+*/
+.weteachcs-content h4,
+.weteachcs-content h4 {
+    margin-top: 20px;
+}
+.weteachcs-content dt {
+	display: list-item;
+}
+.weteachcs-content dt small {
+	font-weight: normal;
+	font-size: 100%;
+}</style>
+<style id="style--weteachcs-card" type="text/css">
+/* TODO: Use this component instead of `style` tags */
+/* WARN: Duplicated in:
+        - `epic`
+        - `epic/research/presentations-and-publications`
+        - `epic/weteachcs`
+        - `epic/weteachcs/certification`
+        - `epic/weteachcs/goals-and-outcomes`
+        - `epic/weteachcs/code.org`
+*/
+/*
+WeTeach CS - Card
+
+An independent piece of figure/text content that can be an item of a greater context.
+
+> The `weteachcs-card--highlight` style was previously manually added via inline styles: `background-color: #f1f1f1; margin: 30px 0px 20px 0px; padding:20px;`.
+
+.weteachcs-card--highlight - This card should draw more attention (can be combined with `weteachcs-card--understate`).
+.weteachcs-card--understate - This card should draw less attention (can be combined with `weteachcs-card--highlight`).
+.weteachcs-card--chart - This card shows a chart figure and a caption.
+
+Markup:
+<article class="weteachcs-card weteachcs-card--{{modifier}}">
+    <!-- FAQ: The media could also be the `__figure`, but do not apply media-specific CSS to the core component styles -->
+    <div class="weteachcs-card__figure">
+        <img class="weteachcs-card__media"  data-cke-saved-src="…" src="…" />
+    </div>
+    <div class="weteachcs-card__content">
+        <h3 class="weteachcs-card__title">TACC</h3>
+        <!-- FAQ: The `<time>` could also be the `__datetime`, but do not apply `<time>`-specific CSS to the core component styles -->
+        <h4 class="weteachcs-card__datetime">
+            <time datetime="2020-06-22">June 22, 2020</time>
+        </h4>
+        <p>Description of an amazing event at that date.</p>
+        <a  data-cke-saved-href="…" href="…" target="_blank">Learn more about the event.</a>
+    </div>
+</article>
+
+Style guide: components.weteachcs.card
+*/
+.weteachcs-card {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+}
+.weteachcs-card + .weteachcs-card {
+    margin-top: 30px;
+}
+
+.weteachcs-card--highlight {
+    padding: 20px;
+    background-color: #f1f1f1;
+    font-size: 16px;
+}
+/* FAQ: Remove default bottom margin of the last `p` within a
+        `weteachcs-card--highlight`, so space around card content is equal. */
+.weteachcs-card--highlight *:last-child { margin-bottom: 0; }
+/* FAQ: Remove default top margin of any headings that begin a
+        `weteachcs-card--highlight`, so space around card content is equal. */
+.weteachcs-card--highlight *:first-child { margin-top: 0; }
+
+.weteachcs-card--understate {
+    padding: 20px;
+    font-size: small;
+}
+.weteachcs-card--highlight.weteachcs-card--understate {
+	font-size: 14px;
+	letter-spacing: normal;
+}
+
+.weteachcs-card__title {
+    margin-top: 0;
+}
+
+.weteachcs-card--chart .weteachcs-card__media {
+    /* Use a border style that exists on the page */
+    /* SEE: .portlet-navigation .nav-menu > .layouts a */
+    border: 1px solid #ddd;
+}</style>
+<section class="weteachcs-content">
+    <div class="weteachcs-card weteachcs-card--highlight">
+        <div class="row">
+            <div class="col-sm-4">
+                <img class="img-responsive" src="/documents/1084364/1761473/EPIC-4c-2020-logo.svg" class="weteachcs-card__media" /></div>
+            <div class="col-sm-8">
+                <p>
+                    EPIC's mission is to broaden participation in K20 computing pathways through research, outreach, professional development, and policy advocacy. To achieve this mission, we partner with school districts, institutions of higher education, industry leaders, and federal, state and local government entities who are also dedicated to expanding access and opportunity for traditionally underrepresented students in computing. EPIC also provides evaluation and technology services to external entities to help advance their STEM education research and outreach.</p>
+            </div>
+        </div>
+    </div>
+    <h3>
+        Components of EPIC</h3>
+    <!--<div class="row">
+    <div class="col-sm-6">-->
+    <h4><a href="/epic/weteachcs">WeTeach_CS</a></h4>
+    <p>The WeTeach_CS project trains K-12 educators to improve high quality CS experiences for a broad and diverse range of students. WeTeach_CS is increasing the number of CS certified high school teachers, increasing the number of high schools offering CS courses, increasing the number and diversity of students enrolled in CS courses, and expanding access to computational thinking, coding and programming experiences for all students in K-8. WeTeach_CS educates, empowers and inspires K-12 teachers to realize the vision of CSforAll.</p>
+    <h4><a href="/epic/research">Research</a></h4>
+    <p>EPIC supports several research projects related to broadening participation in CS education.</p>
+    <!--</div>
+    <div class="col-sm-6">
+    <a href="/documents/1084364/1761473/epic-team-1000.jpg/" target="_blank"><img style="margin-bottom:0px; border:none;" src="/documents/1084364/1761473/epic-team-1000.jpg/" class="img-responsive" /></a>
+    <p style="margin-top:3px; font-size:12px;"><i>The EPIC team at TACC. [click for a larger version]</i></p>
+    </div>
+    </div>-->
+    <h4><a href="/epic/stem-evaluation-services">STEM Evaluation Services</a></h4>
+    <p>EPIC's STEM Evaluation Services division assists researchers and practitioners with rigorous, high-quality external evaluation services that are customized to serve the unique needs of every client. Our team has extensive experience designing and conducting research and evaluations with a wide variety of clients, including PreK-12 school systems, higher education, non-profit organizations, corporations, and government agencies.</p>
+    <h4><a href="/epic/technology-services">Technology Services</a></h4>
+    <p>EPIC's Technology Services division designs and supports a variety of custom web applications to assist in operational processes needed to run an effective research, service, governmental, or non-profit organization. We work with partners and clients to create secure web forms, payment gateways, registration systems, and web-based compliance reporting systems. Our applications are secured using enterprise-level security standards and updated regularly. Below are examples of projects our team currently services.</p>
+    <p>
+        <img class="img-responsive" src="/documents/1084364/1761473/epic-team-1000.jpg/" style="border:none; margin:20px 0px;" /></p>
+</section>
