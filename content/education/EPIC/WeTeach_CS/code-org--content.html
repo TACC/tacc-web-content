@@ -133,6 +133,12 @@ Style guide: components.weteachcs
         /* Use a border style that exists on the page */
         /* SEE: .portlet-navigation .nav-menu > .layouts a */
         border: 1px solid #ddd;
+    }
+    /* Full width card media needs buffer between it and content below (if present) */
+    /* FAQ: Known to be used on these pages: `/epic` */
+    .col-sm-12:not(:only-child) .weteachcs-card__media {
+        /* Add space between image and content beneath */
+        padding-bottom: 15px; /* Horizontal padding from `.col` (via `tacc-new-theme/css/main.css`) */
     }</style>
 <style id="style--weteachcs-cta" type="text/css">
 /* TODO: Use this component instead of `style` tags */

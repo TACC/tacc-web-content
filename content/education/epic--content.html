@@ -131,13 +131,19 @@ Style guide: components.weteachcs.card
     /* Use a border style that exists on the page */
     /* SEE: .portlet-navigation .nav-menu > .layouts a */
     border: 1px solid #ddd;
+}
+/* Full width card media needs buffer between it and content below (if present) */
+/* FAQ: Known to be used on these pages: `/epic` */
+.col-sm-12:not(:only-child) .weteachcs-card__media {
+    /* Add space between image and content beneath */
+    padding-bottom: 15px; /* Horizontal padding from `.col` (via `tacc-new-theme/css/main.css`) */
 }</style>
 <section class="weteachcs-content">
     <div class="weteachcs-card weteachcs-card--highlight">
         <div class="row">
-            <div class="col-sm-4">
-                <img class="img-responsive" src="/documents/1084364/1761473/EPIC-4c-2020-logo.svg" class="weteachcs-card__media" /></div>
-            <div class="col-sm-8">
+            <div class="col-sm-12">
+                <img class="img-responsive weteachcs-card__media" src="/documents/1084364/1761473/epic-4c-2020-logo-with-text.svg" /></div>
+            <div class="col-sm-12">
                 <p>
                     EPIC's mission is to broaden participation in K20 computing pathways through research, outreach, professional development, and policy advocacy. To achieve this mission, we partner with school districts, institutions of higher education, industry leaders, and federal, state and local government entities who are also dedicated to expanding access and opportunity for traditionally underrepresented students in computing. EPIC also provides evaluation and technology services to external entities to help advance their STEM education research and outreach.</p>
             </div>
