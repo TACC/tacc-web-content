@@ -1,26 +1,148 @@
-<p style="background-color: #f1f1f1; margin: 0px 0px 20px 0px; padding:20px; font-size:16px;">
-		EPIC supports several research projects related to broadening participation in CS education.</p>
-	<h3>
-		Team</h3>
-	<ul>
-		<li>
-			Carol Fletcher, Ph.D.</li>
-		<li>
-			Jayce Warner, Ph.D.</li>
-		<li>
-			Lisa Garbrecht, Ph.D.</li>
-		<li>
-			Ryan Torbey, GRA</li>
-	</ul>
-	<hr />
+<style id="style--weteachcs-content" type="text/css">
+	/* TODO: Use this scope instead of `style` tags */
+	/* WARN: Duplicated in:
+			- `epic`
+			- `epic/research`
+			- `epic/research/presentations-and-publications`
+			- `epic/weteachcs/about`
+			- `epic/weteachcs/about/projects`
+			- `epic/weteachcs/certification`
+			- `epic/weteachcs/goals-and-outcomes`
+			- `epic/funders-and-project-partners`
+			- `epic/code.org`
+	*/
+	/*
+	WeTeach CS - Content (would be a `s-` i.e. "Scope" namespace)
+	
+	Any stakeholder-provided content on a WeTeach page. Later,
+	
+	> **Extra Information**
+	>
+	> The WeTeach CS website receives enough edits (as of 2019-10/11) to merit candidacy for testing out changes to generic scope styling of stakeholder-provided content through scope styles.
+	
+	Markup:
+	<!--<div class="weteachcs-content">-->
+	<section class="weteachcs-content">
+		<h3>About</h3>
+		<div><pre>(introductory content or media)</pre></div>
+		<h4>What We Do to Things</h4>
+		<dl>
+			<dt>Make Bigger</dt>
+				<dd>We increase things.</dd>
+			<dt>Make Better</dt>
+				<dd>We improve things.</dd>
+			<dt>Make Stronger</dt>
+				<dd>We strengthen things.</dd>
+		</dl>
+		<h4>What We Do for People</h4>
+		<p>We teach them things.</p>
+		<h5>What We Do for Specific People</h5>
+		<p>We certify them to teach things.</p>
+	</section>
+	<!--</div>-->
+	
+	Style guide: components.weteachcs
+	*/
+	.weteachcs-content h4,
+	.weteachcs-content h5 {
+		margin-top: 20px;
+	}
+	.weteachcs-content dt {
+		display: list-item;
+	}
+	.weteachcs-content dt small {
+		font-weight: normal;
+		font-size: 100%;
+	}</style>
+	<style id="style--weteachcs-card" type="text/css">
+	/* TODO: Use this component instead of `style` tags */
+			/* WARN: Duplicated in:
+					- `epic`
+					- `epic/research`
+					- `epic/research/presentations-and-publications`
+					- `epic/weteachcs`
+					- `epic/weteachcs/goals-and-outcomes`
+			*/
+				/*
+				WeTeach CS - Card
+	
+				An independent piece of figure/text content that can be an item of a greater context.
+	
+				> The `weteachcs-card--highlight` style was previously manually added via inline styles: `background-color: #f1f1f1; margin: 30px 0px 20px 0px; padding:20px;`.
+	
+				.weteachcs-card--highlight - This card is distinct from other cards so as to draw more attention (can be combined with `weteachcs-card--understate`).
+				.weteachcs-card--understate - This card is distinct form other cards so as to draw less attention (can be combined with `weteachcs-card--highlight`).
+				.weteachcs-card--chart - This card shows a chart figure and a caption.
+	
+				Markup:
+				<article class="weteachcs-card weteachcs-card--{{modifier}}">
+					<!-- FAQ: The media could also be the `__figure`, but do not apply media-specific CSS to the core component styles -->
+					<div class="weteachcs-card__figure">
+						<img class="weteachcs-card__media"  data-cke-saved-src="https://www.tacc.utexas.edu/tacc-new-theme/images/logo.svg" src="https://www.tacc.utexas.edu/tacc-new-theme/images/logo.svg" />
+					</div>
+					<div class="weteachcs-card__content">
+						<h3 class="weteachcs-card__title">TACC</h3>
+						<!-- FAQ: The `<time>` could also be the `__datetime`, but do not apply `<time>`-specific CSS to the core component styles -->
+						<h5 class="weteachcs-card__datetime">
+							<time datetime="2020-06-22">June 22, 2020</time>
+						</h5>
+						<p>The Texas Advanced Computing Center (TACC) designs and operates some of the world's most powerful computing resources. The center's mission is to enable discoveries that advance science and society through the application of advanced computing technologies.</p>
+						<a class="weteachcs-card__cta"   data-cke-saved-href="https://www.tacc.utexas.edu/about/" href="https://www.tacc.utexas.edu/about/" target="_blank">Learn more about TACC.</a></div>
+				</article>
+	
+				Style guide: components.weteachcs.card
+				*/
+				.weteachcs-card {
+					margin-left: 0px;
+					margin-right: 0px;
+					margin-bottom: 20px;
+				}
+				.weteachcs-card + .weteachcs-card {
+					margin-top: 30px;
+				}
+	
+				.weteachcs-card--highlight {
+					padding: 20px;
+					background-color: #f1f1f1;
+					font-size: 16px;
+				}
+				/* FAQ: Remove the default bottom margin of the last
+						`p` within a `weteachcs-card--highlight`,
+						so space around card content is equal. */
+				.weteachcs-card--highlight *:last-child {
+					margin-bottom: 0;
+				}
+				.weteachcs-card--understate {
+					padding: 20px;
+					font-size: small;
+				}
+	
+				.weteachcs-card__title {
+					margin-top: 0;
+				}
+	
+				.weteachcs-card--chart .weteachcs-card__media {
+					/* Use a border style that exists on the page */
+					/* SEE: .portlet-navigation .nav-menu > .layouts a */
+					border: 1px solid #ddd;
+				}
+				/* Full width card media needs buffer between it and content below (if present) */
+				/* FAQ: Known to be used on these pages: `/epic` */
+				.col-sm-12:not(:only-child) .weteachcs-card__media {
+					/* Add space between image and content beneath */
+					padding-bottom: 15px; /* Horizontal padding from `.col` (via `tacc-new-theme/css/main.css`) */
+				}</style>
+<section class="weteachcs-content">
+	<div class="weteachcs-card weteachcs-card--highlight">
+		<p class="weteachcs-card__content">EPIC supports several research projects related to broadening participation in CS education.</p>
+	</div>
 	<h3>
 		Projects</h3>
 	<h4>
 		ECEP (Expanding Computing Education Pathways)</h4>
 	<p>
 		ECEP is a collective impact alliance of 22 states and the territory of Puerto Rico. The National Science Foundation (NSF) supports ECEP through its Broadening Participation in Computing Alliance (BPC-A) program. The ECEP Alliance seeks to increase the number and diversity of students in the pipeline to computing and computing-intensive degrees by supporting state-level computing education reforms. Through interventions, pathways, partnerships and models that drive state-level computing education change, ECEP supports states as they work to align their state efforts with the national vision for <em>computer science for <strong>all</strong></em>. The University of Texas at Austin serves as the backbone organizer for <a href="https://ecepalliance.org" target="_blank">ECEP</a>.</p>
-	<p>
-		<b>Team</b></p>
+	<h5>Team</h5>
 	<ul>
 		<li>
 			Carol Fletcher, PI</li>
@@ -39,8 +161,7 @@
 		AWSM in CS</h4>
 	<p>
 		Accelerating Women's Success and Mastery in Computer Science (AWSM in CS) is an NSF funded Research Practitioner Partnership. AWSM in CS supports a Networked Improvement Community of 20+ secondary computing teachers all focused on increasing access and participation of young women in computing courses. This project seeks to apply the tools of improvement science to support teacher-led plan, do, study, act (PDSA) cycles that address this challenge and measure impact on females and particularly females of color.</p>
-	<p>
-		<b>Team</b></p>
+	<h5>Team</h5>
 	<ul>
 		<li>
 			Carol Fletcher, PI</li>
@@ -54,7 +175,10 @@
 	<p>
 		Project ROCS aims to produce a framework for collecting and reporting outcome measures that accurately portray the nature and extent of access to and participation in K-12 computer science education, especially for students in rural communities. This research project is funded by Google.</p>
 	<p>
-		<b>Team</b></p>
+		The CAPE Framework was developed as a result of Project ROCS. The purpose of this framework is to help education leaders, policy makers, and researchers assess equity in CS education at multiple levels of the educational system. The framework addresses four key components of CS education: Capacity for, Access to, Participation in, and Experience of CS education (CAPE).</p>
+	<p>
+		Fletcher, C.L. and Warner, J. R., (2019). Summary of the <a href="https://utexas.box.com/s/t0d8mugfd8qvaxwk0uoeaqlxf65bdlrb" title="CAPE Framework Summary Publication">CAPE Framework</a> for Assessing Equity in Computer Science Education. <em>Retrieved from <a href="https://www.tacc.utexas.edu/epic/research">https://www.tacc.utexas.edu/epic/research</a>.</em></p>
+	<h5>Team</h5>
 	<ul>
 		<li>
 			Carol Fletcher, PI</li>
@@ -74,3 +198,4 @@
 		The Computer Science Regional Data reports were created to help educational service centers (ESC's), school districts, and anyone interested in the progress of computer science education in Texas to better understand the data we have collected. You may download these pdf's to share/distribute.</p>
 	<p>
 		<em><a href="/epic/weteachcs/cs-regional-data">Browse <span class="sr-only">Computer Science Regional Data</span> reports</a></em></p>
+</section>
