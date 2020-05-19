@@ -1,9 +1,5 @@
 # TACC Website Content - To Do List
 
-## Documentation
-
-1. Move some `README.md` content to Confluence.
-
 ## Styles
 
 1. Fix redundant styles for `<abbr>` tag:

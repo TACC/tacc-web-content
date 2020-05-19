@@ -1,26 +1,14 @@
 # TACC Website Content
 
-This is a project to maintain revision history for web content (see "Web Content History" section) and a collection of markup templating utilities (see "Markup Templating Utilities" section) for Liferay Portal [Web Content][lr-web-content] in the [TACC Website][cp-website], but that are independent of the Liferay Portal infrastructure.
+This is a project to maintain revision history for Liferay Portal [Web Content][lr-web-content] in the [TACC Website][tacc-website], but that are independent of the Liferay Portal infrastructure.
 
-It was created Nov 2019 by [Wesley B.][user-wb] so that the CMD (Communication, Media & Design) team would be able to more easily perform, track, and review changes to the website but not require Liferay development knowledge.
-
-_The "CMS" referenced in this document, as of 2019, is [Liferay Portal 6.1.20 CE][lr-version]._
-
+It was created Nov 2019 by [Wesley B.][user-wb] so that the he could more easily perform, track, and review his changes to the website.
 
 [lr-web-content]: https://portal.liferay.dev/docs/6-1/user/-/knowledge_base/u/web-content-management "Liferay Portal: Web Content Management"
-[lr-version]: https://liferay.dev/blogs/-/blogs/liferay-portal-6-1-ce-ga2-release "Liferay Portal Enterprise Edition 6.1.20 EE"
-
 [user-wb]: https://github.com/tacc-wbomar "Wesley B. of Communications, Media & Design"
+[tacc-website]: https://www.tacc.utexas.edu "TACC Public Website"
 
-[cp-pages]: https://www.tacc.utexas.edu/group/control_panel/manage?p_p_id=156&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&doAsGroupId=1084364 "Control Panel > Website > Pages > Public Pages"
-[cp-website]: https://www.tacc.utexas.edu "TACC Public Website"
-
-[doc-conflicts]: ./docs/content-conflicts.md "Example Content Conflicts"
-
-
-## Web Content History
-
-### Version Control Usage
+## Usage
 
 1. Find the repository file content matching the relevant CMS web content.\*
 2. Compare CMS web content to repository file(s) content.
@@ -35,58 +23,16 @@ _The "CMS" referenced in this document, as of 2019, is [Liferay Portal 6.1.20 CE
 
 \* The directory of the page (in [Control Panel "Pages"][cp-pages] hierarchy) on which the web content exists is the directory in which you should find the relevant repository file.
 
-### Add Files
+[doc-conflicts]: ./docs/content-conflicts.md "Example Content Conflicts"
+[cp-pages]: https://www.tacc.utexas.edu/group/control_panel/manage?p_p_id=156&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&doAsGroupId=1084364 "Control Panel > Website > Pages > Public Pages"
+
+## Add Files
 
 See [`./content/README.md`](./content/README.md).
 
-
-## Markup Templating Utilities
-
-### Requirements
-
-- Node.js 12 or LTS (whichever version is greater)
-- all NPM Packages (see [`package.json`](./package.json))
-
-### Setup
-
-> **Notice**
->
-> To be effectual, the following commands:
->
-> - **must** be run from this (`./`) directory
-> - **must** have been preceeded by the command `npm install`\* _at least once_
-> - (for Windows only) **must** ensure that `node.exe` is on the `PATH` system variable
->
-> \* If `npm install` produces an error that mentions `cannot run in wd`, you are likely trying to run the command as root/sudo. If so, add the flag `--unsafe-perm`.
-
-1. Install dependencies:
-
-    - (normal install or re-install)
-
-        ```npm install```
-
-    - (remove dependencies, then re-install)
-
-        ```npm ci```
-
-2. Run script:
-
-    - (see available scripts)
-
-        ```npm run```
-
-    - (build final markup)
-
-        ```npm run build```
-
-### Usage
+## Markup Generation Utilities
 
 See [How To - Legacy TACC - Markup Generation Utility](https://confluence.tacc.utexas.edu/x/AYGDC).
-
-### Create New Utility
-
-See [How To - Legacy TACC - Markup Generation Utility](https://confluence.tacc.utexas.edu/x/AYGDC).
-
 
 ## Repository History
 
