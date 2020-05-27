@@ -453,11 +453,11 @@ th{
 		</div>
 
 		<style id="o-gallery-styles" type="text/css">
-		/*
+			/*
 			Gallery (Object)
-	
+
 			A gallery of apps to launch, images to view, etc.
-	
+
 			Markup:
 			<ul class="o-gallery">
 				<li>…</li>
@@ -472,17 +472,18 @@ th{
 			.o-gallery {
 				--grid-gap: 30px;
 				--min-item-width: 300px;
-	
+
 				display: grid;
 				grid-gap: var(--grid-gap);
 				grid-template-columns: repeat(auto-fit, minmax(var(--min-item-width), 1fr));
 				justify-items: center;
 				align-items: center;
-			}	</style>
+			}
+		</style>
 		<style id="s-gallery-styles" type="text/css">
 			/*
 			Gallery (Scope)
-	
+
 			Styles often added for instances of `o-gallery`, but independent of `o-gallery` layout.
 			*/
 			/* WARN: Duplicated in:
@@ -499,7 +500,7 @@ th{
 				--grid-gap: 25px;
 				/* FAQ: This variable is borrowed from `.s-gallery` */
 				--min-item-width: var(--smallest-image-width);
-	
+
 				margin: 25px auto 0;
 			}
 			.s-gallery {
