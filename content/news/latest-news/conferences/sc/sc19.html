@@ -185,28 +185,28 @@
          and these page-specific styles __below__ should not need IDs;
          but, am not allowed to edit global styles, yet;
          so, we need to artifically scope these styles */
-#sc-content {
+#sc-wrap {
     background-color: #0e0520;
     padding: 0px 25px 30px 25px;
 }
-#sc-content dl {
+#sc-wrap dl {
     margin-left: 0; /* override `…/main.css` */
 }
-#sc-content dd,
-#sc-content dt {
+#sc-wrap dd,
+#sc-wrap dt {
     line-height: 1.5; /* override `tacc-new-theme/css/main.css`; match `body` */
 }
-#sc-content dd {
+#sc-wrap dd {
     margin-left: 0; /* override `html/css/main.css` *//* match `tacc-new-theme/css/main.css` */
 }
 
 /* MARKUP NOTES */
-/* FAQ: `#sc-content` and `.container` __must not__ be together,
-        because `#sc-content` sets wide background color
+/* FAQ: `#sc` and `.container` __must not__ be together,
+        because `#sc` sets wide background color
         (without reliance on variable containers)
         and `.container` restricts content width. */
 </style><!--close styles-->
-	<div id="sc-content">
+	<div id="sc-wrap">
 		<div class="container">
 			<section class="sc-content--primary" id="sc-booth-events">
 				<h1 class="sc-content__title">SC19 TACC Booth Schedule</h1>
@@ -474,7 +474,7 @@
 								<article class="sc-event">
 									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
 									<strong class="sc-event__title">
-										<a href="https:&#x2F;&#x2F;sc19.supercomputing.org&#x2F;presentation&#x2F;?id&#x3D;wksp118&amp;sess&#x3D;sess101" target="_blank">Deep Learning on Supercomputers</a>
+										<a href="https://sc19.supercomputing.org/presentation/?id=wksp118&sess=sess101" target="_blank">Deep Learning on Supercomputers</a>
 									</strong>
 									<dl class="sc-event__data">
 										<dt>Organizers</dt>
@@ -492,10 +492,10 @@
 								<article class="sc-event">
 									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
 									<strong class="sc-event__title">
-										<a href="https:&#x2F;&#x2F;sc19.supercomputing.org&#x2F;presentation&#x2F;?id&#x3D;ws_dls123&amp;sess&#x3D;sess101" target="_blank">Deep Facial Recognition using Tensorflow</a>
+										<a href="https://sc19.supercomputing.org/presentation/?id=ws_dls123&sess=sess101" target="_blank">Deep Facial Recognition using Tensorflow</a>
 									</strong>
 									<dl class="sc-event__data">
-										<dt>Author&#x2F;Presenters</dt>
+										<dt>Author/Presenters</dt>
 											<dd><ul>
 												<li>Chris A. Mattmann</li>
 												<li>Zhao Zhang</li>
@@ -509,10 +509,10 @@
 								<article class="sc-event">
 									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
 									<strong class="sc-event__title">
-										<a href="https:&#x2F;&#x2F;sc19.supercomputing.org&#x2F;presentation&#x2F;?id&#x3D;ws_dls106&amp;sess&#x3D;sess101" target="_blank">Aggregating Local Storage for Scalable Deep Learning I&#x2F;O</a>
+										<a href="https://sc19.supercomputing.org/presentation/?id=ws_dls106&sess=sess101" target="_blank">Aggregating Local Storage for Scalable Deep Learning I&#x2F;O</a>
 									</strong>
 									<dl class="sc-event__data">
-										<dt>Author&#x2F;Presenters</dt>
+										<dt>Author/Presenters</dt>
 											<dd><ul>
 												<li>Zhao Zhang</li>
 												<li>Lei Huang</li>
@@ -528,7 +528,7 @@
 								<article class="sc-event">
 									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
 									<strong class="sc-event__title">
-										<a href="https:&#x2F;&#x2F;sc19.supercomputing.org&#x2F;presentation&#x2F;?id&#x3D;tut144&amp;sess&#x3D;sess208" target="_blank">Tools and Best Practices for Distributed Deep Learning on Supercomputers</a>
+										<a href="https://sc19.supercomputing.org/presentation/?id=tut144&sess=sess208" target="_blank">Tools and Best Practices for Distributed Deep Learning on Supercomputers</a>
 									</strong>
 									<dl class="sc-event__data">
 										<dt>Presenters</dt>
@@ -552,10 +552,10 @@
 								<article class="sc-event">
 									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
 									<strong class="sc-event__title">
-										<a href="https:&#x2F;&#x2F;sc19.supercomputing.org&#x2F;presentation&#x2F;?id&#x3D;ws_hust101&amp;sess&#x3D;sess116" target="_blank">Tools for Monitoring CPU Usage and Affinity in Multicore Supercomputers</a>
+										<a href="https://sc19.supercomputing.org/presentation/?id=ws_hust101&sess=sess116" target="_blank">Tools for Monitoring CPU Usage and Affinity in Multicore Supercomputers</a>
 									</strong>
 									<dl class="sc-event__data">
-										<dt>Author&#x2F;Presenters</dt>
+										<dt>Author/Presenters</dt>
 											<dd><ul>
 												<li>Lei Huang</li>
 												<li>Kent Milfeld</li>
@@ -570,7 +570,7 @@
 								<article class="sc-event">
 									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
 									<strong class="sc-event__title">
-										<a href="https:&#x2F;&#x2F;sc19.supercomputing.org&#x2F;presentation&#x2F;?id&#x3D;pec420&amp;sess&#x3D;sess116" target="_blank">HUST19 Panel: HPC User tickets discussion</a>
+										<a href="https://sc19.supercomputing.org/presentation/?id=pec420&sess=sess116" target="_blank">HUST19 Panel: HPC User tickets discussion</a>
 									</strong>
 									<dl class="sc-event__data">
 										<dt>Panelists</dt>
@@ -593,7 +593,7 @@
 								<article class="sc-event">
 									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
 									<strong class="sc-event__title">
-										<a href="https:&#x2F;&#x2F;sc19.supercomputing.org&#x2F;presentation&#x2F;?id&#x3D;bof144&amp;sess&#x3D;sess413" target="_blank">SIGHPC Annual Member Meeting</a>
+										<a href="https://sc19.supercomputing.org/presentation/?id=bof144&sess=sess413" target="_blank">SIGHPC Annual Member Meeting</a>
 									</strong>
 									<dl class="sc-event__data">
 										<dt>Session Leader</dt>
@@ -613,7 +613,7 @@
 								<article class="sc-event">
 									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
 									<strong class="sc-event__title">
-										<a href="https:&#x2F;&#x2F;sc19.supercomputing.org&#x2F;presentation&#x2F;?id&#x3D;bof148&amp;sess&#x3D;sess299" target="_blank">Getting Scientific Software Installed</a>
+										<a href="https://sc19.supercomputing.org/presentation/?id=bof148&sess=sess299" target="_blank">Getting Scientific Software Installed</a>
 									</strong>
 									<dl class="sc-event__data">
 										<dt>Session Leader</dt>
@@ -632,7 +632,7 @@
 								<article class="sc-event">
 									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
 									<strong class="sc-event__title">
-										<a href="https:&#x2F;&#x2F;sc19.supercomputing.org&#x2F;presentation&#x2F;?id&#x3D;bof203&amp;sess&#x3D;sess315" target="_blank">SOLAR Consortium: Accelerated Ray Tracing for Scientific Simulations</a>
+										<a href="https://sc19.supercomputing.org/presentation/?id=bof203&sess=sess315" target="_blank">SOLAR Consortium: Accelerated Ray Tracing for Scientific Simulations</a>
 									</strong>
 									<dl class="sc-event__data">
 										<dt>Session Leader</dt>
@@ -654,7 +654,7 @@
 								<article class="sc-event">
 									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
 									<strong class="sc-event__title">
-										<a href="https:&#x2F;&#x2F;sc19.supercomputing.org&#x2F;session&#x2F;?sess&#x3D;sess457" target="_blank">HPC Impact Showcase 4</a>
+										<a href="https://sc19.supercomputing.org/session/?sess=sess457" target="_blank">HPC Impact Showcase 4</a>
 									</strong>
 									<dl class="sc-event__data">
 										<dt>Session Chair</dt>
@@ -674,7 +674,7 @@
 								<article class="sc-event">
 									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
 									<strong class="sc-event__title">
-										<a href="https:&#x2F;&#x2F;sc19.supercomputing.org&#x2F;presentation&#x2F;?id&#x3D;bof141&amp;sess&#x3D;sess335" target="_blank">Science and Technology Requirements for Leadership Computing in Open Science</a>
+										<a href="https://sc19.supercomputing.org/presentation/?id=bof141&sess=sess335" target="_blank">Science and Technology Requirements for Leadership Computing in Open Science</a>
 									</strong>
 									<dl class="sc-event__data">
 										<dt>Session Leader</dt>
@@ -700,7 +700,7 @@
 								<article class="sc-event">
 									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
 									<strong class="sc-event__title">
-										<a href="https:&#x2F;&#x2F;sc19.supercomputing.org&#x2F;session&#x2F;?sess&#x3D;sess133" target="_blank">The 3rd Industry&#x2F;University Joint International Workshop on Data-Center Automation, Analytics, and Control (DAAC)</a>
+										<a href="https://sc19.supercomputing.org/session/?sess=sess133" target="_blank">The 3rd Industry&#x2F;University Joint International Workshop on Data-Center Automation, Analytics, and Control (DAAC)</a>
 									</strong>
 									<dl class="sc-event__data">
 										<dt>Session Chairs</dt>
