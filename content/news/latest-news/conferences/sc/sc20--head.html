@@ -15,6 +15,9 @@
 	text-align: center;
 	position: relative; /* allow layer management with pseudo element */
 }
+.sc-banner h1 {
+	color: #ffffff;
+}
 .sc-banner__header {
 	padding: 0; /* override `.sc-banner__marquee:last-child` */
 }
@@ -141,7 +144,7 @@
 
 /* PAGE-SPECIFIC: Logos */
 #sc-logo-sc20,
-#sc-logo-nsf		{ height: 90px; }
+#sc-logo-nsf		{ height: 60px; }
 #sc-logo-tacc,
 #sc-logo-utaustin	{ height: 30px; }
 /* TODO: Upload and use the taller logos (that have text) */
@@ -163,18 +166,8 @@
 }
 </style>
 <section id="sc-banner" class="sc-banner">
-	<header class="sc-banner__header sc-banner__marquee sc-logo">
-		<figure class="sc-logo">
-			<a href="https://sc20.supercomputing.org/" target="_blank"><img id="sc-logo-sc20" class="sc-logo__image" src="/documents/1084364/1923661/sc20-logo.svg"></a>
-			<figcaption class="sc-logo__text sr-only">
-				<h1>
-					<abbr title="Super Computing 2019">SC20<abbr>
-				</h1>
-			</figcaption>
-		</figure>
-		<h2 class="sc-banner__text">
-			<a href="https://sc20.supercomputing.org/" target="_blank"><abbr title="Super Computing 2019">SC20</abbr> Is Everywhere We Are</a>
-		</h2>
+	<header class="sc-banner__header sc-banner__marquee">
+		<h1>TACC at <a href="https://sc20.supercomputing.org/" target="_blank">SC20</a></h1>
 	</header>
     <div class="sc-banner__content sc-banner__marquee embed">
 		<div class="embed-responsive embed-responsive-16by9">
@@ -183,6 +176,16 @@
 	</div>
 	<footer class="sc-banner__footer">
 		<ul class="sc-gallery sc-banner__marquee">
+			<li class="sc-gallery__item">
+				<figure class="sc-logo">
+					<a href="https://sc20.supercomputing.org/" target="_blank">
+						<img id="sc-logo-sc20" class="sc-logo__image" src="/documents/1084364/1923661/sc20-logo.svg">
+					</a>
+					<figcaption class="sc-logo__text sr-only">
+						<dl><dt>SC20</dt><dd>Supercomputing 2019</dd></dl>
+					</figcaption>
+				</figure>
+			</li>
 			<li class="sc-gallery__item">
 				<figure class="sc-logo">
 					<img id="sc-logo-tacc" class="sc-logo__image" src="/documents/1084364/1797126/sc19-logo-tacc.svg" />
