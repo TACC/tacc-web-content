@@ -1,20 +1,7 @@
 <!--open styles-->
-<style type="text/css">
-/* Resolve whitespace in a simpler manner than `/sc18` failed to do */
-/* WARN: There are two `#main-content`'s! (bug origin: clone `/sc18`) */
-/* HACK: We should instead only have one `#main-content`! */
-#main-content {
-    padding-bottom: 0;
-}
-/* Avoids adding more superfluous `.row` and `.col-…` divs */
-#sc-content-booth-events {
-    margin-bottom: 30px; /* replicate `.col-… { margin-*: 15px; }` pair */
-}
-
-/* COMPONENTS */
-/* COMPONENTS: SC Content */
-.sc-content,
-[class*="sc-content--"] {
+<style type="text/css" id="style--sc-components">
+/* SC CONTENT */
+.sc-content {
     background-color: #FFF;
     margin: 0px;
     padding: 20px;
@@ -38,7 +25,9 @@
 .sc-content--secondary .sc-content__title     { font-size: 2em; }
 .sc-content--secondary .sc-content__sub-title { font-size: 1.5em; }
 
-/* COMPONENTS: SC Event */
+
+
+/* SC EVENT */
 .sc-event + .sc-event {
     margin-top: 20px;
 }
@@ -50,9 +39,16 @@
 .sc-event__desc {
     margin-bottom: 10px; /* redundant for `p.sc-event__desc` */
 }
+.sc-event__sub-title {
+    display: block;
+}
+
+/* SC EVENT: Data */
 .sc-event__data dt {
     display: inline-block;
-    font-weight: normal; /* override `tacc-new-theme/css/main.css` */
+}
+.sc-event__data dt {
+    font-weight: 500;
 }
 .sc-event__data dt:after {
     display: inline-block;
@@ -66,31 +62,27 @@
     display: block;
     content: '';
 }
-.sc-event__data dd ul {
-    margin: 0;
+.sc-event__data dd ul:not(.has-commas) li::after { content: ", "; }
+.sc-event__data dd ul.has-commas li::after { content: "; "; }
+.sc-event__data dd li:last-of-type::after {
+    display: none;
 }
-.sc-event__data dd ul,
-.sc-event__data dd li {
-    display: inline;
-}
-.sc-event__data dd li::after {
-    display: inline;
-    content: ", ";
-}
-.sc-event__data dd li:last-of-type::after { display: none; }
 .sc-event__data p {
     display: inline;
 }
 
-/* COMPONENTS: SC Media */
+
+
+/* SC MEDIA */
 .sc-media + .sc-media {
     margin-top: 30px;
 }
 .sc-media .sc-media__title {
     margin-bottom: 15px;
 }
-
-/* COMPONENTS: SC "Read More" */
+</style>
+<style type="text/css" id="style--sc-components--read-more">
+/* SC "READ MORE" */
 /* .sc-read-more {} *//* Noop, but adheres to BEM naming practice */
 .sc-read-more__state { display: none; }
 /* RFE: Should we use <a> and `:target` (universal question)?
@@ -109,7 +101,8 @@
     cursor: pointer;
     color: #4f71db; /* from `a … { color: #4f71db }` */
 }
-/* COMPONENTS: SC "Read More": Show/Hide Solution #1:
+
+/* SC "READ MORE": Show/Hide Solution #1:
     - Pro: [Performance] CSS-only (no JavaScript)
     - Con: [UI / Design] Only supports one line
 */
@@ -124,7 +117,8 @@
     overflow: visible; /* In case revealed content has floating content */
 	white-space: normal;
 }
-/* COMPONENTS: SC "Read More": Show/Hide Solution #2:
+
+/* SC "READ MORE": Show/Hide Solution #2:
     - Pro: [Performance] CSS-only (no JavaScript)
     - Con: [Localization] Ellipses is hard-coded
 */
@@ -165,7 +159,8 @@
 .sc-read-more--solution-2 .sc-read-more__state:checked ~ .sc-read-more__target::before {
     display: none;
 }
-/* COMPONENTS: SC "Read More": Show/Hide Solution #3:
+
+/* SC "READ MORE": Show/Hide Solution #3:
     - Pro: [Performance] CSS-only (no JavaScript)
     - Con: [Degradation] Fallback is non-functional links
 */
@@ -179,11 +174,27 @@
 .sc-read-more--solution-3 .sc-read-more__state:checked ~ .sc-read-more__target {
     -webkit-line-clamp: inherit;
 }
+</style>
+<style type="text/css" id="style--sc-trumps">
+/* HACKS */
+
+/* Resolve whitespace in a simpler manner than `/sc18` failed to do */
+/* WARN: There are two `#main-content`'s! (bug origin: clone `/sc18`) */
+/* HACK: We should instead only have one `#main-content`! */
+#main-content {
+    padding-bottom: 0;
+}
+/* Avoids adding more superfluous `.row` and `.col-…` divs */
+/* HACK: If we changed Bootstrap (a big "if"), then this value would be wrong */
+#sc-booth-events {
+    margin-bottom: 30px; /* replicate `.col-… { margin-*: 15px; }` pair */
+}
+
+
 
 /* PAGE-SPECIFIC */
-/* NOTE: The __not__ page-specific styles __above__ should be global;
-         and these page-specific styles __below__ should not need IDs;
-         but, am not allowed to edit global styles, yet;
+/* NOTE: These page-specific styles should not need IDs;
+         but, we are not allowed to edit global styles, yet;
          so, we need to artifically scope these styles */
 #sc-wrap {
     background-color: #0e0520;
@@ -199,16 +210,12 @@
 #sc-wrap dd {
     margin-left: 0; /* override `html/css/main.css` *//* match `tacc-new-theme/css/main.css` */
 }
-
-/* MARKUP NOTES */
-/* FAQ: `#sc` and `.container` __must not__ be together,
-        because `#sc` sets wide background color
-        (without reliance on variable containers)
-        and `.container` restricts content width. */
-</style><!--close styles-->
-	<div id="sc-wrap">
+</style>
+<!--close styles-->
+	<div id="sc-wrap" class="t-2019">
+		<!-- WARNING: `#sc` and `.container` __must not__ be together, because `#sc` sets wide background color (without reliance on variable containers) and `.container` restricts content width. -->
 		<div class="container">
-			<section class="sc-content--primary" id="sc-booth-events">
+			<section class="sc-content sc-content--primary" id="sc-booth-events">
 				<h1 class="sc-content__title">SC19 TACC Booth Schedule</h1>
 				<div class="row">
 					<!--open booth-events-->
@@ -218,13 +225,15 @@
 							</h2>
 							<hr class="sc-content__sub-title-decoration" />
 							<article class="sc-event">
-								<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+								<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 								<strong class="sc-event__title">
 									Lmod: What&#39;s New with TACC&#39;s Environment Module System
 								</strong>
+
+
 								<dl class="sc-event__data">
 									<dt>Presenters</dt>
-										<dd><ul>
+										<dd><ul >
 											<li>Robert McLay</li>
 										</ul></dd>
 									<dt>Length</dt>
@@ -247,13 +256,15 @@
 								</div>
 							</article>
 							<article class="sc-event">
-								<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+								<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 								<strong class="sc-event__title">
 									XALT: How to Track and Understand What Your Users are Running on Your System
 								</strong>
+
+
 								<dl class="sc-event__data">
 									<dt>Presenters</dt>
-										<dd><ul>
+										<dd><ul >
 											<li>Robert McLay</li>
 										</ul></dd>
 									<dt>Length</dt>
@@ -276,13 +287,15 @@
 								</div>
 							</article>
 							<article class="sc-event">
-								<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+								<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 								<strong class="sc-event__title">
 									A High-Productivity Tool for Interactive Parallelization
 								</strong>
+
+
 								<dl class="sc-event__data">
 									<dt>Presenters</dt>
-										<dd><ul>
+										<dd><ul >
 											<li>Ritu Arora</li>
 										</ul></dd>
 									<dt>Length</dt>
@@ -305,13 +318,15 @@
 								</div>
 							</article>
 							<article class="sc-event">
-								<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+								<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 								<strong class="sc-event__title">
 									Visual Analysis on Frontera
 								</strong>
+
+
 								<dl class="sc-event__data">
 									<dt>Presenters</dt>
-										<dd><ul>
+										<dd><ul >
 											<li>Paul Navrátil</li>
 										</ul></dd>
 									<dt>Length</dt>
@@ -340,13 +355,15 @@
 							</h2>
 							<hr class="sc-content__sub-title-decoration" />
 							<article class="sc-event">
-								<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+								<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 								<strong class="sc-event__title">
 									Tapis – Transforming HPC through APIs
 								</strong>
+
+
 								<dl class="sc-event__data">
 									<dt>Presenters</dt>
-										<dd><ul>
+										<dd><ul >
 											<li>Joe Stubbs</li>
 										</ul></dd>
 									<dt>Length</dt>
@@ -369,13 +386,15 @@
 								</div>
 							</article>
 							<article class="sc-event">
-								<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+								<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 								<strong class="sc-event__title">
 									Improving a Science Gateways’ Efficiency and Effectiveness by Implementing User-Centered Design
 								</strong>
+
+
 								<dl class="sc-event__data">
 									<dt>Presenters</dt>
-										<dd><ul>
+										<dd><ul >
 											<li>Paul Parsons</li>
 											<li>Claire Stirm</li>
 											<li>Maytal Dahan</li>
@@ -400,13 +419,15 @@
 								</div>
 							</article>
 							<article class="sc-event">
-								<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+								<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 								<strong class="sc-event__title">
 									Lmod: What&#39;s New with TACC&#39;s Environment Module System
 								</strong>
+
+
 								<dl class="sc-event__data">
 									<dt>Presenters</dt>
-										<dd><ul>
+										<dd><ul >
 											<li>Robert McLay</li>
 										</ul></dd>
 									<dt>Length</dt>
@@ -429,13 +450,15 @@
 								</div>
 							</article>
 							<article class="sc-event">
-								<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+								<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 								<strong class="sc-event__title">
 									XALT: How to Track and Understand What Your Users are Running on Your System
 								</strong>
+
+
 								<dl class="sc-event__data">
 									<dt>Presenters</dt>
-										<dd><ul>
+										<dd><ul >
 											<li>Robert McLay</li>
 										</ul></dd>
 									<dt>Length</dt>
@@ -463,7 +486,7 @@
 			</section>
 			<div class="row">
 				<div class="col-md-8">
-					<section class="sc-content--secondary" id="sc-conf-events">
+					<section class="sc-content sc-content--secondary" id="sc-conf-events">
 						<h1 class="sc-content__title">SC19 TACC Participation</h1>
 						<!--open conf-events-->
 							<div>
@@ -472,13 +495,15 @@
 								</h2>
 								<hr class="sc-content__sub-title-decoration" />
 								<article class="sc-event">
-									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+									<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 									<strong class="sc-event__title">
 										<a href="https://sc19.supercomputing.org/presentation/?id=wksp118&sess=sess101" target="_blank">Deep Learning on Supercomputers</a>
 									</strong>
+
+
 									<dl class="sc-event__data">
 										<dt>Organizers</dt>
-											<dd><ul>
+											<dd><ul >
 												<li>Zhao Zhang</li>
 												<li>Valeriu Codreanu</li>
 												<li>Ian T. Foster</li>
@@ -490,13 +515,15 @@
 									</dl>
 								</article>
 								<article class="sc-event">
-									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+									<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 									<strong class="sc-event__title">
 										<a href="https://sc19.supercomputing.org/presentation/?id=ws_dls123&sess=sess101" target="_blank">Deep Facial Recognition using Tensorflow</a>
 									</strong>
+
+
 									<dl class="sc-event__data">
 										<dt>Author/Presenters</dt>
-											<dd><ul>
+											<dd><ul >
 												<li>Chris A. Mattmann</li>
 												<li>Zhao Zhang</li>
 											</ul></dd>
@@ -507,13 +534,15 @@
 									</dl>
 								</article>
 								<article class="sc-event">
-									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+									<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 									<strong class="sc-event__title">
 										<a href="https://sc19.supercomputing.org/presentation/?id=ws_dls106&sess=sess101" target="_blank">Aggregating Local Storage for Scalable Deep Learning I&#x2F;O</a>
 									</strong>
+
+
 									<dl class="sc-event__data">
 										<dt>Author/Presenters</dt>
-											<dd><ul>
+											<dd><ul >
 												<li>Zhao Zhang</li>
 												<li>Lei Huang</li>
 												<li>J. Gregory Pauloski</li>
@@ -526,13 +555,15 @@
 									</dl>
 								</article>
 								<article class="sc-event">
-									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+									<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 									<strong class="sc-event__title">
 										<a href="https://sc19.supercomputing.org/presentation/?id=tut144&sess=sess208" target="_blank">Tools and Best Practices for Distributed Deep Learning on Supercomputers</a>
 									</strong>
+
+
 									<dl class="sc-event__data">
 										<dt>Presenters</dt>
-											<dd><ul>
+											<dd><ul >
 												<li>Xu Weijia</li>
 												<li>Zhao Zhang</li>
 												<li>David Walling</li>
@@ -550,13 +581,15 @@
 								</h2>
 								<hr class="sc-content__sub-title-decoration" />
 								<article class="sc-event">
-									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+									<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 									<strong class="sc-event__title">
 										<a href="https://sc19.supercomputing.org/presentation/?id=ws_hust101&sess=sess116" target="_blank">Tools for Monitoring CPU Usage and Affinity in Multicore Supercomputers</a>
 									</strong>
+
+
 									<dl class="sc-event__data">
 										<dt>Author/Presenters</dt>
-											<dd><ul>
+											<dd><ul >
 												<li>Lei Huang</li>
 												<li>Kent Milfeld</li>
 												<li>Si Liu</li>
@@ -568,13 +601,15 @@
 									</dl>
 								</article>
 								<article class="sc-event">
-									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+									<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 									<strong class="sc-event__title">
 										<a href="https://sc19.supercomputing.org/presentation/?id=pec420&sess=sess116" target="_blank">HUST19 Panel: HPC User tickets discussion</a>
 									</strong>
+
+
 									<dl class="sc-event__data">
 										<dt>Panelists</dt>
-											<dd><ul>
+											<dd><ul >
 												<li>Robert McLay</li>
 												<li>Lissa Moore</li>
 											</ul></dd>
@@ -591,10 +626,12 @@
 								</h2>
 								<hr class="sc-content__sub-title-decoration" />
 								<article class="sc-event">
-									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+									<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 									<strong class="sc-event__title">
 										<a href="https://sc19.supercomputing.org/presentation/?id=bof144&sess=sess413" target="_blank">SIGHPC Annual Member Meeting</a>
 									</strong>
+
+
 									<dl class="sc-event__data">
 										<dt>Session Leader</dt>
 											<dd>John West</dd>
@@ -611,15 +648,17 @@
 								</h2>
 								<hr class="sc-content__sub-title-decoration" />
 								<article class="sc-event">
-									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+									<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 									<strong class="sc-event__title">
 										<a href="https://sc19.supercomputing.org/presentation/?id=bof148&sess=sess299" target="_blank">Getting Scientific Software Installed</a>
 									</strong>
+
+
 									<dl class="sc-event__data">
 										<dt>Session Leader</dt>
 											<dd>Robert McLay</dd>
 										<dt>Additional Session Leaders</dt>
-											<dd><ul>
+											<dd><ul >
 												<li>Davide Vanzo</li>
 												<li>Kenneth Hoste</li>
 											</ul></dd>
@@ -630,15 +669,17 @@
 									</dl>
 								</article>
 								<article class="sc-event">
-									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+									<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 									<strong class="sc-event__title">
 										<a href="https://sc19.supercomputing.org/presentation/?id=bof203&sess=sess315" target="_blank">SOLAR Consortium: Accelerated Ray Tracing for Scientific Simulations</a>
 									</strong>
+
+
 									<dl class="sc-event__data">
 										<dt>Session Leader</dt>
 											<dd>Paul Navratil</dd>
 										<dt>Additional Session Leaders</dt>
-											<dd><ul>
+											<dd><ul >
 												<li>Estelle Dirand</li>
 												<li>Pascal Grosset</li>
 												<li>Peter Messmer</li>
@@ -652,10 +693,12 @@
 									</dl>
 								</article>
 								<article class="sc-event">
-									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+									<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 									<strong class="sc-event__title">
 										<a href="https://sc19.supercomputing.org/session/?sess=sess457" target="_blank">HPC Impact Showcase 4</a>
 									</strong>
+
+
 									<dl class="sc-event__data">
 										<dt>Session Chair</dt>
 											<dd>Melyssa Fratkin</dd>
@@ -672,15 +715,17 @@
 								</h2>
 								<hr class="sc-content__sub-title-decoration" />
 								<article class="sc-event">
-									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+									<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 									<strong class="sc-event__title">
 										<a href="https://sc19.supercomputing.org/presentation/?id=bof141&sess=sess335" target="_blank">Science and Technology Requirements for Leadership Computing in Open Science</a>
 									</strong>
+
+
 									<dl class="sc-event__data">
 										<dt>Session Leader</dt>
 											<dd>Dan Stanzione</dd>
 										<dt>Additional Session Leaders</dt>
-											<dd><ul>
+											<dd><ul >
 												<li>Omar Ghattas</li>
 												<li>Rick Stevens</li>
 												<li>John West</li>
@@ -698,13 +743,15 @@
 								</h2>
 								<hr class="sc-content__sub-title-decoration" />
 								<article class="sc-event">
-									<!-- FAQ: Not using <h3> because it has too much too unstyle -->
+									<!-- FAQ: Not using <h3> because it has too much to unstyle -->
 									<strong class="sc-event__title">
 										<a href="https://sc19.supercomputing.org/session/?sess=sess133" target="_blank">The 3rd Industry&#x2F;University Joint International Workshop on Data-Center Automation, Analytics, and Control (DAAC)</a>
 									</strong>
+
+
 									<dl class="sc-event__data">
 										<dt>Session Chairs</dt>
-											<dd><ul>
+											<dd><ul >
 												<li>Yong Chen, Texas Tech University</li>
 												<li>Dong Dai, University of North Carolina, Charlotte</li>
 												<li>Tim Cockerill, Texas Advanced Computing Center (TACC)</li>
@@ -721,12 +768,12 @@
 					</section>
 				</div>
 				<div class="col-md-4">
-					<section class="sc-content--secondary" id="sc-social_media">
+					<section class="sc-content sc-content--secondary" id="sc-social_media">
 						<!--open social-media-->
-						<h1 class="sc19-content__title">
+						<h1 class="sc-content__title">
 						    Connect with TACC</h1>
-						<article class="sc19-media">
-						    <h2 class="sc19-content__sub-title sc19-media__title">
+						<article class="sc-media">
+						    <h2 class="sc-content__sub-title sc-media__title">
 						        Twitter Feed</h2>
 						    <a class="twitter-timeline" href="https://twitter.com/TACC?ref_src=twsrc%5Etfw" data-tweet-limit="3">Tweets by TACC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 						</article>
