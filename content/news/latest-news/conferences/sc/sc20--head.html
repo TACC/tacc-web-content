@@ -1,6 +1,5 @@
-<style type="text/css">
-/* COMPONENTS */
-/* COMPONENTS: SC19 Banner */
+<style type="text/css" id="style--sc-components--hero">
+/* SC BANNER */
 .sc-banner {
 	padding-top: 100px;
 	padding-bottom: 45px;
@@ -8,7 +7,7 @@
 	background-size: auto 900px;
 	background-repeat: no-repeat;
 	background-position: center top;
-	background-color: #0e0520; /* match `#sc19` */
+	background-color: #0e0520; /* match `#sc` */
 }
 .sc-banner > * {
     max-width: 680px;
@@ -25,13 +24,25 @@
 .sc-banner__marquee:last-child {
 	margin-bottom: 0;
 }
+.sc-banner a {
+	color: #ffffff;
+}
+.sc-banner abbr {
+	text-decoration: none;
+	border-bottom-color: #ffffff;
+}
+.sc-banner__text {
+	text-transform: capitalize;
+}
 .sc-banner__footer {
 	display: flex;
 	flex-direction: column;
 	padding: 0 10px;
 }
 
-/* COMPONENTS: SC19 CTA */
+
+
+/* SC CTA */
 .sc-cta {
 	display: inline-block;
 
@@ -45,7 +56,9 @@
 	color: #ffffff;
 }
 
-/* COMPONENTS: SC19 Logo List */
+
+
+/* SC19 LOGO LIST (i.e. GALLERY) */
 .sc-gallery {
 	display: flex;
 	flex-direction: row;
@@ -70,7 +83,8 @@
 
 	background-color: #d1b681;
 }
-/* Small Screen - Vertical Logos */
+
+/* SC19 LOGO LIST: Small Screen - Vertical Logos */
 @media (max-width: 474px) {
 	.sc-gallery {
 		flex-direction: column;
@@ -90,7 +104,10 @@
 		top: 0;
 	}
 }
-/* Large Screen - Horizontal Logos */
+
+
+
+/* SC19 LOGO LIST: Large Screen - Horizontal Logos */
 @media (min-width: 475px) {
 	.sc-gallery {
 		flex-direction: row;
@@ -111,15 +128,19 @@
 	}
 }
 
-/* COMPONENTS: SC19 Logo */
-/* .sc-logo {} *//* Noop, but fully identified in markup */
 
+
+/* SC LOGO */
+/* .sc-logo {} *//* Noop, but fully identified in markup */
+</style>
+<style type="text/css" id="style--sc-trumps--hero">
 /* PAGE-SPECIFIC */
-/* NOTE: The __not__ page-specific styles __above__ should be global;
-         but, am not allowed to edit global styles, yet;
+/* NOTE: These page-specific styles should not need IDs;
+         but, we are not allowed to edit global styles, yet;
          so, we need to artifically scope these styles */
+
 /* PAGE-SPECIFIC: Logos */
-#sc-logo-sc19,
+#sc-logo-sc20,
 #sc-logo-nsf		{ height: 90px; }
 #sc-logo-tacc,
 #sc-logo-utaustin	{ height: 30px; }
@@ -144,25 +165,23 @@
 <section id="sc-banner" class="sc-banner">
 	<header class="sc-banner__header sc-banner__marquee sc-logo">
 		<figure class="sc-logo">
-			<img id="sc-logo-sc19" class="sc-logo__image" src="/documents/1084364/1797126/sc19-logo.svg">
+			<a href="https://sc20.supercomputing.org/" target="_blank"><img id="sc-logo-sc20" class="sc-logo__image" src="/documents/1084364/1923661/sc20-logo.svg"></a>
 			<figcaption class="sc-logo__text sr-only">
 				<h1>
-					<abbr title="Super Computing 2019">SC19<abbr>
+					<abbr title="Super Computing 2019">SC20<abbr>
 				</h1>
-				<h2>
-					<address>Denver, <abbr title="Colorado">CO</abbr></address>
-					<span><abbr title="High Performance Computing">HPC</abbr> is <strong>now</strong>.</span>
-				</h2>
 			</figcaption>
 		</figure>
+		<h2 class="sc-banner__text">
+			<a href="https://sc20.supercomputing.org/" target="_blank"><abbr title="Super Computing 2019">SC20</abbr> Is Everywhere We Are</a>
+		</h2>
 	</header>
     <div class="sc-banner__content sc-banner__marquee embed">
 		<div class="embed-responsive embed-responsive-16by9">
-			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MZJGgJmgtPU" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/T8xd1W4C61Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	</div>
 	<footer class="sc-banner__footer">
-		<p class="sc-cta sc-banner__marquee"><a href="https://sc19.supercomputing.org/organization/?inst=3111240566820996241" target="_blank">Visit TACC at Booth #1353</a></p>
 		<ul class="sc-gallery sc-banner__marquee">
 			<li class="sc-gallery__item">
 				<figure class="sc-logo">
