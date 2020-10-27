@@ -1,29 +1,39 @@
 <style type="text/css" id="style--sc-banner">
-/* SC BANNER: Generic */
-.sc-banner {
-	padding-top: 100px;
-	padding-bottom: 45px;
-
-	background-size: auto 900px;
-	background-repeat: no-repeat;
-	background-position: center top;
-	background-color: #0e0520; /* match `#sc` */
-}
-.sc-banner > * {
+/* SC BANNER */
+.sc-banner__marquee {
     max-width: 680px;
 	margin: 0 auto;
 	text-align: center;
 	position: relative; /* allow layer management with pseudo element */
 }
+.sc-banner__marquee            { margin-bottom: 45px; }
+.sc-banner__marquee:last-child { margin-bottom: 0; }
+
+.sc-banner h1 {
+	color: #ffffff; /* overwrite `main.css` */
+	margin: 0; /* overwrite `main.css` */
+}
 .sc-banner a {
 	color: #ffffff;
 }
 .sc-banner abbr {
+	/* NOTE: An <abbr> has a (browser) default accessible style, but that style is likely not desired, so undo it */
 	text-decoration: none;
-	border-bottom-color: #ffffff;
+
+	/* NOTE: Setting border color would improve the (website) global accessible style, but that style is likely not desired, so undo it */
+	/* border-bottom-color: #ffffff; */
+	border-bottom: none;
 }
 
-/* SC BANNER: Specifics */
+/* SC BANNER: Page-Specific */
+#sc-banner {
+	padding: 100px 10px 45px;
+
+	background-size: auto 900px;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-color: #0e0520; /* match `#sc-banner`, `#sc-wrap`, `#sc-footer` */
+}
 @media (-webkit-max-device-pixel-ratio: 1.9), (max-resolution: 191dpi) {
 	#sc-banner {
 		background-image: url("/documents/1084364/1797126/sc19-banner.jpg");
@@ -35,156 +45,10 @@
 	}
 }
 </style>
-<section id="sc-banner" class="sc-banner">
-	<style type="text/css" id="style--sc-banner--elements">
-	/* SC BANNER: Elements */
-	.sc-banner__header {
-		padding: 0; /* override `.sc-banner__marquee:last-child` */
-	}
-	.sc-banner__header h1 {
-		color: #ffffff;
-	}
-	.sc-banner__marquee {
-		margin-bottom: 45px;
-	}
-	.sc-banner__marquee:last-child {
-		margin-bottom: 0;
-	}
-	.sc-banner__footer {
-		display: flex;
-		flex-direction: column;
-		padding: 0 10px;
-	}
-	</style>
-	<header class="sc-banner__header sc-banner__marquee">
-		<h1>TACC at <a href="https://sc20.supercomputing.org/" target="_blank">SC20</a></h1>
+<div id="sc-banner" class="sc-banner">
+	<header class="sc-banner__marquee">
+		<h1>
+			<abbr title="Texas Advanced Computing Center">TACC</abbr> at <a href="https://sc20.supercomputing.org/" target="_blank"><abbr title="Supercomputing 2020">SC20</abbr></a>
+		</h1>
 	</header>
-    <div class="sc-banner__content sc-banner__marquee embed">
-		<div class="embed-responsive embed-responsive-16by9">
-			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/T8xd1W4C61Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</div>
-	</div>
-
-	<style type="text/css" id="style--sc-components--gallery">
-	/* SC19 LOGO LIST (i.e. GALLERY) */
-	.sc-gallery {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		margin-left: auto;
-		margin-right: auto;
-
-		list-style: none;
-	}
-	.sc-gallery__item {
-		position: relative;
-
-		display: grid;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-	.sc-gallery__item + .sc-gallery__item::after {
-		position: absolute;
-		display: block;
-		content: "";
-
-		background-color: #d1b681;
-	}
-
-	/* SC19 LOGO LIST: Small Screen - Vertical Logos */
-	@media (max-width: 474px) {
-		.sc-gallery {
-			flex-direction: column;
-		}
-		.sc-gallery__item             { padding-top: 20px;  padding-bottom: 20px; }
-		/* WARN: Ideally, child elements do not have modifiers (supports overly complex modules) */
-		.sc-gallery__item--focus      { padding-top: 40px;  padding-bottom: 40px; }
-		.sc-gallery__item:first-child { padding-top: 0; }
-		.sc-gallery__item:last-child  { padding-bottom: 0; }
-		/* RFE: Wes used `background-color` instead of `border`,
-				only because it seems like less code. Ideas? */
-		.sc-gallery__item + .sc-gallery__item::after {
-			height: 2px;
-			width: 74px;
-			margin-left: -37px;
-			left: 50%;
-			top: 0;
-		}
-	}
-
-	/* SC19 LOGO LIST: Large Screen - Horizontal Logos */
-	@media (min-width: 475px) {
-		.sc-gallery {
-			flex-direction: row;
-		}
-		.sc-gallery__item             { padding-left: 20px;  padding-right: 20px; }
-		/* WARN: Ideally, child elements do not have modifiers (supports overly complex modules) */
-		.sc-gallery__item--focus      { padding-left: 40px;  padding-right: 40px; }
-		.sc-gallery__item:first-child { padding-left: 0; }
-		.sc-gallery__item:last-child  { padding-right: 0; }
-		/* RFE: Wes used `background-color` instead of `border`,
-				only because it seems like less code. Ideas? */
-		.sc-gallery__item + .sc-gallery__item::after {
-			width: 2px;
-			height: 74px;
-			margin-top: -37px;
-			top: 50%;
-			left: 0;
-		}
-	}
-	</style>
-	<style type="text/css" id="style--sc-components--logo">
-	/* SC LOGO: Generic */
-	/* .sc-logo {} *//* Noop, but fully identified in markup */
-
-	/* SC LOGO: Specifics */
-	#sc-logo-sc20,
-	#sc-logo-nsf		{ height: 60px; }
-	#sc-logo-tacc,
-	#sc-logo-utaustin	{ height: 30px; }
-	/* TODO: Upload and use the taller logos (that have text) */
-	/*
-	#sc-logo-tacc,
-	#sc-logo-utaustin	{ height: 45px; }
-	*/
-	</style>
-	<footer class="sc-banner__footer">
-		<ul class="sc-gallery sc-banner__marquee">
-			<li class="sc-gallery__item">
-				<figure class="sc-logo">
-					<a href="https://sc20.supercomputing.org/" target="_blank">
-						<img id="sc-logo-sc20" class="sc-logo__image" src="/documents/1084364/1923661/sc20_1color_white_hor%404x.png">
-					</a>
-					<figcaption class="sc-logo__text sr-only">
-						<dl><dt>SC20</dt><dd>Supercomputing 2019</dd></dl>
-					</figcaption>
-				</figure>
-			</li>
-			<li class="sc-gallery__item">
-				<figure class="sc-logo">
-					<img id="sc-logo-tacc" class="sc-logo__image" src="/documents/1084364/1797126/sc19-logo-tacc.svg" />
-					<figcaption class="sc-logo__text sr-only">
-						<dl><dt>TACC</dt><dd>Texas Advanced Computing Center</dd></dl>
-					</figcaption>
-				</figure>
-			</li>
-			<li class="sc-gallery__item sc-gallery__item--focus">
-				<figure class="sc-logo">
-					<img id="sc-logo-nsf" class="sc-logo__image" src="/documents/1084364/1797126/sc19-logo-nsf.svg" />
-					<figcaption class="sc-logo__text sr-only">
-						<dl><dt>NSF</dt><dd>National Science Foundation</dd></dl>
-					</figcaption>
-				</figure>
-			</li>
-			<li class="sc-gallery__item">
-				<figure class="sc-logo">
-					<img id="sc-logo-utaustin" class="sc-logo__image" src="/documents/1084364/1797126/sc19-logo-utaustin.svg" />
-					<figcaption class="sc-logo__text sr-only">
-						<dl><dt>Texas</dt><dd>The University of Texas at Austin</dd></dl>
-					</figcaption>
-				</figure>
-			</li>
-		</ul>
-	</footer>
-</section>
+</div>

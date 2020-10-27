@@ -81,6 +81,42 @@
     margin-bottom: 15px;
 }
 </style>
+<style type="text/css" id="style--sc-trumps">
+/* HACKS */
+
+/* Resolve whitespace in a simpler manner than `/sc18` failed to do */
+/* WARN: There are two `#main-content`'s! (bug origin: clone `/sc18`) */
+/* HACK: We should instead only have one `#main-content`! */
+#main-content {
+    padding-bottom: 0;
+}
+/* Avoids adding more superfluous `.row` and `.col-…` divs */
+/* HACK: If we changed Bootstrap (a big "if"), then this value would be wrong */
+#sc-booth-events {
+    margin-bottom: 30px; /* replicate `.col-… { margin-*: 15px; }` pair */
+}
+
+
+
+/* PAGE-SPECIFIC */
+/* NOTE: These page-specific styles should not need IDs;
+         but, we are not allowed to edit global styles, yet;
+         so, we need to artifically scope these styles */
+#sc-wrap {
+	background-color: #0e0520; /* match `#sc-banner`, `#sc-wrap`, `#sc-footer` */
+    padding: 0px 25px 30px 25px;
+}
+#sc-wrap dl {
+    margin-left: 0; /* override `…/main.css` */
+}
+#sc-wrap dd,
+#sc-wrap dt {
+    line-height: 1.5; /* override `tacc-new-theme/css/main.css`; match `body` */
+}
+#sc-wrap dd {
+    margin-left: 0; /* override `html/css/main.css` *//* match `tacc-new-theme/css/main.css` */
+}
+</style>
 <style type="text/css" id="style--sc-components--read-more">
 /* SC "READ MORE" */
 /* .sc-read-more {} *//* Noop, but adheres to BEM naming practice */
@@ -175,40 +211,20 @@
     -webkit-line-clamp: inherit;
 }
 </style>
-<style type="text/css" id="style--sc-trumps">
-/* HACKS */
-
-/* Resolve whitespace in a simpler manner than `/sc18` failed to do */
-/* WARN: There are two `#main-content`'s! (bug origin: clone `/sc18`) */
-/* HACK: We should instead only have one `#main-content`! */
-#main-content {
-    padding-bottom: 0;
-}
-/* Avoids adding more superfluous `.row` and `.col-…` divs */
-/* HACK: If we changed Bootstrap (a big "if"), then this value would be wrong */
-#sc-booth-events {
-    margin-bottom: 30px; /* replicate `.col-… { margin-*: 15px; }` pair */
-}
-
-
-
-/* PAGE-SPECIFIC */
-/* NOTE: These page-specific styles should not need IDs;
-         but, we are not allowed to edit global styles, yet;
-         so, we need to artifically scope these styles */
-#sc-wrap {
-    background-color: #0e0520;
-    padding: 0px 25px 30px 25px;
-}
-#sc-wrap dl {
+<style type="text/css" id="style--sc-themes">
+/* COMPONENTS: SC EVENT: Data */
+.t-2019 .sc-event__data {
     margin-left: 0; /* override `…/main.css` */
 }
-#sc-wrap dd,
-#sc-wrap dt {
-    line-height: 1.5; /* override `tacc-new-theme/css/main.css`; match `body` */
+.t-2019 .sc-event__data dt {
+    font-weight: normal;
 }
-#sc-wrap dd {
-    margin-left: 0; /* override `html/css/main.css` *//* match `tacc-new-theme/css/main.css` */
+.t-2019 .sc-event__data dd ul {
+    margin: 0;
+}
+.t-2019 .sc-event__data dd ul,
+.t-2019 .sc-event__data dd li {
+    display: inline;
 }
 </style>
 <!--close styles-->
@@ -775,7 +791,7 @@
 						<article class="sc-media">
 						    <h2 class="sc-content__sub-title sc-media__title">
 						        Twitter Feed</h2>
-						    <a class="twitter-timeline" href="https://twitter.com/TACC?ref_src=twsrc%5Etfw" data-tweet-limit="3">Tweets by TACC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+						    <a class="twitter-timeline" href="https://twitter.com/TACC?ref_src=twsrc%5Etfw" data-tweet-limit="3">Tweets by TACC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 						</article>
 						<!--close social-media-->
 					</section>
