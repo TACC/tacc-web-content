@@ -62,11 +62,6 @@
     display: block;
     content: '';
 }
-.sc-event__data dd ul:not(.has-commas) li::after { content: ", "; }
-.sc-event__data dd ul.has-commas li::after { content: "; "; }
-.sc-event__data dd li:last-of-type::after {
-    display: none;
-}
 .sc-event__data p {
     display: inline;
 }
@@ -225,6 +220,11 @@
 .t-2019 .sc-event__data dd ul,
 .t-2019 .sc-event__data dd li {
     display: inline;
+}
+.t-2019 .sc-event__data dd ul:not(.has-commas) li::after { content: ", "; }
+.t-2019 .sc-event__data dd ul.has-commas li::after { content: "; "; }
+.t-2019 .sc-event__data dd li:last-of-type::after {
+    display: none;
 }
 </style>
 <!--close styles-->
@@ -498,6 +498,7 @@
 							</article>
 						</div>
 					<!--close booth-events-->
+					
 				</div>
 			</section>
 			<div class="row">
@@ -781,6 +782,7 @@
 								</article>
 							</div>
 						<!--close conf-events-->
+						
 					</section>
 				</div>
 				<div class="col-md-4">
@@ -794,6 +796,7 @@
 						    <a class="twitter-timeline" href="https://twitter.com/TACC?ref_src=twsrc%5Etfw" data-tweet-limit="3">Tweets by TACC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 						</article>
 						<!--close social-media-->
+						
 					</section>
 				</div>
 			</div>
