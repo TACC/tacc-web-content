@@ -1,16 +1,6 @@
 <style id="style--weteachcs-content" type="text/css">
 /* TODO: Use this scope instead of `style` tags */
-/* WARN: Duplicated in:
-    - `epic`
-    - `epic/stem-evaluation-services`
-    - `epic/research`
-    - `epic/weteachcs/about`
-    - `epic/weteachcs/about/projects`
-    - `epic/weteachcs/certification`
-    - `epic/weteachcs/goals-and-outcomes`
-    - `epic/funders-and-project-partners`
-    - `epic/code.org`
-*/
+/* WARNING: Duplicated in other pages */
 /*
 WeTeach CS - Content (would be a `s-` i.e. "Scope" namespace)
 
@@ -53,20 +43,15 @@ Style guide: components.weteachcs
 .weteachcs-content dt small {
     font-weight: normal;
     font-size: 100%;
+}
+
+/* Add buffer between (margin-less) figcaption content and media it follows */
+.weteachcs-content + .o-gallery > * {
+    /* text-align: center; */
 }</style>
 <style id="style--weteachcs-card" type="text/css">
 /* TODO: Use this component instead of `style` tags */
-/* WARN: Duplicated in:
-    - `epic`
-    - `epic/stem-evaluation-services`
-    - `epic/research`
-    - `epic/weteachcs`
-    - `epic/weteachcs/about/projects`
-    - `epic/weteachcs/certification`
-    - `epic/weteachcs/goals-and-outcomes`
-    - `epic/weteachcs/code.org`
-    - `reu`
-*/
+/* WARNING: Duplicated in other pages */
 /*
 WeTeach CS - Card
 
@@ -141,6 +126,11 @@ Style guide: components.weteachcs.card
 .col-sm-12:not(:only-child) .weteachcs-card__media {
     /* Add space between image and content beneath */
     padding-bottom: 15px; /* Horizontal padding from `.col` (via `tacc-new-theme/css/main.css`) */
+}
+
+/* Add buffer between (margin-less) figcaption content and media it follows */
+.weteachcs-card__media + figcaption.weteachcs-card__content {
+    margin-top: 0.5em;
 }</style>
 <section class="weteachcs-content">
     <div class="weteachcs-card weteachcs-card--highlight">
@@ -171,7 +161,8 @@ Style guide: components.weteachcs.card
     <p>EPIC's Technology Services division designs and supports a variety of custom web applications to assist in operational processes needed to run an effective research, service, governmental, or non-profit organization. We work with partners and clients to create secure web forms, payment gateways, registration systems, and web-based compliance reporting systems. Our applications are secured using enterprise-level security standards and updated regularly. Below are examples of projects our team currently services.</p>
     <p>
         <img class="img-responsive" src="/documents/1084364/1761473/epic-team-1000.jpg/" style="border:none; margin:20px 0px;" /></p>
-    <hr />
+    <h3>
+        Contact</h3>
     <style id="o-gallery-styles" type="text/css">
     /*
     Gallery (Object)
@@ -202,11 +193,11 @@ Style guide: components.weteachcs.card
         grid-gap: var(--grid-gap);
     }
     .o-gallery--shrink-wrap {
-        --min-item-width: 225px;
+        --min-item-width: auto;
 
-        grid-template-columns: minmax(var(--min-item-width),min-content);
+        grid-template-columns: minmax(var(--min-item-width), min-content);
     }</style>
-    <div class="o-gallery o-gallery--shrink-wrap">
+    <div class="o-gallery o-gallery--shrink-wrap" style="--min-item-width: 225px">
         <figure class="weteachcs-card weteachcs-card--highlight">
             <img class="img-responsive  weteachcs-card__media" src="/documents/1084364/1085221/carol-fletcher.jpg/">
             <figcaption class="weteachcs-card__content">

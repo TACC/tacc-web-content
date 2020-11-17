@@ -1,10 +1,57 @@
+<style id="style--weteachcs-content" type="text/css">
+/* TODO: Use this scope instead of `style` tags */
+/* WARNING: Duplicated in other pages */
+/*
+WeTeach CS - Content (would be a `s-` i.e. "Scope" namespace)
+
+Any stakeholder-provided content on a WeTeach page. Later,
+
+> **Extra Information**
+>
+> The WeTeach CS website receives enough edits (as of 2019-10/11) to merit candidacy for testing out changes to generic scope styling of stakeholder-provided content through scope styles.
+
+Markup:
+<!--<div class="weteachcs-content">-->
+<section class="weteachcs-content">
+    <h3>About</h3>
+    <div><pre>(introductory content or media)</pre></div>
+    <h4>What We Do to Things</h4>
+    <dl>
+        <dt>Make Bigger</dt>
+            <dd>We increase things.</dd>
+        <dt>Make Better</dt>
+            <dd>We improve things.</dd>
+        <dt>Make Stronger</dt>
+            <dd>We strengthen things.</dd>
+    </dl>
+    <h4>What We Do for People</h4>
+    <p>We teach them things.</p>
+    <h4>What We Do for Specific People</h4>
+    <p>We certify them to teach things.</p>
+</section>
+<!--</div>-->
+
+Style guide: components.weteachcs
+*/
+.weteachcs-content h4,
+.weteachcs-content h4 {
+    margin-top: 20px;
+}
+.weteachcs-content dt {
+    display: list-item;
+}
+.weteachcs-content dt small {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+/* Add buffer between (margin-less) figcaption content and media it follows */
+.weteachcs-content + .o-gallery > * {
+    /* text-align: center; */
+}</style>
 <style id="style--weteachcs-card" type="text/css">
 /* TODO: Use this component instead of `style` tags */
-/* WARN: Duplicated in:
-    - `epic/research/presentations-and-publications`
-    - `epic/weteachcs`
-    - `epic/weteachcs/goals-and-outcomes`
-*/
+/* WARNING: Duplicated in other pages */
 /*
 WeTeach CS - Card
 
@@ -67,83 +114,97 @@ Style guide: components.weteachcs.card
     /* Use a border style that exists on the page */
     /* SEE: .portlet-navigation .nav-menu > .layouts a */
     border: 1px solid #ddd;
-}</style>
-<div class="weteachcs-card weteachcs-card--highlight">
-    <div class="row">
-        <!--<div class="row" style="background-color: #f1f1f1; margin: 0px 0px 20px 0px; padding:20px;">-->
-        <div class="col-sm-3  weteachcs-card__figure">
-            <img class="img-responsive  weteachcs-card__media" src="/documents/1084364/1750990/wtcs-Lightbulb-5color.png/" /></div>
-        <p class="col-sm-9  weteachcs-card__content">
-            WeTeach_CS educates, empowers, and inspires K-12 CS teachers, administrators, professional development providers, and university instructors to realize the vision of <em>computer science for <strong>all</strong></em>. The Expanding Pathways in Computing (EPIC) group at The University of Texas at Austin's Texas Advanced Computing Center (TACC) serves as the backbone organization for the WeTeach_CS collective impact network which serves hundreds of districts, schools, and educators in Texas and across the nation. WeTeach_CS is dedicated to broadening participation in computing for every student regardless of race, gender, income, or location and leverages the TACC's internationally recognized computing expertise to guide strategic improvement in computing education at a state and national level.</p>
-    </div>
-</div>
-<div class="row  weteachcs-card">
-    <figure class="col-sm-5  weteachcs-card__figure">
-        <div class="embed-responsive embed-responsive-16by9  weteachcs-card__media">
-            <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/183874056"></iframe></div>
-    </figure>
-    <div class="col-sm-7  weteachcs-card__content">
-        <h3>
-            Goals and Outcomes</h3>
-        <p>
-            WeTeach_CS educates, empowers, and inspires K-12 CS teachers, administrators, professional development providers, and university instructors to realize the vision of <em>computer science for <strong>all</strong></em>.</p>
-        <p>
-            <em><a href="/web/website/weteachcs/goals-and-outcomes">Learn more<span class="sr-only"> about WeTeach_CS goals and outcomes</span></a></em></p>
-    </div>
-</div>
-<div class="row  weteachcs-card">
-    <figure class="col-sm-5  weteachcs-card__figure">
-        <div class="embed-responsive embed-responsive-16by9  weteachcs-card__media">
-            <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/254041542"></iframe></div>
-    </figure>
-    <div class="col-sm-7  weteachcs-card__content">
-        <h3>
-            Certification and Professional Development</h3>
-        <p>
-            Our certification and professional development programs are helping to increase the number of CS teachers in Texas while improving the quality of CS classroom instruction.</p>
-        <p>
-            <em><a href="/web/website/weteachcs/certification">Learn more<span class="sr-only"> about WeTeach_CS certification and professional development</span></a></em></p>
-    </div>
-</div>
-<hr />
-<style id="o-gallery-styles" type="text/css">
-/*
-Gallery (Object)
-
-A gallery of apps to launch, images to view, etc.
-
-.o-gallery--shrink-wrap - Shrink items to minimum size
-
-Markup:
-<ul class="o-gallery">
-    <li>Apple</li>
-    <li>Banana</li>
-    <li>Grapes</li>
-</ul>
-*/
-/* WARN: Duplicated in:
-    - `stem-programs/code-at-tacc/cybersecurity`
-    - `stem-programs/code-at-tacc/cybersecurity-comptia`
-    - `epic/funders-and-project-partners`
-*/
-/* WARN: Re-built in:
-    - `epic`
-    - `epic/weteachcs`
-    - `epic/stem-evaluation-services`
-*/
-.o-gallery {
-    display: grid;
-    grid-gap: var(--grid-gap);
 }
-.o-gallery--shrink-wrap {
-    --min-item-width: 225px;
+/* Full width card media needs buffer between it and content below (if present) */
+/* FAQ: Known to be used on these pages: `/epic` */
+.col-sm-12:not(:only-child) .weteachcs-card__media {
+    /* Add space between image and content beneath */
+    padding-bottom: 15px; /* Horizontal padding from `.col` (via `tacc-new-theme/css/main.css`) */
+}
 
-    grid-template-columns: minmax(var(--min-item-width),min-content);
+/* Add buffer between (margin-less) figcaption content and media it follows */
+.weteachcs-card__media + figcaption.weteachcs-card__content {
+    margin-top: 0.5em;
 }</style>
-<div class="o-gallery o-gallery--shrink-wrap">
-    <figure class="weteachcs-card weteachcs-card--highlight">
-        <img class="img-responsive  weteachcs-card__media" src="/documents/1084364/1085221/amy-carrell.png/">
-        <figcaption class="weteachcs-card__content">
-            <a href="/about/directory/amy-carrell">Amy Carrell</a> serves as Director of Outreach for EPIC and can assist you with questions about WeTeach_CS professional development services.</figcaption>
-    </figure>
-</div>
+<section class="weteachcs-content">
+    <div class="weteachcs-card weteachcs-card--highlight">
+        <div class="row">
+            <!--<div class="row" style="background-color: #f1f1f1; margin: 0px 0px 20px 0px; padding:20px;">-->
+            <div class="col-sm-3  weteachcs-card__figure">
+                <img class="img-responsive  weteachcs-card__media" src="/documents/1084364/1750990/wtcs-Lightbulb-5color.png/" /></div>
+            <p class="col-sm-9  weteachcs-card__content">
+                WeTeach_CS educates, empowers, and inspires K-12 CS teachers, administrators, professional development providers, and university instructors to realize the vision of <em>computer science for <strong>all</strong></em>. The Expanding Pathways in Computing (EPIC) group at The University of Texas at Austin's Texas Advanced Computing Center (TACC) serves as the backbone organization for the WeTeach_CS collective impact network which serves hundreds of districts, schools, and educators in Texas and across the nation. WeTeach_CS is dedicated to broadening participation in computing for every student regardless of race, gender, income, or location and leverages the TACC's internationally recognized computing expertise to guide strategic improvement in computing education at a state and national level.</p>
+        </div>
+    </div>
+    <div class="row  weteachcs-card">
+        <figure class="col-sm-5  weteachcs-card__figure">
+            <div class="embed-responsive embed-responsive-16by9  weteachcs-card__media">
+                <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/183874056"></iframe></div>
+        </figure>
+        <div class="col-sm-7  weteachcs-card__content">
+            <h3>
+                Goals and Outcomes</h3>
+            <p>
+                WeTeach_CS educates, empowers, and inspires K-12 CS teachers, administrators, professional development providers, and university instructors to realize the vision of <em>computer science for <strong>all</strong></em>.</p>
+            <p>
+                <em><a href="/web/website/weteachcs/goals-and-outcomes">Learn more<span class="sr-only"> about WeTeach_CS goals and outcomes</span></a></em></p>
+        </div>
+    </div>
+    <div class="row  weteachcs-card">
+        <figure class="col-sm-5  weteachcs-card__figure">
+            <div class="embed-responsive embed-responsive-16by9  weteachcs-card__media">
+                <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/254041542"></iframe></div>
+        </figure>
+        <div class="col-sm-7  weteachcs-card__content">
+            <h3>
+                Certification and Professional Development</h3>
+            <p>
+                Our certification and professional development programs are helping to increase the number of CS teachers in Texas while improving the quality of CS classroom instruction.</p>
+            <p>
+                <em><a href="/web/website/weteachcs/certification">Learn more<span class="sr-only"> about WeTeach_CS certification and professional development</span></a></em></p>
+        </div>
+    </div>
+    <h3>
+        Contact</h3>
+    <style id="o-gallery-styles" type="text/css">
+    /*
+    Gallery (Object)
+
+    A gallery of apps to launch, images to view, etc.
+
+    .o-gallery--shrink-wrap - Shrink items to minimum size
+
+    Markup:
+    <ul class="o-gallery">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+    */
+    /* WARN: Duplicated in:
+        - `stem-programs/code-at-tacc/cybersecurity`
+        - `stem-programs/code-at-tacc/cybersecurity-comptia`
+        - `epic/funders-and-project-partners`
+    */
+    /* WARN: Re-built in:
+        - `epic`
+        - `epic/weteachcs`
+        - `epic/stem-evaluation-services`
+    */
+    .o-gallery {
+        display: grid;
+        grid-gap: var(--grid-gap);
+    }
+    .o-gallery--shrink-wrap {
+        --min-item-width: auto;
+
+        grid-template-columns: minmax(var(--min-item-width), min-content);
+    }</style>
+    <div class="o-gallery o-gallery--shrink-wrap" style="--min-item-width: 225px">
+        <figure class="weteachcs-card weteachcs-card--highlight">
+            <img class="img-responsive  weteachcs-card__media" src="/documents/1084364/1085221/amy-carrell.png/">
+            <figcaption class="weteachcs-card__content">
+                <a href="/about/directory/amy-carrell">Amy Carrell</a> serves as Director of Outreach for EPIC and can assist you with questions about WeTeach_CS professional development services.</figcaption>
+        </figure>
+    </div>
+</section>
