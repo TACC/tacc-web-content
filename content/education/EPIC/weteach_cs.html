@@ -179,17 +179,31 @@ Style guide: components.weteachcs.card
     /* WARNING: Duplicated in other pages */
     /* WARNING: Over-engineered in other pages */
     .o-gallery {
+        --gap: 15px; /* Bootstrap spacing */
+
         display: grid;
-        grid-gap: var(--grid-gap);
+        gap: var(--gap);
     }
     .o-gallery--shrink-wrap {
-        --min-item-width: auto;
-
-        grid-template-columns: minmax(var(--min-item-width), min-content);
+        --item-min-width: auto;
+    }
+    /* On very narrow viewport, no columns */
+    /* WARNING: Custom standard breakpoint: 359px / 360px */
+    /* SEE: https://ricostacruz.com/til/css-media-query-breakpoints */
+    @media only screen and (max-width: 359px) {
+        .o-gallery--shrink-wrap { grid-template-columns: repeat(1, minmax(var(--item-min-width), 1fr)); }
+    }
+    /* On narrow viewport, less columns */
+    @media only screen and (min-width: 360px) and (max-width: 767px) {
+        .o-gallery--shrink-wrap { grid-template-columns: repeat(2, minmax(var(--item-min-width), 2fr)); }
+    }
+    /* On wide viewport, more columns */
+    @media only screen and (min-width: 768px) {
+        .o-gallery--shrink-wrap { grid-template-columns: repeat(3, minmax(var(--item-min-width), 1fr)); }
     }</style>
     <div class="o-gallery o-gallery--shrink-wrap" style="--min-item-width: 225px">
         <figure class="weteachcs-card weteachcs-card--highlight">
-            <img class="img-responsive  weteachcs-card__media" src="/documents/1084364/1085221/amy-carrell.png/">
+            <img class="img-responsive  weteachcs-card__media" src="/documents/1084364/1085221/amy-carrell.jpg/">
             <figcaption class="weteachcs-card__content">
                 <a href="/about/directory/amy-carrell">Amy Carrell</a> serves as Director of Outreach for EPIC and can assist you with questions about WeTeach_CS professional development services.</figcaption>
         </figure>
