@@ -146,7 +146,7 @@ Style guide: components.weteachcs.card
     <div class="weteachcs-card weteachcs-card--highlight">
         <div class="row">
             <figure class="col-sm-12  weteachcs-card__figure">
-                <img class="img-responsive weteachcs-card__media" src="/documents/1084364/1761473/epic-4c-2020-logo-with-text.svg" /></figure>
+                <img class="img-responsive  weteachcs-card__media" src="/documents/1084364/1761473/epic-4c-2020-logo-with-text.svg" /></figure>
             <p class="col-sm-12  weteachcs-card__content">
                 EPIC's mission is to broaden participation in K20 computing pathways through research, outreach, professional development, and policy advocacy. To achieve this mission, we partner with school districts, institutions of higher education, industry leaders, and federal, state and local government entities who are also dedicated to expanding access and opportunity for traditionally underrepresented students in computing. EPIC also provides evaluation and technology services to external entities to help advance their STEM education research and outreach.</p>
         </div>
@@ -171,4 +171,46 @@ Style guide: components.weteachcs.card
     <p>EPIC's Technology Services division designs and supports a variety of custom web applications to assist in operational processes needed to run an effective research, service, governmental, or non-profit organization. We work with partners and clients to create secure web forms, payment gateways, registration systems, and web-based compliance reporting systems. Our applications are secured using enterprise-level security standards and updated regularly. Below are examples of projects our team currently services.</p>
     <p>
         <img class="img-responsive" src="/documents/1084364/1761473/epic-team-1000.jpg/" style="border:none; margin:20px 0px;" /></p>
+    <hr />
+    <style id="o-gallery-styles" type="text/css">
+    /*
+    Gallery (Object)
+
+    A gallery of apps to launch, images to view, etc.
+
+    .o-gallery--shrink-wrap - Shrink items to minimum size
+
+    Markup:
+    <ul class="o-gallery">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+    */
+    /* WARN: Duplicated in:
+        - `stem-programs/code-at-tacc/cybersecurity`
+        - `stem-programs/code-at-tacc/cybersecurity-comptia`
+        - `epic/funders-and-project-partners`
+    */
+    /* WARN: Re-built in:
+        - `epic`
+        - `epic/weteachcs`
+        - `epic/stem-evaluation-services`
+    */
+    .o-gallery {
+        display: grid;
+        grid-gap: var(--grid-gap);
+    }
+    .o-gallery--shrink-wrap {
+        --min-item-width: 225px;
+
+        grid-template-columns: minmax(var(--min-item-width),min-content);
+    }</style>
+    <div class="o-gallery o-gallery--shrink-wrap">
+        <figure class="weteachcs-card weteachcs-card--highlight">
+            <img class="img-responsive  weteachcs-card__media" src="/documents/1084364/1085221/carol-fletcher.jpg/">
+            <figcaption class="weteachcs-card__content">
+                <a href="/about/directory/carol-fletcher">Carol L. Fletcher</a>, Ph.D., serves as EPIC Director.</figcaption>
+        </figure>
+    </div>
 </section>

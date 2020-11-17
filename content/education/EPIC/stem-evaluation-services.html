@@ -240,4 +240,46 @@ Style guide: components.weteachcs.card
         Our evaluation approach is highly participatory in order to provide meaningful, actionable information. We collaborate with school administrators, project managers, staff, and key stakeholders to help shape the evaluation, inform data collection methods, and effectively use findings for program improvement.</p>
     <p>
         Please contact <a href="/web/website/about/directory/lisa-garbrecht">Dr. Lisa Garbrecht</a> at <a href="mailto:lgarbrecht@tacc.utexas.edu">lgarbrecht@tacc.utexas.edu</a> to discuss how we can meet your evaluation and research needs.</p>
+    <hr />
+    <style id="o-gallery-styles" type="text/css">
+    /*
+    Gallery (Object)
+
+    A gallery of apps to launch, images to view, etc.
+
+    .o-gallery--shrink-wrap - Shrink items to minimum size
+
+    Markup:
+    <ul class="o-gallery">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+    */
+    /* WARN: Duplicated in:
+        - `stem-programs/code-at-tacc/cybersecurity`
+        - `stem-programs/code-at-tacc/cybersecurity-comptia`
+        - `epic/funders-and-project-partners`
+    */
+    /* WARN: Re-built in:
+        - `epic`
+        - `epic/weteachcs`
+        - `epic/stem-evaluation-services`
+    */
+    .o-gallery {
+        display: grid;
+        grid-gap: var(--grid-gap);
+    }
+    .o-gallery--shrink-wrap {
+        --min-item-width: 225px;
+
+        grid-template-columns: minmax(var(--min-item-width),min-content);
+    }</style>
+    <div class="o-gallery o-gallery--shrink-wrap">
+        <figure class="weteachcs-card weteachcs-card--highlight">
+            <img class="img-responsive  weteachcs-card__media" src="/documents/1084364/1085221/lisa-garbrecht.jpeg/">
+            <figcaption class="weteachcs-card__content">
+                Please contact <a href="https://www.tacc.utexas.edu/about/directory/lisa-garbrecht">Dr. Lisa Garbrecht</a>, EPIC's Director of STEM Evaluation Services, at lgarbrecht@tacc.utexas.edu to discuss how we can meet your evaluation and research needs.</figcaption>
+        </figure>
+    </div>
 </section>
