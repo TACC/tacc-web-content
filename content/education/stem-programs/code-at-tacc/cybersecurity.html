@@ -1,206 +1,312 @@
 <style type="text/css">
 body {
-    background: #f4f4f4; /* Fallback */
-    background: linear-gradient(#f4f4f4, #dadada); /* Standard */
+	background: #f4f4f4; /* Fallback */
+	background: linear-gradient(#f4f4f4, #dadada); /* Standard */
 }
 
 abbr[title] {
-    border-bottom: none;
+	border-bottom: none;
 }
 
 p {
-    font-family: "Helvetica Neue","Helvetica",sans-serif;
-    line-height:1.5;
-    font-size:15px;
+	font-family: "Helvetica Neue","Helvetica",sans-serif;
+	line-height:1.5;
+	font-size:15px;
 }
 
 th{
-    font-weight:lighter;
-    font-size: 1em;
+	font-weight:lighter;
+	font-size: 1em;
 }
 
 #retro-header-wrapper {
-    width:90%;
-    margin: 0px auto 0px auto;
-    padding:0px 5%;
+	width:90%;
+	margin: 0px auto 0px auto;
+	padding:0px 5%;
 }
 
 #retro-header-div {
-    margin:0px;
-    padding:30px 0px;
+	margin:0px;
+	padding:30px 0px;
 }
 
 #retro-body-wrapper {
-    width:90%;
-    margin: 0px auto 0px auto;
-    padding:50px 5%;
+	width:90%;
+	margin: 0px auto 0px auto;
+	padding:50px 5%;
 }
 
 .headers{
-    padding-left: 30%;
-    position: relative;
+	padding-left: 30%;
+	position: relative;
 }
 
 .codetacc-head{
-    display: block;
-    margin-bottom: -18px;
+	display: block;
+	margin-bottom: -18px;
 }
 
 .code-logo-ds{
-    margin-left: 12%;
-    width: 800px;
+	margin-left: 12%;
+	width: 800px;
 }
 
 .designsafe{
-    font-size: 4em;
-    display: block;
-    margin-top: -30px;
+	font-size: 4em;
+	display: block;
+	margin-top: -30px;
 }
 
 .cybersecurity-logo{
-    text-transform: uppercase;
-    font-family:"HelveticaNeueLTStd-BdCn","Helvetica Neue","Helvetica", sans-serif;
-    text-align: center;
-    /* margin: 25px 0; */
-    font-size: 7em;
+	text-transform: uppercase;
+	font-family:"HelveticaNeueLTStd-BdCn","Helvetica Neue","Helvetica", sans-serif;
+	text-align: center;
+	/* margin: 25px 0; */
+	font-size: 7em;
 }
 
 .code-at-tacc-logo{
-    width: 400px;
-    margin: 0 auto;
-}
-
-.camp-dates{
-    color:#039;
-    font-size: 2.75em;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    text-align: center;
+	width: 400px;
+	margin: 0 auto;
 }
 
 .panel{
-    border: 0 none;
+	border: 0 none;
 }
 
 .panel-default > .panel-heading{
-    background-image: none;
-    background-color: transparent;
-    border-bottom: 2px solid transparent;
-    color: #039;
+	background-image: none;
+	background-color: transparent;
+	border-bottom: 2px solid transparent;
+	color: #039;
 }
 
 .panel-title a{
-    color: #039;
+	color: #039;
 }
 
-.center-col{
-    border-left: 1px solid #3e3e3e;
-    border-right: 1px solid #3e3e3e;
+
+
+.camp-dates {
+	color:#039;
+	font-size: 2.75em;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: center;
 }
 
-.application{
-    border-bottom: 1px solid;
-    font-weight: bolder;
+.camp-subhead {
+	font-family:"HelveticaNeueLTStd-LtCn","Helvetica Neue","Helvetica",sans-serif;
+	color: rgb(0, 0, 0);
+	text-align:center;
+}
+h2.camp-subhead {
+	margin:75px 0px 50px 0px;
+}
+h4.camp-subhead {
+	margin: 10px 10px 30px 10px;
 }
 
-.camp-subhead{
-    font-family:"HelveticaNeueLTStd-LtCn","Helvetica Neue","Helvetica",sans-serif;
-    color: rgb(0, 0, 0);
+.camp-aside {
+	text-align: center;
 }
+
+
 
 .img-banners{
-    margin:0;
-    padding:0;
-    width:100%;
-    border:none;
-    text-align: center;
+	margin:0;
+	padding:0;
+	width:100%;
+	border:none;
+	text-align: center;
 
 }
 
 @media (max-width: 1200px) {
-    .rwd-codetacc{}
+	.rwd-codetacc{}
 
-    .rwd-designsafe{
-        font-size: 3em;
-    }
+	.rwd-designsafe{
+		font-size: 3em;
+	}
 
-    .rwd-dates{}
+	.rwd-dates{}
 
 }
 @media (max-width: 800px){
-    .rwd-codetacc{}
+	.rwd-codetacc{}
 
-    .rwd-designsafe{
-        font-size: 2em;
-        padding: 10px;
-    }
+	.rwd-designsafe{
+		font-size: 2em;
+		padding: 10px;
+	}
 
-    .cybersecurity-logo{
-        font-size: 2.5em;
-    }
+	.cybersecurity-logo{
+		font-size: 2.5em;
+	}
 
-    .rwd-dates{}
+	.rwd-dates{}
 
-    .center-col{
-            border-left: 0 none;
-            border-right: 0 none;
-        }
-
-    .code-logo-ds{
-            margin-left: 0;
+	.code-logo-ds{
+	margin-left: 0;
 
 
-        }
-        .code-main-logo{
-                width: 400px;
-        }
+	}
+	.code-main-logo{
+		width: 400px;
+	}
 
-        .img-banners{
-            margin-bottom: 20px;
-        }
+	.img-banners{
+		margin-bottom: 20px;
+	}
 }
 
 @media (max-width: 480px) {
-    .rwd-codetacc{
-        font-size: 20px;
-    }
+	.rwd-codetacc{
+		font-size: 20px;
+	}
 
-    .rwd-designsafe{
-        font-size: 1em;
-        padding-top: 10px;
-    }
+	.rwd-designsafe{
+		font-size: 1em;
+		padding-top: 10px;
+	}
 
-    .rwd-dates{
-        font-size:1.5em;
-    }
+	.rwd-dates{
+		font-size:1.5em;
+	}
 
-    .code-logo-ds{
-        margin-left:0;
+	.code-logo-ds{
+		margin-left:0;
 
-    }
-    .code-main-logo{
-            width: 400px;
-    }
-    .cybersecurity-logo{
-        font-size: 2em;
-    }
-    .center-col{
-        border-left: 0 none;
-        border-right: 0 none;
-    }
+	}
+	.code-main-logo{
+			width: 400px;
+	}
+	.cybersecurity-logo{
+		font-size: 2em;
+	}
 
-    .directions{
-        border-top: 1px solid lightgrey;
-        padding-top: 15px;
-    }
+	.directions{
+		border-top: 1px solid lightgrey;
+		padding-top: 15px;
+	}
 
-    .img-banners{
-        margin-bottom: 20px;
-    }
-}</style>
+	.img-banners{
+		margin-bottom: 20px;
+	}
+}
+
+
+
+/*
+Data Banner
+
+A banner with columns of data.
+
+Warning: Relies on Bootstrap
+
+Markup:
+<div class="row  data-banner">
+	<!-- Single Column -->
+	<div class="col-md-4  data-banner__column" />
+
+	<!-- Single Column: Short Big Content -->
+	<div class="col-md-4  data-banner__column">
+		<h2>
+			<span class="data-banner__title">Heading</span>
+			<span class="data-banner__title-content">Simple Value</span>
+		</h2>
+	</div>
+
+	<!-- Single Column: Long Normal Content -->
+	<div class="col-md-4  data-banner__column">
+		<h2><span class="data-banner__title">Heading</span></h2>
+		<p class="data-banner__content">Long message about something.</p>
+	</div>
+
+	<!-- Multi-Column -->
+	<div class="col-md-4  data-banner__column" />
+	<div class="col-md-4  data-banner__column data-banner__center-column" />
+	<div class="col-md-4  data-banner__column" />
+</div>
+*/
+.data-banner {
+	margin: 30px 0px 50px 0px;
+	border: solid 1px #000000;
+	text-align: center;
+}
+.data-banner__column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	border-style: solid;
+	border-color: #3e3e3e;
+	border-width: 0; /* SEE: @media query for when which width is turned on */
+}
+.data-banner__title {
+	display: inline-block;
+	border-bottom: 1px solid #000000;
+}
+h2.data-banner__title {
+	margin: 0 auto;
+}
+
+/* FAQ: This markup exists because not all `tacc-new-theme:/…/tacc-base.css` `h2` styles do not affect `.h2` (which would have allowed markup `<p class="data-banner__content  h2">`), and changing them to do so now (a) could have unexpected consequences and (b) requires deploy which is to be limited to only as necessary. */
+h2 > .data-banner__title {
+	display: inline-block;
+}
+h2 > .data-banner__title + a.data-banner__title-content,
+h2 > .data-banner__title + span.data-banner__title-content {
+	display: block;
+}
+
+/* Borders for center column */
+/* WARNING: Only three columns are supported */
+/* FAQ: More columns with these styles cause double borders and diff. heights */
+/* Wide */ @media only screen and (min-width: 992px) {
+	[class*="col-md"].data-banner__center-column {
+		border-width: 0 1px;
+	}
+	.data-banner { padding: 30px; }
+	.data-banner__content,
+	.data-banner__title-content { margin-top: 1em; }
+}
+/* Narrow */ @media only screen and (max-width: 991px) {
+	[class*="col-md"].data-banner__center-column {
+		border-width: 1px 0;
+
+		margin: 30px 0;
+		padding: 10px 0 15px;
+	}
+	.data-banner { padding: 15px 30px; }
+	.data-banner__content,
+	.data-banner__title-content { margin-top: 0.5em; }
+}
+
+
+
+/*
+Info List
+
+A banner with columns of data.
+
+Warning: Relies on Bootstrap
+
+Markup:
+<ul class="info-list">
+	<li>Apples are good for you.</li>
+	<li>Buttons will be the end of you.</li>
+	<li>Calamity befalls those who don't follow the rules.</li>
+</ul>
+*/
+.info-list {
+	text-align: center;
+	list-style: none;
+}
+</style>
 <div class="container" id="retro-header-wrapper">
 	<div class="row" id="retro-header-div">
-		<div class="col-sm-12" style="font-size: 1em;">
+		<div class="col-sm-12">
 			<p>
 				<img alt="Code@TACC Summer High School STEM Camp Logo" class="img-responsive code-at-tacc-logo code-main-logo" src="https://www.tacc.utexas.edu/documents/1084364/1158641/Code-Wearables-1074px.png" /></p>
 			<!-- <img alt="Code@TACC Summer High School STEM Camp Logo" class="img-responsive code-main-logo" src="https://www.tacc.utexas.edu/documents/1084364/1151567/gencyber-logo-small.png" />-->
@@ -224,13 +330,14 @@ th{
 	<!-- closing header-div -->
 	<div class="row">
 		<div class="col-md-12 col-sm-12">
-			<p class="centered" style="font-size:small; color:#999; margin-top:0px; margin-bottom:30px; display: block;">
+			<p class="centered">
 				<img class="img-responsive" src="/documents/1084364/1836493/cybersecurity-1.jpg/" /></p>
 		</div>
 		<!-- <div class="col-md-6">
-				<p class="centered" style="font-size:small; color:#999; margin-top:0px; margin-bottom:30px; display: block;">
-					<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1158641/DScamp02.png" /></p>
-			</div>  --></div>
+			<p class="centered">
+				<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1158641/DScamp02.png" /></p>
+		</div> -->
+	</div>
 	<div class="row">
 		<div class="col-md-6">
 			<p>
@@ -241,30 +348,33 @@ th{
 				Students are expected to participate in GenCyber@TACC until the conclusion of the program. All students will be invited to participate in quarterly Back@TACC <abbr title="Science, Technology, Engineering, and Mathematics">STEM</abbr> workshops upon completion of the program.</p>
 			<!--<p>This camp was funded with the generosity from Cisco and Silicon Valley Community Foundation.</p>--></div>
 		<div class="col-md-6">
-			<p class="centered" style="font-size:small; color:#999; margin-top:0px; margin-bottom:30px;">
+			<p class="centered">
 				<img alt="Student working on laptop" class="img-responsive" src="/documents/1084364/1836493/cybersecurity-2.jpg/" /></p>
 		</div>
 	</div>
 	<!-- Short Info about camp -->
-	<div class="row" style="margin: 30px 0px 50px 0px; padding: 30px; border: solid 1px #000000;">
-		<div class="col-md-4">
-			<h2 style="text-align:center;">
-				<span style="border-bottom: 1px solid; font-weight:bolder;">Dates</span><br />
-				<br />
-				July 6 – July 16, 2021</h2>
+	<div class="row  data-banner">
+		<div class="col-md-4  data-banner__column">
+			<h2>
+				<span class="data-banner__title">Dates</span>
+				<span class="data-banner__title-content">July 6 – July 16, 2021</span>
+			</h2>
 		</div>
-		<div class="col-md-4 center-col">
-			<h2 style="text-align:center;">
-				<span style="border-bottom: 1px solid; font-weight:bolder;">Application</span><br />
-				<br />
-				<a href="https://utexas.qualtrics.com/jfe/form/SV_aVhIgJLYLwSo5Hn" target="_blank">Apply Here</a></h2>
-			<!--2020-04-21: Camps closed --><!--<p style="margin-top: 0px; font-style: italic; font-size: 12px; text-align: center;">
-					Participants will be notified by May 1, if they were selected to participate in the program. Application closes on April 20, 2020.</p>--></div>
-		<div class="col-md-4">
-			<h2 style="text-align:center;">
-				<span style="border-bottom: 1px solid; font-weight: bolder;">Cost</span><br />
-				<br />
-				FREE</h2>
+		<div class="col-md-4  data-banner__column data-banner__center-column">
+			<h2>
+				<span class="data-banner__title">Application</span>
+				<a class="data-banner__title-content" href="https://utexas.qualtrics.com/jfe/form/SV_aVhIgJLYLwSo5Hn" target="_blank">Apply Here</a>
+			</h2>
+			<!--2020-04-21: Camps closed --><!--
+			<p class="data-banner__content  small">
+				Participants will be notified by May 1, if they were selected to participate in the program. Application closes on April 20, 2020.</p>
+			-->
+		</div>
+		<div class="col-md-4  data-banner__column">
+			<h2>
+				<span class="data-banner__title">Cost</span>
+				<span class="data-banner__title-content">FREE</span>
+			</h2>
 		</div>
 	</div>
 	<small><!-- Prospective Activities --></small>
@@ -274,7 +384,7 @@ th{
 				<small><img alt="Students look at video screen" class="img-responsive" src="/documents/1084364/1836493/cybersecurity-3.jpg/" /></small></p>
 		</div>
 		<div class="col-md-6 col-xs-12">
-			<h4 class="camp-subhead" style="margin:10px 10px 30px 10px; text-align:center;">
+			<h4 class="camp-subhead">
 				PROSPECTIVE ACTIVITIES</h4>
 			<div class="col-md-12">
 				<ul>
@@ -298,14 +408,14 @@ th{
 	<!-- Camp Info: FAQs, What not to Bring -->
 	<div class="row">
 		<div class="col-md-12">
-			<h2 class="camp-subhead" style="margin:75px 0px 50px 0px; text-align:center;">
+			<h2 class="camp-subhead">
 				Program Information</h2>
 			<!-- <img alt="Supercompute Deep Earth: 2015 Gordon Bell Prize Winner" class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1484428/deep-earth.png" style="margin:0px; padding:0px; width:100%;" alt="Camp FAQs"/> -->
 			<div class="row">
 				<!--<div class="col-md-4 col-sm-12">
-					<h4 class="camp-subhead" style="margin:10px 10px 30px 10px; text-align:center;">
+					<h4 class="camp-subhead">
 						WHAT TO BRING</h4>
-					<ul style="text-align: center; list-style: none;">
+					<ul class="info-list">
 						<li>
 							Shorts, T-shirts, jeans, pants, sneakers or sandals are acceptable</li>
 						<li>
@@ -327,9 +437,9 @@ th{
 					</ul>
 				</div>-->
 				<div class="col-md-4 col-sm-12">
-					<h4 class="camp-subhead" style="margin:10px 10px 30px 10px; text-align:center;">
+					<h4 class="camp-subhead">
 						WHAT TO KNOW</h4>
-					<ul style="text-align: center; list-style: none;">
+					<ul class="info-list">
 						<li>
 							Willingness to learn</li>
 						<li>
@@ -339,9 +449,9 @@ th{
 					</ul>
 				</div>
 				<!--<div class="col-md-4 col-sm-12">
-					<h4 class="camp-subhead" style="margin:10px 10px 30px 10px; text-align:center;">
+					<h4 class="camp-subhead">
 						WHAT <b>NOT</b> TO BRING</h4>
-					<ul style="text-align: center; list-style: none;">
+					<ul class="info-list">
 						<li>
 							Weapons, explosives, candles, flammable materials &nbsp;</li>
 						<li>
@@ -355,9 +465,9 @@ th{
 					</ul>
 				</div>-->
 				<div class="col-md-4 col-sm-12">
-					<h4 class="camp-subhead" style="margin:10px 10px 30px 10px; text-align: center;">
+					<h4 class="camp-subhead">
 						PROGRAM FORMS</h4>
-					<ul style="text-align: center; list-style: none;">
+					<ul class="info-list">
 						<li>
 							Required forms will be available soon.</small></li>
 					</ul>
@@ -373,16 +483,16 @@ th{
 						</ul>-->
 				</div>
 				<div class="col-md-4 col-sm-12">
-					<h4 class="camp-subhead" style="margin:10px 10px 30px 10px; text-align:center;">
+					<h4 class="camp-subhead">
 						CAMP PROGRAM</h4>
-					<ul style="text-align: center; list-style: none;">
+					<ul class="info-list">
 						<li>
 							Communication plan will be available soon.</li>
 					</ul>
 				</div>
 			</div>
 			<small><!-- <img alt="Supercompute Deep Earth: 2015 Gordon Bell Prize Winner" class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1484428/deep-earth.png" style="margin:0px; padding:0px; width:100%;" alt="Camp FAQs"/> --></small>
-			<h2 class="camp-subhead" style="margin:75px 0px 50px 0px; text-align:center;">
+			<h2 class="camp-subhead">
 				Frequently Asked Questions</h2>
 			<div aria-multiselectable="table" class="panel-group" id="dates" role="tablist">
 				<!-- BASICS -->
@@ -571,7 +681,7 @@ th{
 				</div>-->
 				<!-- PARTICIPATION -->
 				<!--<div class="panel panel-default">
-					<div class="panel-heading" id="dismissal" role="tab" style="border-bottom: 0px none;">
+					<div class="panel-heading" id="dismissal" role="tab">
 						<h4 class="panel-title">
 							<a aria-controls="dismissal-answer" aria-expanded="true" class="collapsed" data-parent="#dismissal" data-toggle="collapse" href="#dismissal-answer" role="button"> <b>Q</b>: May students leave campus? </a></h4>
 					</div>
@@ -581,7 +691,7 @@ th{
 					</div>
 				</div>
 				<div class="panel panel-default">
-					<div class="panel-heading" id="early-dismissal" role="tab" style="border-bottom: 0px none;">
+					<div class="panel-heading" id="early-dismissal" role="tab">
 						<h4 class="panel-title">
 							<a aria-controls="early-dis-answer" aria-expanded="true" class="collapsed" data-parent="#early-dismissal" data-toggle="collapse" href="#early-dis-answer" role="button"> <b>Q</b>: Can I leave the camp early? </a></h4>
 					</div>
@@ -591,7 +701,7 @@ th{
 					</div>
 				</div>
 				<div class="panel panel-default">
-					<div class="panel-heading" id="camp-visitors" role="tab" style="border-bottom: 0px none;">
+					<div class="panel-heading" id="camp-visitors" role="tab">
 						<h4 class="panel-title">
 							<a aria-controls="visitors" aria-expanded="true" class="collapsed" data-parent="#camp-visitors" data-toggle="collapse" href="#visitors" role="button"> <b>Q</b>: Can I have visitors during Code@TACC Cybersecurity?</a></h4>
 					</div>
@@ -638,7 +748,7 @@ th{
 		<div class="dress-code col-sm-12">
 			<!-- <p style="font-size: 5em; text-align: center;">
 				<i class="fa fa-ban" aria-hidden="true"></i></p> -->
-			<h2 class="camp-subhead" style="margin:75px 0px 50px 0px; text-align:center;">
+			<h2 class="camp-subhead">
 				TACC Dress Policy</h2>
 			<p>
 				Participants have the right to dress as they choose as long as their dress meets the approved dress and grooming regulations, does not disrupt activities, is not obscene or defamatory, and does not endanger the physical health or safety of themselves or others.
@@ -668,9 +778,9 @@ th{
 	</div>
 	<div class="row">
 		<div class="col-sm-12">
-			<h2 class="camp-subhead" style="margin:75px 0px 50px 0px; text-align:center;">
+			<h2 class="camp-subhead">
 				Funding</h2>
-			<p style="text-align:center">
+			<p class="camp-aside">
 				The camp was funded by the National Security Agency and the National Science Foundation.</p>
 			<!-- Gallery removed 2020-09 for "UTS 122 Guidelines […]"--><!-- SEE: https://www.utsystem.edu/sites/policy-library/policies/uts-122-guidelines-web-site-solicitations --><!--<style id="o-gallery-styles" type="text/css">
 	/*
