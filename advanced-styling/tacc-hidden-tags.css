@@ -1,0 +1,3 @@
+/* Ensure component is invisible when not editing page */
+.signed-out .tacc-hidden-tags,
+.controls-hidden .tacc-hidden-tags { display: none; }

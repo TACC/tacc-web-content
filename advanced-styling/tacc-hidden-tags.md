@@ -19,5 +19,5 @@ Ensure that a "Web Content Display" can be hidden from website users.
 3. From the "WEB CONTENT DISPLAY" toolbar, click wrench icon a.k.a. "Options".
 4. From the dropdown menu, click "Look and feel".
 5. Via the tab navigation, open "Advanced Styling".
-6. In "Enter your custom CSS class names.", enter "tacc-hidden-style"
-7. In "Enter your custom CSS.", paste the contents of `./tacc-hidden-style.css`.
+6. In "Enter your custom CSS class names.", enter "tacc-hidden-tags"
+7. In "Enter your custom CSS.", paste the contents of `./tacc-hidden-tags.css`.
