@@ -1,0 +1,4 @@
+/* FAQ: Add "__unique_class_name__" to "Enter your custom CSS class names." */
+
+/* Ensure component has no height when not editing page */
+:not(.controls-visible) .__unique_class_name__ .portlet-borderless-container { min-height: 0; }
