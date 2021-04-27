@@ -1,14 +1,8 @@
 <!-- Hide this "Web Content Display" using Advanced Styling -->
 <!-- SEE: https://github.com/TACC/tacc-web-content/blob/master/advanced-styling/tacc-hidden-tags.md -->
 <code>Scripts for 2021 "Education - …" Pages</code>
-<script>
-/* Define local paths that redirect to external URLs */
-/* NOTE: This is ONLY necessary for old CMS sites */
-/* EXAMPLE: If a redirect to [https://3dem.org/atlas/] appears as [/atlas/],
-            then add '/atlas/' to this list */
-/* SEE: https://www.w3schools.com/js/js_arrays.asp */
-window.redirectPaths = ['/atlas/', 'another-path'];
-</script>
+<!-- Automatically and intelligently open external links in new window -->
+<!-- SEE: https://github.com/TACC/Core-CMS/blob/9f274af/taccsite_cms/snippets/gh-7-js-ext-link-open-in-new-tab.html -->
 <script>
 /* Automatically find external links and set `target="_blank"` */
 (function setTargetForExternalLinks(document) {
@@ -32,11 +26,15 @@ window.redirectPaths = ['/atlas/', 'another-path'];
     /**
      * Set external links to open in new tab
      * @param {array.<string>} redirectPaths - A list of relative URLs that shoul be treated like external URLs
+     * @param {HTMLElement} [scope=document] - The element within which to search for links
      */
-    function findLinksAndSetTargets(redirectPaths) {
-        const links = document.getElementsByTagName('a');
+    function findLinksAndSetTargets(redirectPaths, scope = document) {
+        const links = scope.getElementsByTagName('a');
         [ ...links ].forEach( function setTarget(link) {
             if ( ! link.href) {
+              return false;
+            }
+            if (link.href.indexOf('javascript') === 0) {
               return false;
             }
 
@@ -44,8 +42,13 @@ window.redirectPaths = ['/atlas/', 'another-path'];
                 return doPathsMatch(path, link.pathname);
             });
             const isExternal = (link.origin !== document.location.origin);
+            const isIndex = ( (link.host === document.location.host)
+                            && link.pathname === '/');
+            const shouldOpenInNewWindow = (
+                ! isIndex && (isExternal || hasExternalRedirect)
+            );
 
-            if (isExternal || hasExternalRedirect) {
+            if ( shouldOpenInNewWindow ) {
                 if (link.target !== '_blank') {
                     link.target = '_blank';
                     console.debug(`Link ${link.href} now opens in new tab`);

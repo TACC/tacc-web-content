@@ -1,10 +1,18 @@
 <!-- Hide this "Web Content Display" using Advanced Styling -->
-<!-- SEE: https://github.com/TACC/tacc-web-content/blob/master/advanced-styling/tacc-hidden-style.md -->
+<!-- SEE: https://github.com/TACC/tacc-web-content/blob/master/advanced-styling/tacc-hidden-tags.md -->
 <code>Styles for 2021 "Education - …" Pages</code>
 <style type="text/css">
 .edu-list--major {
     list-style-type: none;
     margin-left: 0;
+}
+.edu-list--major a[target="_blank"]::after {
+    display: inline-block;
+    content: '[↗]';
+    margin-left: 0.3em;
+    font-size: x-small;
+    font-weight: bold;
+    vertical-align: super;
 }
 .edu-list--major a small {
     display: inline-block;
