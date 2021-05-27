@@ -1,0 +1,952 @@
+<script src="https://portal.tacc.utexas.edu/portal-theme/js/jquery.min.js" type="text/javascript"></script><!--<script src="https://portal.tacc.utexas.edu/portal-theme/js/jquery.toc.min.js" type="text/javascript"></script>--><script src="https://portal.tacc.utexas.edu/portal-theme/js/bootstrap.js" type="text/javascript"></script><script src="https://portal.tacc.utexas.edu/portal-theme/js/auto-enable-toc.js" type="text/javascript"></script><script>
+$('#toc').toc({
+    'selectors': 'h1,h2,h3', //elements to use as headings
+    'container': 'mybody', //element to find all selectors in
+    'smoothScrolling': true, //enable or disable smooth scrolling on click
+    'prefix': 'toc', //prefix for anchor tags and class names
+    'onHighlight': function(el) {}, //called when a new section is highlighted
+    'highlightOnScroll': true, //add class to heading that is currently in focus
+    'highlightOffset': 100, //offset to trigger the next headline
+    'anchorName': function(i, heading, prefix) { //custom function for anchor name
+        return prefix+i;
+    },
+    'headerText': function(i, heading, $heading) { //custom function building the header-item text
+        return $heading.text();
+    },
+'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+  return $heading[0].tagName.toLowerCase();
+}
+});</script>
+<style type="text/css">
+#toc {
+    top: 135px;
+    left: 0px;
+    height: 500px;
+    position: fixed;
+    background: none;
+    /*box-shadow: inset -5px 0 5px 0px #000; */
+    width: 85px;
+    padding-top: 0px;
+    color: #999;
+	white-space:nowrap;
+	overflow:auto;
+}
+
+#toc ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#toc li {
+    padding: 0px 0px 0px 5px;
+	line-height:1.4;
+	font-size:13px;
+}
+
+#toc a {
+    color: #999;
+    text-decoration: none;
+    display: block;
+}
+
+#toc .toc-h2 {
+    padding-left: 10px;
+}
+
+#toc .toc-h3 {
+    padding-left: 20px;
+}
+
+#toc .toc-active {
+    background: #f7f3f2;
+    /*box-shadow: inset -5px 0px 10px -5px #000;*/
+}
+
+.toc-toggle {
+	color:#FFF;
+	background-color:#FFF;
+	height:0px;
+	margin:0px;
+	padding:0px;
+	border:none;
+}
+
+#timeline-container{
+	margin:10px 10px 0px 10px;
+	padding:0px 0px 0px 85px;
+}
+
+#timeline-wrapper{
+	margin:0px auto 0px auto;
+	padding:0px 5px;
+	max-width:1000px;
+}
+
+h1.h1timeline{
+	font-size:40px;
+	color:#666;
+	border-bottom:#abb9d3 solid 1px;
+	width:225px;
+	text-align:center;
+	line-height:2;
+	margin:40px 0px 25px 0px;
+	font-weight:normal;
+	font-family: "HelveticaNeueLTStd-BdCn","Helvetica Neue","Helvetica",sans-serif;
+}
+
+p.h1other{
+	font-size:30px;
+	color:#666;
+	border-bottom:#039 solid 1px;
+	width:225px;
+	text-align:center;
+	line-height:2;
+	margin:40px 0px 25px 0px;
+	font-weight:bold;
+	font-family: "HelveticaNeueLTStd-BdCn","Helvetica Neue","Helvetica",sans-serif;
+}
+
+
+p.h3timeline{
+	font-size:20px;
+	color:#666;
+	text-align:center;
+	font-family: "HelveticaNeueLTStd-BdCn","Helvetica Neue","Helvetica",sans-serif;
+}
+
+p.ptimeline{
+	font-size:15px;
+	text-align:center;
+	color:#999;
+	width:70%;
+	font-family: "Helvetica Neue","Helvetica",sans-serif;
+}
+
+.bgimage::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, transparent 0%, #000 100%);
+  margin-top: -150px;
+  height: 150px;
+  width: 100%;
+  content: '';
+}
+
+.overlay-text{
+	margin:0px;
+	background:#000;
+	color:#FFF;
+	height: 80px;
+	padding:0px 10px 10px 10px;
+	font-size:11px;
+	line-height:1.1;
+	font-family: "Helvetica Neue","Helvetica",sans-serif;
+}</style>
+<div id="mybody">
+	<!-- Header image and text -->
+	<div id="timeline-container">
+		<div class="row" style="margin:0px; padding:0px;">
+			<div class="col-sm-12" style="margin:0px; padding:0px; background-image:url(https://www.tacc.utexas.edu/documents/1084364/1617763/timeline-header-image.jpg/);">
+				<center>
+					<div>
+						<a href="/about/timeline#2001"><img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/Timeline-Header-Text.jpg/" style="margin:0; padding:0px; border:none;" width="100%" /></a></div>
+				</center>
+			</div>
+		</div>
+		<div id="timeline-wrapper">
+			<div id="year2001">
+				<center>
+					<h1 class="h1timeline" id="2001">
+						2001<a href="#2001">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="h3timeline">
+							TACC Rebooted</p>
+						<center>
+							<p class="ptimeline">
+								New leadership is hired to build a leading advanced computing center at The University of Texas at Austin from the staff and resources of the university's high performance computing facility.</p>
+						</center>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2001-Cray.png/" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">TACC's First System</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC receives a 272-processor, liquid-cooled Cray T3E transitioned from the San Diego Supercomputer Center through the NPACI project.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2001-Vislab.png/" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">TACC Visualization Lab Opens</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							The ACES Visualization Laboratory on UT Austin's main campus is assumed by TACC.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2001--></div>
+			<div id="year2002">
+				<center>
+					<h1 class="h1timeline" id="2002">
+						2002<a href="#2002">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2002-Santa-Rita.png/38a54701-289c-4f17-839c-55e2e58c8843?t=1528236182172" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">TACC Grows to Multiple Systems</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							<em>Longhorn</em>: A Power4 system with a peak performance of 300 gigaflops.<br />
+							<em>Tejas</em>: TACC's first production Linux/x86 cluster<br />
+							<em>Santa Rita</em>: An Intel Itanium-based cluster</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2002-HiPCAT.png/" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">HiPCAT Established</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							The High Performance Computing Across Texas (HiPCAT) consortium is established by researchers at Rice University, Texas A&amp;M, Texas Tech, University of Houston, and The University of Texas at Austin.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2002--></div>
+			<div id="year2003">
+				<center>
+					<h1 class="h1timeline" id="2003">
+						2003<a href="#2003">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="h3timeline">
+							Lonestar2 Deployed</p>
+						<center>
+							<p class="ptimeline">
+								The Dell-Cray Linux cluster is installed by TACC. It is the most powerful system in the National Partnership for Advanced Computational Infrastructure (NPACI) and the 4th most powerful supercomputer for U.S. academic research at the time, with a peak performance of 3.67 teraflops.</p>
+						</center>
+						<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2003+Lonestar2.png/8bb86348-d619-45dc-bf11-bb5ade65840a?t=1526501716000" width="100%" />
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2003-TeraGrid.png/d1f707a0-fc64-4187-864d-a82edfe49434?t=1526501728603" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">TACC joins TeraGrid</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							The National Science Foundation (NSF) awards TACC a partnership in the TeraGrid, the world's largest, distributed infrastructure for open scientific research.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2003-TUP.png/833e9032-32c3-4fe0-a941-d6a24351508d?t=1528237347083" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">TACC User Portal</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							Developed and deployed by TACC staff, the portal allows researchers to log into and interact with TACC resources remotely.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2003--></div>
+			<div id="year2004">
+				<center>
+					<h1 class="h1timeline" id="2004">
+						2004<a href="#2004">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="h3timeline">
+							GRACE Research in Climate Effects</p>
+						<center>
+							<p class="ptimeline">
+								The Gravity Recovery and Climate Experiment (GRACE) at UT's Center for Space Research is featured in <em>Science</em> magazine for work using TACC resources to analyze data and understand the Earth's changes in mass distribution resulting from climate effects.</p>
+						</center>
+						<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2004+Grace+Tapley.png/b9733bc6-f38f-47dc-adc6-2e859d24cdc8?t=1526501741442" width="100%" />
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2004-Maverick.png/b260a599-7dc4-4f2c-b12e-6ea4f12998d5?t=1528236138002" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Maverick1 Deployed</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							A unique high-performance, large shared memory Sun system provides remote 3D graphics and data-intensive compute resources for research like global weather prediction and homeland security.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2004-Lonestar.png/1299912b-fa34-479e-96c6-6d17a373f1c3?t=1526501752961" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Biomedical Research</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC places a staff expert at the UT Southwestern Medical Center to work directly with biomedical researchers, helping them use the computing resources at TACC, including Lonestar and Maverick.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing yeah--></div>
+			<div id="year2005">
+				<center>
+					<h1 class="h1timeline" id="2005">
+						2005<a href="#2005">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="h3timeline">
+							New Building</p>
+						<center>
+							<p class="ptimeline">
+								The UT Board of Regents approves a new building at the J.J. Pickle Research Campus that provides new offices and machine room space for the rapidly growing center.</p>
+						</center>
+						<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1569910/2005-Groundbreaking.png" width="100%" />
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2005--></div>
+			<div id="year2006">
+				<center>
+					<h1 class="h1timeline" id="2006">
+						2006<a href="#2006">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2006-Lonestar.png/3e4b166d-d166-4c44-8770-26e8103d330f?t=1526501803888" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Lonestar3 Deployed</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							In partnership with UT System and available to researchers at all 15 UT institutions, Lonestar3 debuts as the most powerful academic supercomputer in the U.S. and the 12th on the Top 500 list.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2006-Gravitational-Waves.png/aaf40148-069e-48ee-8818-0a5547ff8be5?t=1526501791904" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Gravitational Waves</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							Dr. Richard Matzner, a UT physicist, uses Lonestar3 to simulate binary black hole mergers and aid the search for gravitational waves.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2006--></div>
+			<div id="year2007">
+				<center>
+					<h1 class="h1timeline" id="2007">
+						2007<a href="#2007">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2007-STAR.png/9d57f474-3fb4-4e3d-b032-c11ab6896ac6?t=1526501829852" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">STAR Program</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							The Science and Technology Affiliates for Research (STAR) program, instituted by TACC, supports and enhances private sector R&amp;D using advanced computing technologies.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2007-First-Billion.png/9ae68ed4-d383-4fc6-89ce-0009a7eee786?t=1526501817364" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">First Billion Years of the Universe</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							Using TACC's resources, Volker Bromm and his team model the first billion years of the universe, shedding light on the cosmic past and future. The work is featured in <em>Scientific American</em>.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2007--></div>
+			<div id="year2008">
+				<center>
+					<h1 class="h1timeline" id="2008">
+						2008<a href="#2008">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="h3timeline">
+							Ranger Deployed</p>
+						<center>
+							<p class="ptimeline">
+								TACC launches the world's most powerful supercomputer for open science research. With a peak performance of 579.4 teraflops, Ranger is five times more capable than any open system in the TeraGrid.</p>
+						</center>
+						<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2008+Ranger.jpg/c90c386c-159c-4f78-b781-3b9127b4f7be?t=1526501846077" width="100%" />
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2008-Comp-Bio.png/5288c917-4d2d-4df1-a601-73129f85bde7?t=1526501859430" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Computational Biology</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							The program is established to provide the life sciences research community with computational tools and expertise.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2008-Stallion.png/24a15011-2e3d-4853-a389-9baea7aae9fb?t=1526501874973" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Stallion Deployed</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							The ACES Visualization Lab is upgraded and the world's highest resolution tiled display, with 75 screens and a total of 307 megapixels, is installed.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2008--></div>
+			<div id="year2009">
+				<center>
+					<h1 class="h1timeline" id="2009">
+						2009<a href="#2009">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2009-Corral.png/0ed117d9-6e9e-42c3-a4e8-9513e036f7af?t=1526501891717" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Corral Deployed</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							A Dell/Data Direct Networks high performance storage system is launched for hosting and managing digital data collections and services.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2009-H1N1.png/c1a255a2-5c46-438e-98f1-e023a736c091?t=1526501906711" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">H1N1 Research</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							Using Ranger, Dr. Klaus Schulten and colleagues develop the first atomistic model of the H1N1 virus and discover how mutations in viral proteins lead to drug resistance.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2009-iPlant.png/f8ee0a78-e50b-4699-be41-b27bff0d2796?t=1526501921012" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">iPlant Collaborative</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC begins major involvement with the iPlant Collaborative, a $50 million, 5-year project to create the cyberinfrastructure needed to tackle Grand Challenge questions in plant biology.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+                    <div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2009-M87.jpg/a1e897ec-1b9e-4092-abfe-d75869b71e34?t=1528320583745" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Texas-Sized Supercomputer Finds Massive Black Hole</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							Astronomers use TACC's Lonestar supercomputer to determine that the black hole at the heart of M87, one of the largest nearby galaxies, is two to three times more massive than previously thought.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2009--></div>
+			<div id="year2010">
+				<center>
+					<h1 class="h1timeline" id="2010">
+						2010<a href="#2010">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2010-Longhorn.png/993f0e7b-262d-4cd2-bbda-9fe1dc5037f2?t=1526501968942" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Longhorn Deployed</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC launches Longhorn, the largest hardware-accelerated interactive visualization cluster in the world, as well as the Longhorn Visualization Portal, a remote and collaborative tool for the national science community.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2010-Arts-Humanities.png/62e5c8b7-19d6-45ac-8dd0-430493cab8fb?t=1526501935946" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Arts &amp; Humanities</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC's initiative to support digital media, arts and humanities offers the power of advanced computing technologies to enable these communities to study and exhibit digital works.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="h3timeline">
+							Gulf of Mexico Oil Spill</p>
+						<center>
+							<p class="ptimeline">
+								To protect property and wildlife, researchers and TACC staff collaborate to produce and visualize 3D models of the oil spill in the Gulf of Mexico using TACC resources.</p>
+						</center>
+						<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1569910/2009OilSpill_Kubach_vega.png" width="100%" />
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2010-Cover-Science.png/581b7b74-d2a2-499e-b61f-85fdf39a9069?t=1526501950558" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Cover of <em>Science</em></span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							Using Ranger, Omar Ghattas and his associates produce an unprecedented view of plate tectonics and the forces that drive it. The research appears on the cover of <em>Science</em>.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+                    <div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2010-SCEC.jpg/b0940207-f9b5-4202-9aab-07292066cfeb?t=1528320953868" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">SCEC CyberShake Project</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC teams up with the Southern California Earthquake Center (SCEC) to create next-generation seismic hazard predictions that are more comprehensive than anything that had been created before.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2010--></div>
+			<div id="year2011">
+				<center>
+					<h1 class="h1timeline" id="2011">
+						2011<a href="#2011">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2011-NARA.png/9e549f41-9bed-40c7-9cba-5c08da11b7da?t=1526502014584" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">NARA Collaboration</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC collaborates with the National Archives and Records Association (NARA) to create visualization tools for 21st Century digital archives.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2011-Japan.png/278d81f8-446a-41fb-95fc-3af68ba649da?t=1528236082410" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">600,000 Hours Donated to Japan</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							In the wake of the tsunami and earthquake in Japan, TACC donates 600,000 compute hours to researchers to simulate the potential environmental impact of radiation in the air and water.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2011-Lonestar.png/00406e95-6608-4b76-96ae-f90cecb38786?t=1526501999766" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Lonestar4 Deployed</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							The NSF-awarded, 302 teraflop Dell/Intel cluster provides shared memory computing and remote visualization capabilities.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2011-XSEDE.png/17211a1f-5a15-4009-994b-fa671ade0a5b?t=1526502027582" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">XSEDE</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC is selected as one of the leaders of The eXtreme Science and Engineering Discovery Environment (XSEDE) project.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2011--></div>
+			<div id="year2012">
+				<center>
+					<h1 class="h1timeline" id="2012">
+						2012<a href="#2012">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2012-Machine-room.png/993afa62-c8d9-49a9-b726-fe58b55709df?t=1526502061197" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Construction Completed</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC completes an 11,000-square-foot machine room, a new utilities plant, thermal energy storage, and a new seminar room.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2012-Hurricane.png/b3ee8755-5b9c-4637-9fe5-b70747ad06ea?t=1528235415327" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Hurricane Predictions Improve</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							Using Ranger, researchers improve intensity predictions for hurricanes by up to 40% over National Hurricane Center forecasts.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2012--></div>
+			<div id="year2013">
+				<center>
+					<h1 class="h1timeline" id="2013">
+						2013<a href="#2013">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2013-Stampede.png/3584f0bc-0249-415b-8fcc-1f1726eb39c1?t=1526502075363" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">New Stampede Deployed</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							At nearly 10 petaflops, Stampede goes into production on January 7. TACC staff designed, built and deployed Stampede, working closely with Dell, Intel and academic partners.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2013-Stockyard.png/9c5faee9-001e-4aec-9e86-6d08fdf4c47e?t=1526502088594" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Stockyard Deployed</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							A massive, 20 petabyte global file system is connected to all of TACC's computing and visualization systems.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2013--></div>
+			<div id="year2014">
+				<center>
+					<h1 class="h1timeline" id="2014">
+						2014<a href="#2014">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="h3timeline">
+							Brain Tumors and Alzheimer's Disease</p>
+						<center>
+							<p class="ptimeline">
+								Scientists at the Houston Methodist Research Institute use Lonestar and Stampede to analyze data of brain tumors and Alzheimer's disease hoping to lead to better treatment options and new medicines.</p>
+						</center>
+						<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1609411/Brain616x223.png" width="100%" />
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2014-Maverick.png/ee7257dc-48b4-4ddc-83f6-a9fce75fd174?t=1526502116108" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Maverick Deployed</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC adds a new HP/NVIDIA interactive visualization and data analytics system to its comprehensive suite of resources.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2014-Gateways.png/b8dedebc-7581-401b-87e7-f11b9c372d6c?t=1526502102779" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Science Gateways Released</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC releases the Agave API, a cloud-based platform for gateway development, and Gateway DNA, a collection of open source components enabling the rapid development of science gateways.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2014--></div>
+			<div id="year2015">
+				<center>
+					<h1 class="h1timeline" id="2015">
+						2015<a href="#2015">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2015-Wrangler.png/ab2ce00d-c387-49d2-b9fe-5834ad23745b?t=1526503655446" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Data-Intensive Supercomputer Deployed</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							Wrangler, a groundbreaking new system, enables researchers to tackle the most complex, data science challenges.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2015-Chameleon.png/ffa2130a-196b-4a1f-a380-90a1848d949f?t=1526503613398" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Chameleon Cloud Computing Testbed Launched</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							A new configurable, large-scale environment lets computer scientists develop and experiment with novel cloud architectures and pursue new applications.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2015-DesignSafe.png/1e0ea822-e198-464b-b17e-8b5453c573c4?t=1526503628722" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Developing DesignSafe-CI</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC teams with UT's Cockrell School of Engineering to create the natural hazards engineering portal, DesignSafe, that will help the U.S. design more resilient buildings, levees and other public infrastructure.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2015-Gordon-Bell.png/70916f7c-b097-4e8c-a7eb-989d3f1dc0eb?t=1526503642576" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Gordon Bell Prize at SC15</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							UT geologists use Stampede1 to model mantle convection and win prize for outstanding achievement in high performance computing.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2015--></div>
+			<div id="year2016">
+				<center>
+					<h1 class="h1timeline" id="2016">
+						2016<a href="#2016">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2016-Lonestar.png/937fcae9-b5e8-4351-9bca-0036bfb1db74?t=1526503694838" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">A Texas-sized Resource for State Researchers</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC deploys its second petascale system, Lonestar5, to advance science and engineering research across the state of Texas.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2016-Jetstream.png/f66ab7c8-89cc-4c1d-a2ba-de378323e9af?t=1526503682097" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Cyberinfrastructure Enters the Cloud</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC partners with Indiana University to deploy Jetstream, the first NSF-supported cloud resource for science and engineering research.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="h3timeline">
+							LIGO Confirms Gravitational Waves</p>
+						<center>
+							<p class="ptimeline">
+								Researchers use TACC supercomputers to confirm the first discovery of gravitation waves by detectors at the Laser Interferometer Gravitational-Wave Observatory (LIGO).</p>
+						</center>
+						<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1569910/Grav-Waves-lg.png" width="100%" />
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2016-Hikari.png/dc23a4a0-3940-4b23-82fa-90736ddb9ecf?t=1526503668898" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Hikari: Energy-Efficiency Computing</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC debuts Hikari, the first supercomputer in the U.S. that runs on solar power and high voltage direct current, in partnership with Japan.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2016-building.jpg/f061f114-0eeb-4244-a71e-a7ae995d23f2?t=1526504048940" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">TACC Expands</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							On its 15th anniversary, TACC dedicates the new Advanced Computing Building, which includes space for growing staff and an experimental Visualization Lab.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2016--></div>
+			<div id="year2017">
+				<center>
+					<h1 class="h1timeline" id="2017">
+						2017<a href="#2017">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="h3timeline">
+							Stampede2 Debuts</p>
+						<center>
+							<p class="ptimeline">
+								TACC launches Stampede2, the fastest supercomputer at any university in the U.S. and 12th most powerful in the world.</p>
+						</center>
+						<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1569910/Group-Stampede-lg.png" width="100%" />
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2017-Heart.png/7bf6eb97-d882-43f0-aaef-8b02fcd59d2b?t=1526503708307" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Modeling the Heart</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							Stampede helps Johns Hopkins and Ohio State research identify a new metric to predict blood clots in the heart.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2017-NASA.png/9f6337cc-9cb3-41b1-ab70-b5a75f5e170b?t=1526503720216" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">TACC Partners with NASA</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC signs five-year advanced computing partnership with NASA Jet Propulsion Laboratory to provide cyberinfrastructure and expertise.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2017--></div>
+
+                <div id="year2018">
+				<center>
+					<h1 class="h1timeline" id="2018">
+						2018<a href="#2018">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="h3timeline">
+							Announcing Frontera</p>
+						<center>
+							<p class="ptimeline">
+								TACC wins $60 million award from the NSF to build and deploy the fastest supercomputer at any U.S. university and among the most powerful in the world. </p>
+						</center>
+						<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2018-Frontera_black.png" width="100%" />
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2018-tx-8.jpg/2798b3f8-f180-420f-bf56-05438980decb?t=1541721244387" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">TACC Teams with DARPA</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC develops a user-friendly, collaborative computing environment to help researchers in science domains where firm, predictive models don't exist, such as synthetic biology. </p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2018-chemical-attacks.jpg/b511a7df-e1c4-47b1-9ab6-0baf9c8836e1?t=1541721207504" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Preparing for Chemical Attacks</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							Researchers from The University of Texas San Antonio use Stampede2 to develop models that predict how chemical weapons disperse in the atmosphere.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2018--></div>
+			<div id="year2019">
+				<center>
+					<h1 class="h1timeline" id="2019">
+						2019<a href="#2019">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="h3timeline">
+							Fastest Academic Supercomputer in the World</p>
+						<center>
+							<p class="ptimeline">
+								Frontera is the fastest supercomputer at any U.S. university and the fifth most powerful in the world.</p>
+					  </center>
+					  <img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2019-frontera.jpg/709aa243-7e23-4b26-802f-027bbd878548?t=1589836208367" width="100%" />
+						<p>&nbsp;
+					  </p>
+				  </div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2019-tapis.jpg/467e13b8-33f9-4224-944b-4e4b4caf888f?t=1589778460239" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Tapis Platform Development</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							 TACC, UT Austin, University of Hawaii create open source API platform for powering research. </p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2019-m87.png/6395a5e0-33a8-451d-a11a-9f864824f746?t=1589778446615" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">Peeling Back the Darkness of M87</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							TACC systems play pivotal role in Event Horizon Telescope's first-ever black hole image.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2019--></div>
+			<div id="year2020">
+				<center>
+					<h1 class="h1timeline" id="2020">
+						2020<a href="#2020">&nbsp;</a></h1>
+				</center>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="bgimage">
+							<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2020-whgov.png/f85b6c30-d5d9-4f1f-90f0-81af2df363bc?t=1589778490607" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;">TACC Supercomputers Join COVID-19 Fight</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							Frontera, Stampede2 key resources within the White House-led COVID-19 HPC Consortium.</p>
+						<p>&nbsp;
+							</p>
+					</div>
+					<div class="col-sm-6">
+					  <div class="bgimage">
+						<img class="img-responsive" src="https://www.tacc.utexas.edu/documents/1084364/1620941/2020-corona.jpg/9c868192-43de-4019-bb86-6d48fdba2fc4?t=1589778475791" width="100%" /></div>
+						<p class="overlay-text">
+							<span style="font-size:14px; font-weight:bold;"> All-Atom Coronavirus  Simulations Completed on Frontera&nbsp;</span><br />
+							<span style="color:#000; font-size:5px;">.</span><br />
+							Amaro Lab's tests are first step in developing full envelope of 200 million atoms. </p>
+						<p>&nbsp;
+							</p>
+					</div>
+				</div>
+				<!--closing 2020--></div>
+
+			<!-- closing timeline-wrapper --></div>
+		<!-- closing timeline-container --></div>
+	<!-- closing my body--></div>
