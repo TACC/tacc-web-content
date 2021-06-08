@@ -39,7 +39,7 @@ Into the appropriate directory add the content from the respective source.
 2. Compare CMS web content to repository file(s) content.
     1. Replace repository file(s) content with web content.
     2. Compare differences by reviewing the `git diff` of the repository file(s).
-    3. Resolve unexpected conflicts (for help, see [example conflicts][doc-conflicts]).
+    3. Resolve unexpected conflicts (for help, see "Known Issues").
 3. Update repository file(s) content.
 4. Test repository file(s) content as CMS web content.
 5. Copy final working CMS web content to repository file(s).
