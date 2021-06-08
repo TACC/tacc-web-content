@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<root>
+	<dynamic-element name="lead" type="text_box" index-type="" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[]]></entry>
+			<entry name="label"><![CDATA[Lead]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element name="byline" type="text" index-type="" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[]]></entry>
+			<entry name="label"><![CDATA[Byline]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element name="publishedDate" type="text" index-type="text" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[]]></entry>
+			<entry name="label"><![CDATA[Published Date]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element name="content" type="text_box" index-type="" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[]]></entry>
+			<entry name="label"><![CDATA[Content]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element name="mainImage" type="image" index-type="" repeatable="false">
+		<dynamic-element name="caption" type="text_box" index-type="text" repeatable="false"/>
+	</dynamic-element>
+	<dynamic-element name="images" type="image" index-type="text" repeatable="true">
+		<dynamic-element name="caption" type="text_box" index-type="text" repeatable="false"/>
+	</dynamic-element>
+	<dynamic-element name="callouts" type="text_box" index-type="" repeatable="true">
+		<dynamic-element name="attribution" type="text_box" index-type="text" repeatable="false"/>
+	</dynamic-element>
+	<dynamic-element name="embeds" type="text_box" index-type="" repeatable="true">
+		<dynamic-element name="caption" type="text_box" index-type="text" repeatable="false"/>
+	</dynamic-element>
+</root>

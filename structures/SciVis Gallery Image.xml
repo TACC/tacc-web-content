@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<root>
+	<dynamic-element name="img-name" type="text" index-type="text" repeatable="false"/>
+	<dynamic-element name="large-src" type="document_library" index-type="" repeatable="false"/>
+	<dynamic-element name="thumb-src" type="document_library" index-type="" repeatable="false"/>
+	<dynamic-element name="alt" type="text" index-type="" repeatable="false"/>
+	<dynamic-element name="science" type="text_box" index-type="text" repeatable="false"/>
+	<dynamic-element name="visualization" type="text_box" index-type="" repeatable="false"/>
+	<dynamic-element name="creators" type="text_box" index-type="" repeatable="false"/>
+</root>

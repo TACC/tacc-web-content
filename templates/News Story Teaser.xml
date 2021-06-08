@@ -1,0 +1,11 @@
+<article class="news-story" role="article">
+  <header>
+    <div class="meta">
+      <p>Published on $publishedDate.data by $byline.data</p>
+    </div>
+  </header>
+
+  <section class="lead" role="contentinfo">
+    $reserved-article-description.data
+  </section>
+</article>

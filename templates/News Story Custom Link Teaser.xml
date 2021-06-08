@@ -1,0 +1,22 @@
+<article id="$reserved-article-id.data" class="news-story" role="article">
+
+<script type="text/javascript">
+try{
+jQuery("#$reserved-article-id.data").parent().parent().siblings(".asset-title" ).first().find("a:first-child").attr("href", "$News-Story-Custom-Link.getData()");
+} catch (e){
+    console.log(e);
+}
+</script>
+
+<input type="hidden" value="$News-Story-Custom-Link.getData()" />
+  <header>
+    <div class="meta">
+      <p>Published on $publishedDate.data by $byline.data</p>
+    </div>
+  </header>
+
+  <section class="lead" role="contentinfo">
+    $reserved-article-description.data
+  </section>
+
+</article>
