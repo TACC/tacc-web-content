@@ -67,7 +67,10 @@
 
     #if ( $mainImage && $mainImage.data != '' )
       <div class="main-image">
+
+      ## This should be in the <head>, but wbomar does not know how from here
       <meta property="og:image" content="$mainImage.data" />
+
       <img class="img-responsive" width="100%" src="$mainImage.data">
       #if ( $mainImage.caption && $mainImage.caption.data != '' )
         <div class="caption">$mainImage.caption.data</div>
