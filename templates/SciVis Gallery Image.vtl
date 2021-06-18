@@ -1,0 +1,106 @@
+<style>
+.grid {
+       background-color: #000000;
+}
+
+.asset-full-content.no-title {
+       width: 215px;
+       float: left;
+       background-color: #000000
+      
+}
+
+.thumb {
+      margin-left: -15px;
+      margin-bottom: -20px;
+      margin-top: 5px;
+      margin-right: -10px;
+}
+
+.portlet-asset-publisher .asset-full-content .asset-content {
+       
+       margin-right: 10px;
+       
+}
+
+.separator {
+       display: none;
+}
+
+.header-title {
+        display: none;
+}
+
+.name {
+       width: 200px;
+       margin-top: -40px;
+       background-color: #000000;
+       opacity: .6;
+       height: 40px;
+       color: #ffffff;
+       font-weight: 300;
+       font-size: 12px;
+       padding-left: 3px;
+}
+
+.thumb img {
+	border: none;
+	outline: none;
+	display: block;
+	position: relative;
+        width: 200px;
+        height:200px;
+}
+
+.showme {
+      display:none;
+      position:relative;
+      float:left;
+      width: 100%;
+      
+}
+
+.og-close {
+    float: right;
+    text-align: right;
+    font-size: 200%;
+    font-weight: 100;
+    margin-top: -60px;
+    position: relative;
+    z-index: 1000; 
+    
+}
+
+
+
+.close {
+   color:#555;
+}
+
+.close:hover {
+   color: #fff;
+}
+
+.science .visualization .creators {
+     color: #ccc;
+}
+
+
+</style>
+
+
+
+<div class="grid">
+     <div class="thumb">
+         
+          <a class="imglink" href="#$img-name.getData().toLowerCase().replace(" ", "-")"><img src ="${thumb-src.getData()}" alt="${alt.getData()}"/><div class="name">$img-name.getData()</div></a>
+             <div class="showme">
+                  <div class="img-name">$img-name.getData()</div>
+                   <span class="og-close"><div class="close">X</div></span>
+                  <div class="large-src"><img style="max-width: 100%;" src="${large-src.getData()}"/></div>
+                  <div class="science"><h6 style="display: inline; color: #fff;">Science Behind the Image - </h6>$science.getData()</div>
+                  <div class="visualization"><h6 style="display: inline; color: #fff;">Visualization Behind the Image - </h6>$visualization.getData()</div>
+                  <div class="creators">$creators.getData()</div>
+            </div>
+      </div>
+</div>

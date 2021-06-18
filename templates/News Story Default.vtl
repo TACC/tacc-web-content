@@ -1,0 +1,135 @@
+<style>
+.news-story .image, .news-story blockquote {
+  max-width: 50%;
+}
+
+.news-story .image.pull-left, .news-story blockquote.pull-left {
+  margin: 10px 10px 10px 0;
+}
+
+.news-story .image.pull-right, .news-story blockquote.pull-right {
+  margin: 10px 0 10px 10px;
+}
+
+.news-story .image.pull-center, .news-story blockquote.pull-center {
+  max-width: 100%;
+  margin: 10px 0 10px 10px;
+}
+
+.news-story blockquote.pull-right footer::before {
+  content: '\2014 \00A0';
+}
+
+.news-story blockquote.pull-right footer::after {
+  content: '';
+}
+
+.news-story .image,
+.news-story .embed {
+  position: relative;
+}
+
+.news-story .caption {
+  font-size: 0.8em;
+  position: absolute;
+  padding: 6px;
+  color: #fff;
+  background-color: #333;
+}
+
+.news-story blockquote {
+  font-family: "HelveticaNeueLTStd-LtCn","Helvetica Neue","Helvetica",sans-serif;
+  color: #039;
+  font-size: 24px;
+  border-right: 0;
+  border-left: 0;
+  text-align: left;
+  padding-left: 0.5em;
+}
+</style>
+
+<article class="news-story" role="article">
+  <header>
+    <div class="page-header">
+      #if ( $lead.data )
+        <p class="lead">$lead.data</p>
+      #end
+    </div>
+
+    <div class="meta">
+      <p>Published on $publishedDate.data by $byline.data</p>
+    </div>
+  </header>
+  <div class="addthis_inline_share_toolbox_w68y"></div>
+  <br/>
+  <br/>
+  <section class="main-article" role="main">
+
+    #if ( $mainImage && $mainImage.data != '' )
+      <div class="main-image">
+
+      ## This should be in the <head>, but wbomar does not know how from here
+      ## WARNING: This does not work; Facebook still reports it cannot find explciit og:image tag
+      <meta property="og:image" content="$mainImage.data" />
+
+      <img class="img-responsive" width="100%" src="$mainImage.data">
+      #if ( $mainImage.caption && $mainImage.caption.data != '' )
+        <div class="caption">$mainImage.caption.data</div>
+      #end
+      </div>
+    #end
+
+    #set ( $html = $content.data.replaceAll( "\n\n", "</p><p>" ) )
+
+    #foreach ( $image in $images.getSiblings() )
+      #set ( $idx = $velocityCount - 1 )
+      #if ( $image.caption && $image.caption.data != '' )
+        #set ( $html = $html.replaceAll( "\[image:$idx:([a-z]+)\]", "<div class=\"image pull-$1\"><img class=\"img-responsive\" src=\"$image.data\"><div class=\"caption\">$image.caption.data</div></div>" ) )
+      #else
+        #set ( $html = $html.replaceAll( "\[image:$idx:([a-z]+)\]", "<div class=\"image pull-$1\"><img class=\"img-responsive\" src=\"$image.data\"></div>" ) )
+      #end
+    #end
+
+    #foreach ( $callout in $callouts.getSiblings() )
+      #set ( $idx = $velocityCount - 1 )
+      #if ( $callout.attribution && $callout.attribution.data != '' )
+        #set ( $html = $html.replaceAll( "\[callout:$idx:([a-z]+)\]", "<blockquote class=\"pull-$1\">$callout.data<footer><cite>$callout.attribution.data</cite></footer></blockquote>" ) )
+      #else
+        #set ( $html = $html.replaceAll( "\[callout:$idx:([a-z]+)\]", "<blockquote class=\"pull-$1\">$callout.data</blockquote>" ) )
+      #end
+    #end
+
+    #foreach ( $embed in $embeds.getSiblings() )
+      #set ( $idx = $velocityCount - 1 )
+      #if ( $embed.caption && $embed.caption.data != '' )
+        #set ( $html = $html.replaceAll( "\[embed:$idx:([a-z]+)\]", "<div class=\"embed\">$embed.data<footer class=\"caption\">$embed.caption.data</footer></div>" ) )
+      #else
+        #set ( $html = $html.replaceAll( "\[embed:$idx:([a-z]+)\]", "<div class=\"embed\">$embed.data</div>" ) )
+      #end
+    #end
+
+    <p>$html</p>
+  </section>
+</article>
+
+<script>
+jQuery(function( $ ) {
+  function padCaption(caption) {
+    caption.parent().css( 'padding-bottom', caption.outerHeight() );
+  }
+  
+  $( '.news-story .caption' ).each(function( i,o ) {
+    var caption = $( o );
+    var img = caption.parent().find( 'img' );
+    if (! img.length || img[0].complete) {
+      padCaption(caption);
+    } else {
+      img.on('load', function() {
+        padCaption(caption);
+      });
+    }
+    $( window ).on( 'resize', function() { padCaption( caption ); } );
+  });
+});
+</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c9cebbe19698554"></script>

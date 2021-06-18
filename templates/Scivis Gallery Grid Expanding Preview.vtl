@@ -1,0 +1,413 @@
+<style>
+
+.main {
+       margin-left: 20px;
+       padding-top: 30px;
+       padding-bottom: 30px;
+       
+}
+
+.og-grid {
+	list-style: none;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+}
+
+.og-grid li {
+	display: inline-block;
+	margin: 10px 0px 0px 0px;
+	vertical-align: top;
+	height: 200px;
+}
+
+.og-grid li > a,
+.og-grid li > a img {
+	border: none;
+	outline: none;
+	display: block;
+	position: relative;
+        width: 200px;
+        height:200px;
+}
+
+.og-grid li.og-expanded > a::after {
+	top: auto;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-bottom-color: #222;
+	border-width: 15px;
+	left: 50%;
+	margin: -20px 0 0 -15px;
+}
+
+.small-title {
+       width: 200px;
+       margin-top: -40px;
+       background-color: #000000;
+       opacity: .7;
+       height: 40px;
+       color: #ffffff;
+       font-weight: 300;
+       font-size: 12px;
+}
+.og-expander {
+	position: absolute;
+	background: #000000;
+	top: auto;
+	left: 45px;
+        right: 45px;
+	/*width: 900px;*/
+	margin-top: 10px;
+	text-align: left;
+	height: 0;
+	overflow: auto;
+        border-width: 2px 0px 2px 0px;
+        border-color: #ccc;
+        border-style: groove;
+
+}
+
+.og-expander-inner {
+	padding: 20px 30px;
+	height: 100%;
+	overflow: visible;
+        padding-bottom: 10px;
+}
+
+.og-close {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.og-close::before,
+.og-close::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	height: 1px;
+	background: #888;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.og-close::after {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+        
+}
+
+.og-close:hover::before,
+.og-close:hover::after {
+	background: #fff;
+}
+
+.og-fullimg {
+	width: 100%;
+	float: left;
+	height: 65%;
+	overflow: hidden;
+	position: relative;
+        margin: 5px 0 10px 0;
+        transition:height 2s ease-out;
+}
+
+
+
+.og-details {
+	width: 95%;
+	float: left;
+	height: 35%;
+	overflow: visible;
+	position: relative;
+        margin-top: -20px;
+}
+
+.og-details {
+	padding: 0 40px 0 5px;
+	color: #fff;
+	/*overflow-y:auto;*/
+}
+
+.og-fullimg {
+	text-align: center;
+}
+
+.og-fullimg img {
+	display: inline-block;
+	max-height: 100%;
+	max-width: 100%;
+        /*min-height: 100%;*/
+}
+
+.og-details h3 {
+	font-weight: 300;
+	font-size: 30px;
+	padding: 40px 0 10px;
+	margin-bottom: 5px;
+        color: #999;
+}
+
+.og-details p {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 22px;
+	color: #999;
+}
+
+
+.og-details a {
+	font-weight: 700;
+	font-size: 16px;
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 10px 20px;
+	border: 3px solid #333;
+	display: inline-block;
+	margin: 30px 0 0;
+	outline: none;
+}
+
+.og-details a::before {
+	content: '\2192';
+	display: inline-block;
+	margin-right: 10px;
+}
+
+
+
+}
+.og-details a:hover {
+	border-color: #999;
+	color: #999;
+}
+
+.og-head {
+        width: 90%;
+	float: left;
+	height: 14%;
+	overflow: hidden;
+	position: relative;
+	color: #999;
+	padding-left: 5px;
+}
+
+.og-head h3 {
+	font-weight: 300;
+	font-size: 25px;
+	padding: 10px 0 10px;
+	margin-bottom: 5px;
+        color: #999;
+        line-height:90%
+}
+
+.arrow, .scilink, .vislink {
+	float: left;
+}
+
+
+#creator {
+    position: relative;
+    color: #fff;
+   /* bottom: 350px;
+    right: 0;
+    width: 45%;*/
+    padding: 10px 0 0 2px;
+    text-align: left;
+   /* background-color: #000;
+    opacity: .65;*/
+   padding-bottom: 10px;
+}
+
+#creator_title {
+    display: none;
+}
+
+#display_description {
+    position: relative;
+    /*bottom: 0px;
+    background-color: #000;
+    opacity: .75;*/
+}
+
+#display_description textarea {
+    width: 90%;
+    height: auto;
+    margin-bottom: 0px;
+    
+}
+
+
+
+.og-nav {
+        display: none;
+        /*width: 100%;
+	float: left;
+	height: 14%;
+	overflow: hidden;
+	position: relative;
+	padding-left: 7px;*/
+
+}
+
+.og-nav a {
+	font-weight: 700;
+	font-size: 10px;
+	color: #555;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 10px 10px;
+	border: 3px solid #555;
+	display: inline-block;
+	margin: 10px 0 0;
+	outline: none;
+}
+
+.og-nav a::before {
+	content: '\2192';
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.og-nav a:hover {
+	border-color: #999;
+	color: #999;
+}
+
+.og-loading {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #ddd;
+	box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -25px 0 0 -25px;
+	-webkit-animation: loader 0.5s infinite ease-in-out both;
+	-moz-animation: loader 0.5s infinite ease-in-out both;
+	animation: loader 0.5s infinite ease-in-out both;
+}
+
+@-webkit-keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+@-moz-keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+@keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+@media screen and (max-width: 830px) {
+
+	.og-expander h3 { font-size: 32px; }
+	.og-expander p { font-size: 13px; }
+	.og-expander a { font-size: 12px; }
+
+}
+
+@media screen and (max-width: 650px) {
+
+	.og-fullimg { display: none; }
+	.og-details { float: none; width: 100%; }
+	
+}
+
+
+.science::before {
+        content: "Science Behind the Image - ";
+        font-weight: bold;
+        font-size: 16px;
+        color: #ccc;
+}
+
+.vis::before {
+        content: "Visualization Behind the Image - ";
+        font-weight: bold;
+        font-size: 16px;
+        color: #ccc;
+}
+
+/*.vis {display: none;}*/
+.scilink {display: none;}
+</style>
+
+<link href="$componentcss.getData()" rel="stylesheet" type="text/css" />
+<!--<link href="$defaultcss.getData()" rel="stylesheet" type="text/css" />-->
+
+<script type="text/javascript" src="$modernizrjs.getData()"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<div class="container">
+<div class="main">
+<ul id="og-grid" class="og-grid">
+#foreach ($item in $image.getSiblings())
+   #foreach ( $itemData in $item.getChildren() )
+        #if ( "$itemData.getName()" == "href" )
+          #set ( $href = $itemData.getData() )
+
+        #elseif ( "$itemData.getName()" == "data-largesrc" )
+          #set ( $data-largesrc = $itemData.getData() )
+
+        #elseif ( "$itemData.getName()" == "data-title" )
+          #set ( $data-title = $itemData.getData() )
+
+        #elseif ( "$itemData.getName()" == "data-description" )
+          #set ( $data-description = $itemData.getData() )
+
+        #elseif ( "$itemData.getName()" == "data-science" )
+          #set ( $data-science = $itemData.getData() )
+
+        #elseif ( "$itemData.getName()" == "data-vis" )
+          #set ( $data-vis = $itemData.getData() )
+       
+        #elseif ( "$itemData.getName()" == "data-thumb" )
+          #set ( $data-thumb = $itemData.getData() )
+
+        #elseif ( "$itemData.getName()" == "alt" )
+          #set ( $alt = $itemData.getData() )
+        #end
+    #end
+   <li>
+    <a href="$href" data-largesrc ="$data-largesrc" data-title="$data-title" data-description="$data-description"
+      data-science="$data-science" data-vis="$data-vis">
+        <img src ="$data-thumb" alt="$alt"/><div class="small-title">$data-title</div>
+         
+    </a>
+   </li>
+
+#end
+</ul>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="$gridjs.getData()"></script>
+
+<script>
+			$(function() {
+				Grid.init();
+			});
+		</script>
+        
