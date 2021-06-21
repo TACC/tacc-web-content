@@ -1,3 +1,5 @@
 /* Ensure component is invisible when not editing page */
 .signed-out .tacc-hidden-tags,
 .controls-hidden .tacc-hidden-tags { display: none; }
+/* Optional content styling */
+.tacc-hidden-tags { opacity: 0.5; }

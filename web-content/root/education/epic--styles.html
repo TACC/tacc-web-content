@@ -1,6 +1,8 @@
+<p><strong>WeTeach CS Styles</strong></p>
+<ul>
+
+<li>WeTeach CS <code>.weteachcs-content</code> Scope</li>
 <style id="style--weteachcs-content" type="text/css">
-/* TODO: Use this scope instead of `style` tags */
-/* WARNING: Duplicated in other pages */
 /*
 WeTeach CS - Content (would be a `s-` i.e. "Scope" namespace)
 
@@ -31,8 +33,9 @@ Markup:
 </section>
 <!--</div>-->
 
-Style guide: components.weteachcs
+Style guide: Components.WeTeachCS
 */
+/* Elements */
 .weteachcs-content h4,
 .weteachcs-content h4 {
     margin-top: 20px;
@@ -45,12 +48,17 @@ Style guide: components.weteachcs
     font-size: 100%;
 }
 
+/* Objects & Components */
 .weteachcs-content .o-gallery > .weteachcs-card {
     margin: 0;
 }</style>
+
+
+
+
+
+<li>WeTeach CS <code>.weteachcs-card</code> Component</li>
 <style id="style--weteachcs-card" type="text/css">
-/* TODO: Use this component instead of `style` tags */
-/* WARNING: Duplicated in other pages */
 /*
 WeTeach CS - Card
 
@@ -79,7 +87,7 @@ Markup:
     </div>
 </article>
 
-Style guide: components.weteachcs.card
+Style guide: Components.WeTeachCS.Card
 */
 .weteachcs-card {
     margin-left: 0px;
@@ -130,82 +138,133 @@ Style guide: components.weteachcs.card
 /* Add buffer between (margin-less) figcaption content and media it follows */
 .weteachcs-card__media + figcaption.weteachcs-card__content {
     margin-top: 0.5em;
+}
+
+/* WARNING: Scopes elements */
+.weteachcs-card img {
+	border: 1px solid #ddd;
+}
+.weteachcs-card a:hover img {
+	outline-offset: 1px;
+	outline: 1px solid #5d5d5d;
 }</style>
-<section class="weteachcs-content">
-	<h3>
-		Computer Science Regional Data</h3>
-	<h4>
-		2017–2018</h4>
-	<div class="weteachcs-card weteachcs-card--highlight">
-		<div class="row">
-			<div class="col-sm-12">
-				<p>
-					The Computer Science Regional Data reports were created to help educational service centers (ESC's), school districts, and anyone interested in the progress of computer science education in Texas to better understand the data we have collected.</p>
-			</div>
-		</div>
-	</div>
-	<div class="weteachcs-card">
-		<div class="row">
-			<div class="col-sm-7  weteachcs-card__content">
-				<h5>
-					PDF Files</h5>
-				<p>
-					You may download these pdf's to share/distribute:</p>
-				<div class="col-sm-6">
-					<ul>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+State.pdf" target="_blank">State</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+1.pdf" target="_blank">Region 1</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+2.pdf" target="_blank">Region 2</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+3.pdf" target="_blank">Region 3</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+4.pdf" target="_blank">Region 4</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+5.pdf" target="_blank">Region 5</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+6.pdf" target="_blank">Region 6</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+7.pdf" target="_blank">Region 7</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+8.pdf" target="_blank">Region 8</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+9.pdf" target="_blank">Region 9</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+10.pdf" target="_blank">Region 10</a></li>
-					</ul>
-				</div>
-				<div class="col-sm-6">
-					<ul>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+11.pdf" target="_blank">Region 11</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+12.pdf" target="_blank">Region 12</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+13.pdf" target="_blank">Region 13</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+14.pdf" target="_blank">Region 14</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+15.pdf" target="_blank">Region 15</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+16.pdf" target="_blank">Region 16</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+17.pdf" target="_blank">Region 17</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+18.pdf" target="_blank">Region 18</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+19.pdf" target="_blank">Region 19</a></li>
-						<li>
-							<a href="/documents/1084364/1897857/CS+Profile+-+Region+20.pdf" target="_blank">Region 20</a></li>
-						<li>
-							<a href="/epic/research/cs-regional-data/2018-2019">2018–2019</a></li>
-					</ul>
-				</div>
-			</div>
-			<figure class="col-sm-5">
-				<img class="img-responsive" src="/documents/1084364/1750990/data-pdf-thumbnail.png/" /></figure>
-		</div>
-	</div>
+
+
+
+
+
+<li>WeTeach CS <code>.weteachcs-cta</code> Component</li>
+<style id="style--weteachcs-cta" type="text/css">
+/*
+WeTeach CS - Call to Action (CTA)
+
+A callout to suggest the user perform some action.
+
+Markup:
+<section>
+	<p>Description of a great opportunity</p>
+	<a class="weteachcs-cta"  data-cke-saved-href="…" href="…" target="_blank">Apply for this oppportunity!</a>
 </section>
+
+Style guide: Components.WeTeachCS.CTA
+*/
+.weteachcs-cta {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	font-variant: small-caps;
+}</style>
+
+
+
+
+
+<li>WeTeach CS <code>.weteachcs-quote</code> Component</li>
+<style id="style--weteachcs-quote" type="text/css">
+/*
+WeTeach CS - Quote
+
+A quotation, with an optional source/author/speaker.
+
+Markup:
+<blockquote class="weteachcs-quote">
+    <p class="weteachcs-quote__content">Regional Partners are carrying on the teacher recruitment, professional learning, and district management work that Code.org began, and as such, they are now the power users of Code.org tools and processes and are best suited to offer valuable feedback and input.</p>
+    <footer class="weteachcs-quote__source">Code.org</footer>
+</blockquote>
+
+Style guide: Components.WeTeachCS.Quote
+*/
+.weteachcs-quote__content {
+    margin-bottom: 5px;
+
+    font-size: 16px;
+    font-style: italic;
+}
+.weteachcs-quote__content::before,
+.weteachcs-quote__content::after {
+    content: '"';
+}
+.weteachcs-quote__source {
+    text-align: right;
+}
+.weteachcs-quote__source::before {
+    content: '—';
+    margin-right: 0.3em;
+}
+
+/* Override `tacc-new-theme/css/main.css` */
+blockquote.weteachcs-quote {
+    padding: unset;
+    margin: unset;
+    font-size: unset;
+    border-left: unset;
+}
+footer.weteachcs-quote__source,
+small.weteachcs-quote__source {
+    line-height: unset;
+    color: unset;
+}
+.weteachcs-quote__source a {
+    color: unset;
+}</style>
+
+
+
+
+
+<li>Generic <code>.article-list</code> Component</li>
+<style id="style--tacc-article-list" type="text/css">
+/*
+Article List
+
+A list of articles; it may be ordered or unordered.
+
+.article-list--ordered - Each article is decorated to show its order within the list.
+
+Markup:
+<section class="article-list article-list--{{modifier}}">
+    <article class="article-list__item">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In magna metus, pellentesque at ullamcorper ac, sagittis non lectus. Cras non diam magna. Donec dolor diam, gravida vel ultricies eget, efficitur nec odio. Integer sodales lectus nec porta pulvinar. Aenean malesuada a tortor sit amet dictum. Integer gravida scelerisque neque, quis fringilla leo. Pellentesque ullamcorper vestibulum risus, eu ullamcorper metus mattis imperdiet. Pellentesque aliquam lectus quam, eu vestibulum felis fringilla sed. Pellentesque egestas nunc vitae purus vehicula ullamcorper. Aliquam diam lacus, eleifend eget mollis quis, venenatis at metus. Nulla eget ligula vitae tortor pulvinar viverra.</p>
+    </article>
+</section>
+
+Style guide: Components.ArticleList
+*/
+.article-list--ordered {
+    counter-reset: article;
+}
+.article-list--ordered .article-list__item {
+    position: relative;
+}
+.article-list--ordered .article-list__item::before {
+    counter-increment: article;
+    content: counter(article) ".";
+
+    opacity: 0.25;
+
+    text-align: center;
+    font-size: xxx-large;
+    font-weight: bolder;
+}</style>
+
+</ul>
