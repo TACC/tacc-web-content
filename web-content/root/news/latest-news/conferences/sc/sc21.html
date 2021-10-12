@@ -1,0 +1,716 @@
+<!--open styles-->
+<style id="style--sc-components" type="text/css">
+/* SC CONTENT */
+.sc-content {
+    background-color: #FFF;
+    margin: 0px;
+    padding: 20px;
+}
+.sc-content__title {
+    margin: 0px;
+    padding: 0px;
+}
+.sc-content__sub-title {
+    margin: 20px 0px 0px 0px;
+    padding: 0px;
+}
+/* FAQ: We should decorate the `…__title`, but only brittle CSS can do that;
+        so, we continue to use an `<hr />` (common on TACC, circa 2019) */
+.sc-content__sub-title-decoration {
+    margin: 3px 0px 15px 0px;
+    padding: 0px;
+}
+.sc-content__caption:first-child { margin: 1.0em 0 0.5em; }
+.sc-content__caption:last-child { margin: 0.5em 0 1.0em; }
+.sc-content--primary .sc-content__title     { font-size: 2.5em; }
+.sc-content--primary .sc-content__sub-title { font-size: 1.75em; }
+.sc-content--secondary .sc-content__title     { font-size: 2em; }
+.sc-content--secondary .sc-content__sub-title { font-size: 1.5em; }
+
+
+
+/* SC EVENT */
+.sc-event + .sc-event {
+    margin-top: 20px;
+}
+/* SEE: https://stackoverflow.com/a/21261303 */
+/* NOTE: Flexbox considered, but this is less code */
+/* WARN: ITCSS: This should be "TRUMPS: Scope" code (`.s-`),
+                but do not implement Namepsaces until team is on board. */
+.sc-event__data,
+.sc-event__desc {
+    margin-bottom: 10px; /* redundant for `p.sc-event__desc` */
+}
+.sc-event__sub-title {
+    display: block;
+}
+
+/* SC EVENT: Data */
+.sc-event__data dt {
+    display: inline-block;
+}
+.sc-event__data dt {
+    font-weight: 500;
+}
+.sc-event__data dt:after {
+    display: inline-block;
+    content: ':';
+    margin-right: 1ch;
+}
+.sc-event__data dd {
+    display: inline;
+}
+.sc-event__data dd:after {
+    display: block;
+    content: '';
+}
+.sc-event__data p {
+    display: inline;
+}
+
+
+
+/* SC MEDIA */
+.sc-media + .sc-media {
+    margin-top: 30px;
+}
+.sc-media .sc-media__title {
+    margin-bottom: 15px;
+}</style>
+<style id="style--sc-trumps" type="text/css">
+/* HACKS */
+
+/* Resolve whitespace in a simpler manner than `/sc18` failed to do */
+/* WARN: There are two `#main-content`'s! (bug origin: clone `/sc18`) */
+/* HACK: We should instead only have one `#main-content`! */
+#main-content {
+    padding-bottom: 0;
+}
+/* Avoids adding more superfluous `.row` and `.col-…` divs */
+/* HACK: If we changed Bootstrap (a big "if"), then this value would be wrong */
+#sc-booth-events {
+    margin-bottom: 30px; /* replicate `.col-… { margin-*: 15px; }` pair */
+}
+
+
+
+/* PAGE-SPECIFIC */
+/* NOTE: These page-specific styles should not need IDs;
+         but, we are not allowed to edit global styles, yet;
+         so, we need to artifically scope these styles */
+#sc-wrap {
+	background-color: #0e0520; /* match `#sc-banner`, `#sc-wrap`, `#sc-footer` */
+    padding: 0px 25px 30px 25px;
+}
+#sc-wrap dl {
+    margin-left: 0; /* override `…/main.css` */
+}
+#sc-wrap dd,
+#sc-wrap dt {
+    line-height: 1.5; /* override `tacc-new-theme/css/main.css`; match `body` */
+}
+#sc-wrap dd {
+    margin-left: 0; /* override `html/css/main.css` *//* match `tacc-new-theme/css/main.css` */
+}</style>
+<style id="style--sc-theme" type="text/css">
+/* … */
+.t-2021 {
+    /* … */
+}</style>
+<!--close styles-->
+<div class="t-2019" id="sc-wrap">
+	<!-- WARNING: `#sc` and `.container` __must not__ be together, because `#sc` sets wide background color (without reliance on variable containers) and `.container` restricts content width. -->
+	<div class="container">
+		<!-- No primary section, this year, because no booth --><!-- IDEA: Make the `--secondary` sections `--primary` (requires grander header) --><!--<section class="sc-content sc-content--primary" id="sc-booth-events">…</section>-->
+		<div class="row">
+			<div class="col-md-8">
+				<section class="sc-content sc-content--secondary" id="sc-conf-events">
+					<h1 class="sc-content__title">
+						SC21 TACC Participation</h1>
+					<!--open conf-events-->
+					<div>
+						<h2 class="sc-content__sub-title">
+							2020</h2>
+						<hr class="sc-content__sub-title-decoration" />
+						<article class="sc-event">
+							<!-- FAQ: Not using <h3> because it has too much to unstyle --><strong class="sc-event__title"><a href="https://sc20.supercomputing.org/submit/transparency-reproducibility-initiative/" target="_blank">Transparency and Reproducibility Initiative</a></strong>
+							<dl class="sc-event__data">
+								<dt>
+									Chairs</dt>
+								<dd>
+									<ul>
+										<li>
+											Beth Plale, Indiana University</li>
+										<li>
+											Stephen Lien Harrell, TACC</li>
+										<li>
+											Andrew Younge, Sandia National Laboratories</li>
+										<li>
+											Line Pouchard, Brookhaven National Laboratory</li>
+									</ul>
+								</dd>
+							</dl>
+						</article>
+					</div>
+					<div>
+						<h2 class="sc-content__sub-title">
+							Thursday–Monday, November 5–9</h2>
+						<hr class="sc-content__sub-title-decoration" />
+						<article class="sc-event">
+							<!-- FAQ: Not using <h3> because it has too much to unstyle --><strong class="sc-event__title"><a href="http://hackhpc.org/hpc/" target="_blank">HPC in the City Hackathon</a></strong>
+							<dl class="sc-event__data">
+								<dt>
+									Led by</dt>
+								<dd>
+									Jeaime Powell, TACC</dd>
+								<dt>
+									Mentors &amp; Staff</dt>
+								<dd>
+									<ul>
+										<li>
+											Charlie Dey, TACC</li>
+										<li>
+											JoonYee Chuah, TACC</li>
+										<li>
+											Egdar Garza, TACC</li>
+										<li>
+											Melissa Pearson, TACC</li>
+										<li>
+											Anna Dabrowski, TACC</li>
+									</ul>
+								</dd>
+							</dl>
+						</article>
+					</div>
+					<div>
+						<h2 class="sc-content__sub-title">
+							Sunday–Wednesday, November 8–11</h2>
+						<hr class="sc-content__sub-title-decoration" />
+						<article class="sc-event">
+							<!-- FAQ: Not using <h3> because it has too much to unstyle --><strong class="sc-event__title"><a href="https://studentclustercompetition.us/2020/Teams/Team09/index.html" target="_blank">Student Cluster Competition (virtual)</a></strong>
+							<dl class="sc-event__data">
+								<dt>
+									Team</dt>
+								<dd>
+									Cloud CloUT, University of Texas at Austin</dd>
+								<dt>
+									Team Mentor</dt>
+								<dd>
+									Jose Garcia, TACC</dd>
+								<dt>
+									Team Members</dt>
+								<dd>
+									<ul>
+										<li>
+											Evan Chang, Electrical and Computer Engineering</li>
+										<li>
+											Juan Paez, Electrical and Computer Engineering</li>
+										<li>
+											Nicholas Aufiero, Computational Engineering</li>
+										<li>
+											Kelly Conlon, Computational Engineering</li>
+										<li>
+											Brock Davis, Computer Science</li>
+										<li>
+											Jack Gaither, Computer Vision and Image Understanding, University of Arkansas</li>
+									</ul>
+								</dd>
+							</dl>
+						</article>
+					</div>
+					<div>
+						<h2 class="sc-content__sub-title">
+							Monday, November 9</h2>
+						<hr class="sc-content__sub-title-decoration" />
+						<article class="sc-event">
+							<!-- FAQ: Not using <h3> because it has too much to unstyle --><strong class="sc-event__title"><a href="https://sc20.supercomputing.org/presentation/?id=tut138&amp;sess=sess255" target="_blank"><span class="sc-event__title-prefix">Tutorial</span>: Tools and Best Practices for Distributed Deep Learning on Supercomputer</a></strong>
+							<dl class="sc-event__data">
+								<dt>
+									Presenters</dt>
+								<dd>
+									<ul>
+										<li>
+											Weijia Xu, TACC</li>
+										<li>
+											Zhao Zhang, TACC</li>
+										<li>
+											David Walling, TACC</li>
+									</ul>
+								</dd>
+								<dt>
+									Time</dt>
+								<dd>
+									<time datetime="2020-11-9T14:30-05:00">
+										2:30pm</time>
+									<span>–</span>
+									<time datetime="2020-11-9T18:30-05:00">
+										6:30pm</time>
+									EST</dd>
+							</dl>
+						</article>
+					</div>
+					<div>
+						<h2 class="sc-content__sub-title">
+							Tuesday, November 10</h2>
+						<hr class="sc-content__sub-title-decoration" />
+						<article class="sc-event">
+							<!-- FAQ: Not using <h3> because it has too much to unstyle --><strong class="sc-event__title"><a href="https://sc20.supercomputing.org/presentation/?sess=sess279&amp;id=tut150#038;id=tut150" target="_blank"><span class="sc-event__title-prefix">Tutorial</span>: Programming and Profiling Modern Multicore Processors</a></strong>
+							<dl class="sc-event__data">
+								<dt>
+									Presenters</dt>
+								<dd>
+									<ul>
+										<li>
+											Amit Ruhela</li>
+										<li>
+											Si Liu</li>
+										<li>
+											Victor Eijkhout</li>
+										<li>
+											Chun-Yaung Lu</li>
+										<li>
+											Lars Koesterke</li>
+									</ul>
+								</dd>
+								<dt>
+									Time</dt>
+								<dd>
+									<time datetime="2020-11-10T14:30-05:00">
+										2:30pm</time>
+									<span>–</span>
+									<time datetime="2020-11-10T18:30-05:00">
+										6:30pm</time>
+									EST</dd>
+							</dl>
+						</article>
+						<article class="sc-event">
+							<!-- FAQ: Not using <h3> because it has too much to unstyle --><strong class="sc-event__title"><a href="https://www.ddn.com/company/events/user-group-sc/" target="_blank">2020 DDN Virtual User Group</a></strong>
+							<dl class="sc-event__data">
+								<dt>
+									Speakers</dt>
+								<dd>
+									<ul>
+										<li>
+											Alex Bouzari, DDN</li>
+										<li>
+											Paul Bloch, DDN</li>
+										<li>
+											Dean Hildebrand, Google</li>
+										<li>
+											Erik Deumens, University of Florida</li>
+										<li>
+											Tommy Minyard, TACC</li>
+										<li>
+											Craig Tierney, NVIDIA</li>
+										<li>
+											James Coomer, Sr. VP Products, DDN</li>
+										<li>
+											Sven Oehme, Chief Research Officer, DDN</li>
+									</ul>
+								</dd>
+								<dt>
+									Time</dt>
+								<dd>
+									<time datetime="2020-11-10T08:30-08:00">
+										11:30am EST (8:30am PST)</time>
+								</dd>
+							</dl>
+						</article>
+					</div>
+					<div>
+						<h2 class="sc-content__sub-title">
+							Wednesday, November 11</h2>
+						<hr class="sc-content__sub-title-decoration" />
+						<article class="sc-event">
+							<!-- FAQ: Not using <h3> because it has too much to unstyle --><strong class="sc-event__title"><a href="https://sc20.supercomputing.org/session/?sess=sess199" target="_blank"><span class="sc-event__title-prefix">Workshop</span>: The 5th Deep Learning on Supercomputers Workshop</a></strong>
+							<dl class="sc-event__data">
+								<dt>
+									Session Chairs</dt>
+								<dd>
+									<ul>
+										<li>
+											Valeriu Codreanu, SURFsara</li>
+										<li>
+											Ian Foster, ANL-University of Chicago</li>
+										<li>
+											Zhao Zhang, TACC</li>
+									</ul>
+								</dd>
+								<dt>
+									Time</dt>
+								<dd>
+									<time datetime="2020-11-11T10:00-05:00">
+										10:00pm</time>
+									<span>–</span>
+									<time datetime="2020-11-11T18:30-05:00">
+										6:30pm</time>
+									EST</dd>
+							</dl>
+						</article>
+						<article class="sc-event">
+							<!-- FAQ: Not using <h3> because it has too much to unstyle --><strong class="sc-event__title"><a href="https://sc20.supercomputing.org/session/?sess=sess200 " target="_blank"><span class="sc-event__title-prefix">Workshop</span>: Best Practices for HPC Training and Education</a></strong>
+							<dl class="sc-event__data">
+								<dt>
+									Session Chairs</dt>
+								<dd>
+									<ul>
+										<li>
+											Nia Alexandrov, Hartree Centre, STFC</li>
+										<li>
+											Scott Lathrop, Shodor Education Foundation, University of Illlinois</li>
+										<li>
+											Nitin Sukhija, Slippery Rock University of Pennsylvania</li>
+									</ul>
+								</dd>
+								<dt>
+									Time</dt>
+								<dd>
+									<time datetime="2020-11-11T10:00-05:00">
+										10:00pm</time>
+									<span>–</span>
+									<time datetime="2020-11-11T18:30-05:00">
+										6:30pm</time>
+									EST</dd>
+							</dl>
+						</article>
+					</div>
+					<div>
+						<h2 class="sc-content__sub-title">
+							Friday, November 13</h2>
+						<hr class="sc-content__sub-title-decoration" />
+						<article class="sc-event">
+							<!-- FAQ: Not using <h3> because it has too much to unstyle --><strong class="sc-event__title"><a href="http://sighpc-syspros.org/workshops/2020/" target="_blank"><span class="sc-event__title-prefix">Workshop</span>: HPCSYSPROS20</a></strong>
+							<p class="sc-event__sub-title">
+								<span>Paper: Application Performance in the Frontera Acceptance Process</span></p>
+							<dl class="sc-event__data">
+								<dt>
+									Author</dt>
+								<dd>
+									<ul>
+										<li>
+											Richard Todd Evans</li>
+									</ul>
+								</dd>
+								<dt>
+									Time</dt>
+								<dd>
+									<time datetime="2020-11-13T11:50-05:00">
+										11:50pm</time>
+									<span>–</span>
+									<time datetime="2020-11-13T12:10-05:00">
+										12:10pm</time>
+									EST</dd>
+							</dl>
+						</article>
+					</div>
+					<div>
+						<h2 class="sc-content__sub-title">
+							Tuesday–Thursday, November 17–19</h2>
+						<hr class="sc-content__sub-title-decoration" />
+						<article class="sc-event">
+							<!-- FAQ: Not using <h3> because it has too much to unstyle --><strong class="sc-event__title"><a href="https://sc20.supercomputing.org/exhibits/exhibitor-forum/" target="_blank">Exhibitor Forum</a></strong>
+							<dl class="sc-event__data">
+								<dt>
+									Exhibitor Forum Chair</dt>
+								<dd>
+									Stephen Harrell, TACC</dd>
+							</dl>
+						</article>
+					</div>
+					<div>
+						<h2 class="sc-content__sub-title">
+							Tuesday, November 17</h2>
+						<hr class="sc-content__sub-title-decoration" />
+						<article class="sc-event">
+							<!-- FAQ: Not using <h3> because it has too much to unstyle --><strong class="sc-event__title"><a href="https://sc20.supercomputing.org/presentation/?id=sotp120&amp;sess=sess289" target="_blank">State-of-Practice: Containerization on Petascale HPC Clusters</a></strong>
+							<p class="sc-event__sub-title">
+								<span>In State of the Practice Reports of the International Conference for High Performance Computing, Networking, Storage and Analysis (SC'20)</span></p>
+							<dl class="sc-event__data">
+								<dt>
+									Authors</dt>
+								<dd>
+									<ul>
+										<li>
+											Amit Ruhela</li>
+										<li>
+											Matthew Vaughn</li>
+										<li>
+											Stephen Harrell</li>
+										<li>
+											Gregory Zynda</li>
+										<li>
+											John Fonner</li>
+										<li>
+											Richard Todd Evans</li>
+										<li>
+											Tommy Minyard</li>
+									</ul>
+								</dd>
+								<dt>
+									Time</dt>
+								<dd>
+									<time datetime="2020-11-17T13:00-05:00">
+										1:00pm</time>
+									<span>–</span>
+									<time datetime="2020-11-17T13:30-05:00">
+										1:30pm</time>
+									EST</dd>
+							</dl>
+						</article>
+						<article class="sc-event">
+							<!-- FAQ: Not using <h3> because it has too much to unstyle --><strong class="sc-event__title"><a href="https://sc20.supercomputing.org/presentation/?sess=sess161&amp;id=pap540" target="_blank">Conference Paper: A Hierarchical and Load-Aware Design for Large Message Neighborhood Collectives</a></strong>
+							<p class="sc-event__sub-title">
+								<span>In Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis (SC'20)</span></p>
+							<dl class="sc-event__data">
+								<dt>
+									Authors</dt>
+								<dd>
+									<ul>
+										<li>
+											S. Mahdieh Ghazimirsaeed</li>
+										<li>
+											Qinghua Zhou</li>
+										<li>
+											Amit Ruhela</li>
+										<li>
+											Mohammadreza Bayatpour</li>
+										<li>
+											Hari Subramoni</li>
+										<li>
+											Dhabaleswar K. (DK) Panda</li>
+									</ul>
+								</dd>
+								<dt>
+									Time</dt>
+								<dd>
+									<time datetime="2020-11-17T15:00-05:00">
+										3:00pm</time>
+									<span>–</span>
+									<time datetime="2020-11-17T15:30-05:00">
+										3:30pm</time>
+									EST</dd>
+							</dl>
+						</article>
+					</div>
+					<div>
+						<h2 class="sc-content__sub-title">
+							Wednesday, November 18</h2>
+						<hr class="sc-content__sub-title-decoration" />
+						<article class="sc-event">
+							<!-- FAQ: Not using <h3> because it has too much to unstyle --><strong class="sc-event__title"><a href="https://sc20.supercomputing.org/presentation/?id=exforum119&amp;sess=sess326" target="_blank"><span class="sc-event__title-prefix">Exhibitor Forum</span>: SOLAR Consortium: Accelerated Ray Tracing for Scientific Simulations</a></strong>
+							<p class="sc-event__sub-title">
+								<span>Session: HPC Visualization and Portals</span></p>
+							<dl class="sc-event__data">
+								<dt>
+									Presenters</dt>
+								<dd>
+									<ul>
+										<li>
+											Paul Navratil</li>
+										<li>
+											Estelle Dirand</li>
+										<li>
+											Hannah Ross</li>
+										<li>
+											Pascal Grosset</li>
+										<li>
+											Christiaan Gribble</li>
+										<li>
+											Peter Messmer, Jeff Amstutz</li>
+									</ul>
+								</dd>
+								<dt>
+									Time</dt>
+								<dd>
+									<time datetime="2020-11-18T10:00-05:00">
+										10:00am</time>
+									<span>–</span>
+									<time datetime="2020-11-18T10:30-05:00">
+										10:30am</time>
+									EST</dd>
+							</dl>
+						</article>
+						<article class="sc-event">
+							<!-- FAQ: Not using <h3> because it has too much to unstyle --><strong class="sc-event__title"><a href="https://sc20.supercomputing.org/session/?sess=sess283" target="_blank"><span class="sc-event__title-prefix">Session</span>: Scientific Visualization &amp; Data Analytics Showcase</a></strong>
+							<dl class="sc-event__data">
+								<dt>
+									Session Chairs</dt>
+								<dd>
+									<ul>
+										<li>
+											Joseph A. Insley, Argonne National Laboratory (ANL)</li>
+										<li>
+											Northern Illinois University</li>
+										<li>
+											David Semeraro, TACC</li>
+									</ul>
+								</dd>
+								<dt>
+									Time</dt>
+								<dd>
+									<time datetime="2020-11-18T13:00-05:00">
+										1:00pm</time>
+									<span>–</span>
+									<time datetime="2020-11-18T2:30-05:00">
+										2:30pm</time>
+									EST</dd>
+							</dl>
+						</article>
+						<article class="sc-event">
+							<!-- FAQ: Not using <h3> because it has too much to unstyle --><strong class="sc-event__title"><a href="https://sc20.supercomputing.org/presentation/?id=svs107&amp;sess=sess283" target="_blank">Showcase: Visualizing Usage on HPC Systems</a></strong>
+							<p class="sc-event__sub-title">
+								<span>Session: HPC Visualization and Portals</span></p>
+							<dl class="sc-event__data">
+								<dt>
+									Presenters</dt>
+								<dd>
+									<ul>
+										<li>
+											Andrew Solis</li>
+										<li>
+											Gregory Foss</li>
+										<li>
+											Matias Frogoso</li>
+										<li>
+											Paul Navratil</li>
+									</ul>
+								</dd>
+								<dt>
+									Time</dt>
+								<dd>
+									<time datetime="2020-11-18T13:25-05:00">
+										1:25pm</time>
+									<span>–</span>
+									<time datetime="2020-11-18T18:38-05:00">
+										1:38pm</time>
+									EST</dd>
+							</dl>
+						</article>
+						<article class="sc-event">
+							<!-- FAQ: Not using <h3> because it has too much to unstyle --><strong class="sc-event__title"><a href="https://sc20.supercomputing.org/presentation/?id=svs103&amp;sess=sess283" target="_blank">Showcase: Scientific Visualization of Antarctica Ice Sheet and Southern Ocean Evolution</a></strong>
+							<p class="sc-event__sub-title">
+								<span>Session: Scientific Visualization and Data Analytics Showcase</span></p>
+							<dl class="sc-event__data">
+								<dt>
+									TACC Authors</dt>
+								<dd>
+									<ul>
+										<li>
+											Francesca Samsel</li>
+										<li>
+											Greg Abram</li>
+									</ul>
+								</dd>
+								<dt>
+									Time</dt>
+								<dd>
+									<time datetime="2020-11-18T13:51-05:00">
+										1:51pm</time>
+									<span>–</span>
+									<time datetime="2020-11-18T14:24-05:00">
+										2:24pm</time>
+									EST</dd>
+							</dl>
+						</article>
+					</div>
+					<div>
+						<h2 class="sc-content__sub-title">
+							Thursday, November 19</h2>
+						<hr class="sc-content__sub-title-decoration" />
+						<article class="sc-event">
+							<!-- FAQ: Not using <h3> because it has too much to unstyle --><strong class="sc-event__title"><a href="https://sc20.supercomputing.org/presentation/?id=pap216&amp;sess=sess178" target="_blank">Conference Paper: Convolutional Neural Network Training with Distributed K-FAC</a></strong>
+							<dl class="sc-event__data">
+								<dt>
+									Authors</dt>
+								<dd>
+									<ul>
+										<li>
+											J. Gregory Pauloski</li>
+										<li>
+											Zhao Zhang</li>
+										<li>
+											Lei Huang</li>
+										<li>
+											Weijia Xu</li>
+										<li>
+											Ian T. Foster</li>
+									</ul>
+								</dd>
+								<dt>
+									Time</dt>
+								<dd>
+									<time datetime="2020-11-19T13:00-05:00">
+										1:00pm</time>
+									<span>–</span>
+									<time datetime="2020-11-19T13:30-05:00">
+										1:30pm</time>
+									EST</dd>
+							</dl>
+						</article>
+					</div>
+					<!--close conf-events-->
+					<div id="aui_3_4_0_1_1373" style="align-items: center;display: flex;margin-top: 2em;margin-bottom: 1em;border-top: 1px solid black;">
+						<img class="sc-logo__image" id="sc-logo-scinet" src="/documents/1084364/1923661/sc20_scinet_black%404x.png" style="margin-top: 2em;" />
+						<p id="aui_3_4_0_1_562" style="margin-left: 1em;margin-top: 2em;margin-bottom: 0;text-align: justify;">
+							Thank you to TACC's Network Security Team who are assisting this year's virtual conference with SCinet, the SC Conference's dedicated high-speed network.</p>
+					</div>
+				</section>
+			</div>
+			<div class="col-md-4">
+				<section class="sc-content sc-content--secondary" id="sc-social_media">
+					<!--open social-media-->
+					<h1 class="sc-content__title">
+						Connect with TACC</h1>
+					<article class="sc-media">
+						<h2 class="sc-content__sub-title sc-media__title">
+							Zoom Backgrounds</h2>
+						<style id="o-gallery-styles" type="text/css">
+/*
+							Gallery (Object)
+
+							A gallery of apps to launch, images to view, etc.
+
+							Markup:
+							<ul class="o-gallery">
+								<li>…</li>
+								<li>…</li>
+							</ul>
+							*/
+						    /* WARNING: Duplicated in other pages */
+							.o-gallery {
+								--grid-gap: 30px;
+								--min-item-width: 300px;
+
+								display: grid;
+								grid-gap: var(--grid-gap);
+								grid-template-columns: repeat(auto-fit, minmax(var(--min-item-width), 1fr));
+								justify-items: center;
+								align-items: center;
+							}						</style>
+						<style id="cybersecurity-unique-gallery-styles" type="text/css">
+.o-gallery {
+								--grid-gap: 0.5em;
+								--min-item-width: 40%; /* between 2–3 items */
+							}
+							.o-gallery * {
+								width: 100%;
+								display: block;
+							}						</style>
+						<div class="o-gallery">
+							<a href="/documents/1084364/1923661/Zoom-BG-Frontera-2.jpg" target="_blank" title="Zoom background of Frontera #2"><img alt="Zoom background of Frontera #2" src="/documents/1084364/1923661/Zoom-BG-Frontera-2.thumb.jpg" /></a> <a href="/documents/1084364/1923661/Zoom-BG-Frontera-3.jpg" target="_blank" title="Zoom background of Frontera #3"><img alt="Zoom background of Frontera #3" src="/documents/1084364/1923661/Zoom-BG-Frontera-3.thumb.jpg" /></a> <a href="/documents/1084364/1923661/Zoom-BG-Stampede2.jpg" target="_blank" title="Zoom background of Stampede2"><img alt="Zoom background of Stampede2" src="/documents/1084364/1923661/Zoom-BG-Stampede2.thumb.jpg" /></a> <a href="/documents/1084364/1923661/Zoom-BG-TACC.jpg" target="_blank" title="Zoom background of TACC"><img alt="Zoom background of TACC" src="/documents/1084364/1923661/Zoom-BG-TACC.thumb.jpg" /></a></div>
+						<h2 class="sc-content__sub-title sc-media__title">
+							Videos</h2>
+						<figure>
+							<figcaption class="sc-content__caption">SC20 TACC &amp; Intel Fireside Chat</figcaption> <a href="https://sc20.gallery.video/detail/videos/sc20/video/6208394302001/supercomputers-covid-19-applying-supercomputing-resources-to-save-lives-and-accelerate-search-for-a-cure?autoStart=true&amp;page=0" target="_blank" title="Supercomputers &amp; COVID-19 Applying Supercomputing Resources to Save Lives and Accelerate Search for a Cure"><img alt="TACC Data Center Virtual Tour Teaser Image" class="img-responsive" src="/documents/1084364/1923661/sc20-fireside-chat-video-thumb.png/" /></a></figure>
+						<figure>
+							<figcaption class="sc-content__caption">Redefining Urgent Computing</figcaption> <a href="https://www.youtube.com/watch?v=jliFjxNxGB4&amp;list=PLwfmdx4TxasT209s7rE8mgue_AeBIVO5C" target="_blank" title="TACC - SC20"><img alt="Texas Advanced Computing Center at Supercomputing 2020" class="img-responsive" src="/documents/1084364/1923661/tacc-sc20-thumb.jpg/" /></a></figure>
+						<figure>
+							<figcaption class="sc-content__caption">Explore the TACC Data Center in 3D</figcaption> <a href="/education/tours" title="TACC Data Center"><img alt="TACC Data Center Virtual Tour Teaser Image" class="img-responsive" src="/documents/1084364/1085237/tours-explore-data_center.thumb.fake-sans-play-button.png/" /></a></figure>
+						<h2 class="sc-content__sub-title sc-media__title">
+							Twitter Feed</h2>
+						<a class="twitter-timeline" data-tweet-limit="3" href="https://twitter.com/TACC?ref_src=twsrc%5Etfw">Tweets by TACC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><!--close social-media--></article>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>

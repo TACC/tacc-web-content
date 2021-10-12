@@ -1,0 +1,55 @@
+<style id="style--sc-banner" type="text/css">
+/* SC BANNER */
+.sc-banner > * {
+    max-width: 680px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative; /* allow layer management with pseudo element */
+}
+.sc-banner__marquee            { margin-bottom: 45px; }
+.sc-banner__marquee:last-child { margin-bottom: 0; }
+
+.sc-banner h1 {
+	color: #ffffff; /* overwrite `main.css` */
+	margin: 0; /* overwrite `main.css` */
+}
+.sc-banner a {
+	color: #ffffff;
+}
+.sc-banner abbr {
+	/* NOTE: An <abbr> has a (browser) default accessible style, but that style is likely not desired, so undo it */
+	text-decoration: none;
+
+	/* NOTE: Setting border color would improve the (website) global accessible style, but that style is likely not desired, so undo it */
+	/* border-bottom-color: #ffffff; */
+	border-bottom: none;
+}
+
+/* SC BANNER: Page-Specific */
+#sc-banner {
+	padding: 45px 10px 45px;
+
+	background-size: auto 900px;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-color: #0e0520; /* match `#sc-banner`, `#sc-wrap`, `#sc-footer` */
+}
+@media (-webkit-max-device-pixel-ratio: 1.9), (max-resolution: 191dpi) {
+	#sc-banner {
+		background-image: url("/documents/1084364/1797126/sc19-banner.jpg");
+	}
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	#sc-banner {
+		background-image: url("/documents/1084364/1797126/sc19-banner%402x.jpg");
+	}
+}
+#sc-tacc-logo {
+	/* Prevent image from butting against sides on narrow view */
+	padding: 0px 20px;
+}
+</style>
+<div class="sc-banner" id="sc-banner">
+	<header class="sc-banner__marquee">
+		<img id="sc-tacc-logo" alt="Texas Advanced Computing Center at Supercomputing 2020" class="img-responsive" src="/documents/1084364/1923661/tacc-at-sc20--match-footer.png/" /></header>
+</div>

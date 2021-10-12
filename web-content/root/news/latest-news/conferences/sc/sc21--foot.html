@@ -1,0 +1,149 @@
+<style type="text/css" id="style--sc-footer">
+/* SC FOOTER */
+.sc-footer {
+    display: flex;
+    flex-direction: column;
+
+	padding: 45px 10px 100px;
+}
+
+/* SC FOOTER: Page-Specific */
+#sc-footer {
+	background-color: #0e0520; /* match `#sc-banner`, `#sc-wrap`, `#sc-footer` */
+}
+</style>
+<footer id="sc-footer" class="sc-footer">
+    <style type="text/css" id="style--sc-components--gallery">
+    /* SC GALLERY */
+    .sc-gallery {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+
+        list-style: none;
+    }
+    .sc-gallery__item {
+        position: relative;
+
+        display: grid;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .sc-gallery__item + .sc-gallery__item::after {
+        position: absolute;
+        display: block;
+        content: "";
+
+        background-color: #d1b681;
+    }
+
+    /* SC GALLERY: Small Screen - Vertical Logos */
+    @media (max-width: 767px) {
+        .sc-gallery {
+            flex-direction: column;
+        }
+        .sc-gallery__item             { padding-top: 20px;  padding-bottom: 20px; }
+        /* WARN: Ideally, child elements do not have modifiers (supports overly complex modules) */
+        .sc-gallery__item--focus      { /* No need to mirror horz. padding */ }
+        .sc-gallery__item:first-child { padding-top: 0; }
+        .sc-gallery__item:last-child  { padding-bottom: 0; }
+        /* RFE: Wes used `background-color` instead of `border`,
+                only because it seems like less code. Ideas? */
+        .sc-gallery__item + .sc-gallery__item::after {
+            height: 2px;
+            width: 74px;
+            margin-left: -37px;
+            left: 50%;
+            top: 0;
+        }
+    }
+
+    /* SC GALLERY: Large Screen - Horizontal Logos */
+    @media (min-width: 768px) {
+        .sc-gallery {
+            flex-direction: row;
+        }
+        .sc-gallery__item             { padding-left: 20px;  padding-right: 20px; }
+        /* WARN: Ideally, child elements do not have modifiers (supports overly complex modules) */
+        .sc-gallery__item--focus      { padding-left: 40px;  padding-right: 40px; }
+        .sc-gallery__item:first-child { padding-left: 0; }
+        .sc-gallery__item:last-child  { padding-right: 0; }
+        /* RFE: Wes used `background-color` instead of `border`,
+                only because it seems like less code. Ideas? */
+        .sc-gallery__item + .sc-gallery__item::after {
+            width: 2px;
+            height: 74px;
+            margin-top: -37px;
+            top: 50%;
+            left: 0;
+        }
+    }
+    </style>
+    <style type="text/css" id="style--sc-components--logo">
+    /* SC LOGO */
+    /* .sc-logo {} *//* Noop, but fully identified in markup */
+
+    /* SC LOGO: Logo-Specific */
+    #sc-logo-sc20,
+    #sc-logo-nsf		{ height: 60px; }
+    #sc-logo-scinet,
+    #sc-logo-tacc,
+    #sc-logo-utaustin	{ height: 30px; }
+    /* TODO: Upload and use the taller logos (that have text) */
+    /*
+    #sc-logo-tacc,
+    #sc-logo-utaustin	{ height: 45px; }
+    */
+    </style>
+    <ul class="sc-gallery sc-banner__marquee">
+        <li class="sc-gallery__item">
+            <figure class="sc-logo">
+                <a href="https://sc20.supercomputing.org/" target="_blank">
+                    <img id="sc-logo-sc20" class="sc-logo__image" src="/documents/1084364/1923661/sc20_1color_white_hor%404x.png">
+                </a>
+                <figcaption class="sc-logo__text sr-only">
+                    <dl><dt>SC20</dt><dd>Supercomputing 2019</dd></dl>
+                </figcaption>
+            </figure>
+        </li>
+        <!--
+        <li class="sc-gallery__item">
+            <figure class="sc-logo">
+                <a href="https://sc20.supercomputing.org/" target="_blank">
+                    <img id="sc-logo-scinet" class="sc-logo__image" src="/documents/1084364/1923661/sc20_scinet_white%404x.png">
+                </a>
+                <figcaption class="sc-logo__text sr-only">
+                    <dl><dt>SC20</dt><dd>Supercomputing 2019</dd></dl>
+                </figcaption>
+            </figure>
+        </li>
+        -->
+        <li class="sc-gallery__item">
+            <figure class="sc-logo">
+                <img id="sc-logo-tacc" class="sc-logo__image" src="/documents/1084364/1797126/sc19-logo-tacc.svg" />
+                <figcaption class="sc-logo__text sr-only">
+                    <dl><dt>TACC</dt><dd>Texas Advanced Computing Center</dd></dl>
+                </figcaption>
+            </figure>
+        </li>
+        <li class="sc-gallery__item sc-gallery__item--focus">
+            <figure class="sc-logo">
+                <img id="sc-logo-nsf" class="sc-logo__image" src="/documents/1084364/1797126/sc19-logo-nsf.svg" />
+                <figcaption class="sc-logo__text sr-only">
+                    <dl><dt>NSF</dt><dd>National Science Foundation</dd></dl>
+                </figcaption>
+            </figure>
+        </li>
+        <li class="sc-gallery__item">
+            <figure class="sc-logo">
+                <img id="sc-logo-utaustin" class="sc-logo__image" src="/documents/1084364/1797126/sc19-logo-utaustin.svg" />
+                <figcaption class="sc-logo__text sr-only">
+                    <dl><dt>Texas</dt><dd>The University of Texas at Austin</dd></dl>
+                </figcaption>
+            </figure>
+        </li>
+    </ul>
+</footer>
