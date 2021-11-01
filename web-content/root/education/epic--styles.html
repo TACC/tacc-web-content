@@ -12,7 +12,10 @@
 /* FAQ: The global CSS styles this with a border bottom,
         but neglects to remove browsers' dotted underline style
         (has style: Firefox, Chrome…; no style: Safari…) */
-        abbr[title] { text-decoration: none; }</style>
+        abbr[title] { text-decoration: none; }
+/* FAQ: The global CSS styles provide decoration that is
+        confusing without the accompanying UX for `title` attribute */
+        abbr:not([title]) { border-bottom: none; cursor: unset; }</style>
 
 <li>Global <code>.s-text-figure-pair</code> Scope</li>
 <style id="style--s-text-figure-pair" type="text/css">
