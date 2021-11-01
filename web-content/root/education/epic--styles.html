@@ -1,5 +1,52 @@
-<p><strong>WeTeach CS Styles</strong></p>
+<p><strong>EPIC Reusable Styles</strong></p>
 <ul>
+
+<li>Global <code>dfn</code> Element</li>
+<style id="style--dfn" type="text/css">
+/* TODO: Add this to global CSS */
+	dfn { font-style: normal; }</style>
+
+<li>Global <code>abbr[title]</code> Element</li>
+<style id="style--abbr-title" type="text/css">
+/* TODO: Add this to global CSS */
+/* FAQ: The global CSS styles this with a border bottom,
+        but neglects to remove browsers' dotted underline style
+        (has style: Firefox, Chrome…; no style: Safari…) */
+        abbr[title] { text-decoration: none; }</style>
+
+<li>Global <code>.s-text-figure-pair</code> Scope</li>
+<style id="style--s-text-figure-pair" type="text/css">
+/*
+Text-Figure Pair
+
+Any pair of elements that represent text content and figure content.
+
+Figure content elements:
+- `<img>`
+- `<figure>`
+- `<video>`
+- `<audio>`
+- `<iframe>`
+
+Text content elements, e.g. `<div>`, `<p>`, `<ul>`, `<ol>`, `<dl>`.
+
+Style guide: Scopes.TextFigurePair
+*/
+/* Elements */
+/* For "mobile" */
+@media (max-width: 767.98px) {
+    .s-text-figure-pair {
+        display: flex;
+        flex-direction: column;
+    }
+    .s-text-figure-pair > img,
+    .s-text-figure-pair > figure,
+    .s-text-figure-pair > video,
+    .s-text-figure-pair > audio,
+    .s-text-figure-pair > iframe {
+        order: 1;
+    }
+}</style>
 
 <li>WeTeach CS <code>.weteachcs-content</code> Scope</li>
 <style id="style--weteachcs-content" type="text/css">
@@ -33,7 +80,7 @@ Markup:
 </section>
 <!--</div>-->
 
-Style guide: Components.WeTeachCS
+Style guide: Scopes.WeTeachCS
 */
 /* Elements */
 .weteachcs-content h4,
@@ -73,9 +120,9 @@ An independent piece of figure/text content that can be an item of a greater con
 Markup:
 <article class="weteachcs-card weteachcs-card--{{modifier}}">
     <!-- FAQ: The media could also be the `__figure`, but do not apply media-specific CSS to the core component styles -->
-    <div class="weteachcs-card__figure">
-        <img class="weteachcs-card__media"  data-cke-saved-src="…" src="…" />
-    </div>
+    <figure class="weteachcs-card__figure">
+        <img class="weteachcs-card__media" src="…" />
+    </figure>
     <div class="weteachcs-card__content">
         <h3 class="weteachcs-card__title">TACC</h3>
         <!-- FAQ: The `<time>` could also be the `__datetime`, but do not apply `<time>`-specific CSS to the core component styles -->
@@ -83,7 +130,7 @@ Markup:
             <time datetime="2020-06-22">June 22, 2020</time>
         </h4>
         <p>Description of an amazing event at that date.</p>
-        <a  data-cke-saved-href="…" href="…" target="_blank">Learn more about the event.</a>
+        <a href="…" target="_blank">Learn more about the event.</a>
     </div>
 </article>
 
@@ -163,7 +210,7 @@ A callout to suggest the user perform some action.
 Markup:
 <section>
 	<p>Description of a great opportunity</p>
-	<a class="weteachcs-cta"  data-cke-saved-href="…" href="…" target="_blank">Apply for this oppportunity!</a>
+	<a class="weteachcs-cta" href="…" target="_blank">Apply for this oppportunity!</a>
 </section>
 
 Style guide: Components.WeTeachCS.CTA
@@ -232,7 +279,7 @@ small.weteachcs-quote__source {
 
 
 
-<li>Generic <code>.article-list</code> Component</li>
+<li>Global <code>.article-list</code> Component</li>
 <style id="style--tacc-article-list" type="text/css">
 /*
 Article List
