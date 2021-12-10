@@ -1,7 +1,6 @@
 <p>
 	<strong>Research Table Styles</strong></p>
 <style id="style--table" type="text/css">
-/* WARNING: Duplicated in other pages */
 /*
 WeTeach CS - Table
 
@@ -10,6 +9,10 @@ Scope styles for table on WeTeach_CS page.
 .weteachcs-table
 
 Markup:
+<div class="weteachcs-table">
+    <p>Warner, J. R., Fletcher, C. L., Martin, N. D., Baker, S. N., (in press). Applying the CAPE framework to measure equity and inform policy in computer science education. <em>Policy Futures in Education</em>.</p>
+    <p>Warner, J. R., Plowman, D. L., Osman, D. J., &amp; Schallert, D. L. (in press). The influence of collective and individual sensemaking on how facilitators and teachers implement a professional development programme. <em>Teacher Development</em>.</p>
+</div> 
 <table class="weteachcs-table">
     <thead>
         <tr>
@@ -74,6 +77,27 @@ Style guide: components.weteachcs.table
     font-size: 1em;
 }
 
+/* Mixed relevant default table styles and `.weteachcs-table` styles */
+/* SEE: https://www.tacc.utexas.edu/tacc-new-theme/css/main.css */
+.weteachcs-table:not(table) {
+    font-size: 1em;
+    border-collapse: collapse;
+    margin: 15px 0;
+    padding: 0;
+    width: 100%
+}
+.weteachcs-table:not(table) p {
+    margin-block: 0;
+    padding: 7px;
+    border: 1px solid #ddd;
+}
+.weteachcs-table:not(table) p + p {
+    border-top: none;
+}
+.weteachcs-table:not(table) p:nth-child(even) {
+    background-color: #eaf3ff
+}
+
 /* For "mobile", render a single column of blocks */
 @media (max-width: 767.98px) {
     .weteachcs-table table,
@@ -114,6 +138,11 @@ Style guide: components.weteachcs.table
     }
     /* Link */ .weteachcs-table__link {
         text-align: center;
+    }
+
+    /* Copied styles for `.weteachcs-table__cite` */
+    .weteachcs-table:not(table) p {
+        font-size: 12px;
     }
 }</style>
 <ul>
