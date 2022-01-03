@@ -1,220 +1,22 @@
-<style type="text/css">
-body {
-		background: #f4f4f4; /* For browsers that do not support gradients */
-		background: -webkit-linear-gradient(#f4f4f4, #dadada); /* For Safari 5.1 to 6.0 */
-		background: -o-linear-gradient(#f4f4f4, #dadada); /* For Opera 11.1 to 12.0 */
-		background: -moz-linear-gradient(#f4f4f4, #dadada); /* For Firefox 3.6 to 15 */
-		background: linear-gradient(#f4f4f4, #dadada); /* Standard syntax */
-	}
-	
-	abbr[title] {
-		border-bottom: none;
-	}
-	
-	p {
-		font-family: "Helvetica Neue","Helvetica",sans-serif;
-		line-height:1.5;
-		font-size:15px;
-	}
-	
-	th{
-		font-weight:lighter;
-		font-size: 1em;
-	}
-	
-	#retro-header-wrapper {
-		width:90%;
-		margin: 0px auto 0px auto;
-		padding:0px 5%;
-	}
-	
-	#retro-header-div {
-		margin:0px;
-		padding:30px 0px;
-	}
-	
-	#retro-body-wrapper {
-		width:90%;
-		margin: 0px auto 0px auto;
-		padding:50px 5%;
-	}
-	
-	.headers{
-		padding-left: 30%;
-		position: relative;
-	}
-	
-	.codetacc-head{
-		display: block;
-		margin-bottom: -18px;
-	}
-	
-	.code-logo-ds{
-		margin-left: 12%;
-		width: 800px;
-	}
-	
-	.connected-logo{
-		text-transform: uppercase;
-		font-family:"HelveticaNeueLTStd-BdCn","Helvetica Neue","Helvetica",sans-serif;
-		text-align: center;
-		font-size: 7em;
-	}
-	.connected-logo--minor {
-		font-size: 3em;
-	}
-	
-	.code-at-tacc-logo{
-		width: 400px;
-		margin: 0 auto;
-	}
-	
-	.camp-dates{
-		color:#039;
-		font-size: 2em;
-		text-align: center;
-	}
-	
-	.panel{
-		border: 0 none;
-	}
-	
-	.panel-default > .panel-heading{
-		background-image: none;
-		background-color: transparent;
-		border-bottom: 2px solid transparent;
-		color: #039;
-	}
-	
-	.panel-title a{
-		color: #039;
-	}
-	
-	.center-col{
-		border-left: 1px solid #3e3e3e;
-		border-right: 1px solid #3e3e3e;
-	}
-	
-	.application{
-		border-bottom: 1px solid;
-		font-weight: bolder;
-	}
-	
-	.camp-subhead{
-		font-family:"HelveticaNeueLTStd-LtCn","Helvetica Neue","Helvetica",sans-serif;
-		color: rgb(0, 0, 0);
-	}
-	
-	.img-banners{
-		margin:0;
-		padding:0;
-		width:100%;
-		border:none;
-		text-align: center;
-	
-	}
-	
-	@media (max-width: 1200px) {
-		.rwd-codetacc{}
-	
-		.rwd-Connected{
-			font-size: 3em;
-		}
-	
-		.rwd-dates{}
-	
-	}
-	@media (max-width: 800px){
-		.rwd-codetacc{}
-	
-		.rwd-Connected{
-			font-size: 2em;
-			padding: 10px;
-		}
-	
-		.rwd-dates{}
-	
-		.center-col{
-				border-left: 0 none;
-				border-right: 0 none;
-			}
-	
-		.code-logo-ds{
-				margin-left: 0;
-	
-	
-			}
-			.code-main-logo{
-					width: 400px;
-					margin-left: 12%;
-			}
-	
-			.img-banners{
-				margin-bottom: 20px;
-			}
-	}
-	
-	@media (max-width: 480px) {
-		.rwd-codetacc{
-			font-size: 20px;
-		}
-	
-		.rwd-Connected{
-			font-size: 1em;
-			padding-top: 10px;
-		}
-	
-		.rwd-dates{
-			font-size:2em;
-		}
-	
-		.code-logo-ds{
-			margin-left:0;
-	
-		}
-		.code-main-logo{
-				width: 400px;
-				margin-left: 0;
-		}
-	
-		.center-col{
-			border-left: 0 none;
-			border-right: 0 none;
-		}
-	
-		.directions{
-			border-top: 1px solid lightgrey;
-			padding-top: 15px;
-		}
-	
-		.img-banners{
-			margin-bottom: 20px;
-		}
-	
-	}</style>
-<div class="container" id="retro-header-wrapper">
-	<div class="row" id="retro-header-div">
-		<div class="col-sm-12" style="font-size: 1em;">
+<!-- NOTE: This markup expects "Code@TACC - Styles" -->
+<div class="container">
+	<header class="row">
+		<div class="col-sm-12">
 			<p>
 				<img alt="Code@TACC Summer High School STEM Camp Logo" class="img-responsive code-at-tacc-logo code-main-logo" src="https://www.tacc.utexas.edu/documents/1084364/1158641/Code-Wearables-1074px.png" /></p>
 		</div>
 		<div class="col-sm-12">
-			<header>
-				<div class="connected-logo">
-					Cybersecurity</div>
-				<div class="connected-logo connected-logo--minor">
-					<span class="text-nowrap">CompTIA Security</span> + <span class="text-nowrap">Certification Virtual Program</span></div>
-			</header>
+			<span class="camp-name">GenCyber@TACC</span>
+			<small class="camp-name camp-name--minor"><span class="text-nowrap">CompTIA Security</span> + <span class="text-nowrap">Certification Virtual Program</span></small>
 		</div>
 		<div class="col-md-12">
 			<h2 class="camp-dates rwd-dates">
 				Approx. 4 Hours per Week</h2>
 		</div>
-	</div>
-	<!-- closing header-div -->
+	</header>
 	<div class="row">
 		<div class="col-md-12">
-			<p class="centered" style="font-size:small; color:#999; margin-top:0px; margin-bottom:30px; display: block;">
+			<p class="centered">
 				<img class="img-responsive" src="/documents/1084364/1822769/cybersecutiry-comptia-1.jpg" /></p>
 		</div>
 	</div>
@@ -228,31 +30,26 @@ body {
 				All past TACC summer camp participants are invited to register. There is no cost for training materials and exam. Coding experience is not required. Participants are expected to participate until the conclusion of the program. Sessions (instruction and review) are offered multiple times during the week and will be recorded for your participation convenience.</p>
 		</div>
 		<div class="col-md-6">
-			<p class="centered" style="font-size:small; color:#999; margin-top:0px; margin-bottom:30px;">
+			<p class="centered">
 				<img class="img-responsive" src="/documents/1084364/1822769/cybersecutiry-comptia-2.jpg" /></p>
 		</div>
 	</div>
 	<!-- Short Info about camp -->
-	<div class="row" style="margin-bottom: 50px;">
-		<div class="col-md-4">
-			<h2 style="text-align:center;">
-				<span style="border-bottom: 1px solid; font-weight:bolder;">Dates</span><br />
-				<br />
-				June 22—Sept 6, 2020</h2>
+	<div class="row  data-banner">
+		<div class="col-md-4  data-banner__column">
+			<h2>
+				<span class="data-banner__title">Dates</span> <span class="data-banner__content">June 22—Sept 6, 2020</span></h2>
 		</div>
-		<div class="col-md-4 center-col">
-			<h2 style="text-align:center;">
-				<span class="application">Application</span><br />
-				<br />
-				<a href="https://utexas.qualtrics.com/jfe/form/SV_e2R16TteAK9kUo5" target="_blank">Apply Here</a></h2>
-			<p style="margin-top: 0px; font-style: italic; font-size: 12px; text-align: center;">
+		<div class="col-md-4  data-banner__column data-banner__center-column">
+			<h2>
+				<span class="data-banner__title">Application</span>
+				<a class="data-banner__title-content" href="https://utexas.qualtrics.com/jfe/form/SV_e2R16TteAK9kUo5" target="_blank">Apply Here</a></h2>
+			<p class="data-banner__content  small">
 				Registration closes on June 3rd, 2020.</p>
 		</div>
-		<div class="col-md-4">
-			<h2 style="text-align:center;">
-				<span style="border-bottom: 1px solid; font-weight: bolder;">Cost</span><br />
-				<br />
-				FREE</h2>
+		<div class="col-md-4  data-banner__column">
+			<h2>
+				<span class="data-banner__title">Cost</span> <span class="data-banner__title-content">FREE</span></h2>
 		</div>
 	</div>
 	<!-- Prospective Activities -->
@@ -262,41 +59,39 @@ body {
 				<img alt="Students working on natural hazards project" class="img-responsive" src="/documents/1084364/1822769/cybersecutiry-comptia-3.jpg" /></p>
 		</div>
 		<div class="col-md-6 col-xs-12">
-			<h2 style="text-align:center; margin:0px 0px 25px 0px; padding:0px;">
-				Prospective Activities</h2>
+			<h4 class="camp-subhead">
+				PROSPECTIVE ACTIVITIES</h4>
 			<p>
 				The CompTIA Security+ certification supports participants who are considering a cybersecurity related career track, want to add security credentials to their resume, or need to learn network security as part of their job.</p>
-			<h3>
-				Security+ Domains</h3>
+			<h5>
+				Security+ Domains</h5>
 			<div>
 				<ul>
 					<li>
-						21% Threats, Attacks and Vulnerabilities</li>
+						<small>21% Threats, Attacks and Vulnerabilities</small></li>
 					<li>
-						22% Technologies and Tools</li>
+						<small>22% Technologies and Tools</small></li>
 					<li>
-						15% Architecture and Design</li>
+						<small>15% Architecture and Design</small></li>
 					<li>
-						16% Identify and Access Management</li>
+						<small>16% Identify and Access Management</small></li>
 					<li>
-						14% Risk Management</li>
+						<small>14% Risk Management</small></li>
 					<li>
-						12% Cryptography and PKI</li>
+						<small>12% Cryptography and PKI</small></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<hr />
 	<!-- Camp Info: FAQs, What not to Bring -->
 	<div class="row">
 		<div class="col-md-12">
-			<div style="margin:0px 0px 50px 0px; padding:0px;">
-				<h2 style="text-align: center;">
-					Virtual Program Information</h2>
+			<h2 class="camp-subhead">
+				Virtual Program Information</h2>
 			</div>
-			<div class="row">
-				<div class="col-md-4 col-sm-12" style="text-align:center;">
-					<h4 class="camp-subhead" style="margin:10px 10px 30px 10px; padding:0px;">
+			<div class="row  camp-info">
+				<div class="col-md-4 col-sm-12">
+					<h4 class="camp-subhead">
 						WHAT TO KNOW</h4>
 					<p>
 						Willingness to learn</p>
@@ -305,230 +100,64 @@ body {
 						(<a href="https://idmanager.its.utexas.edu/eid_self_help/" target="_blank" title="UT EID Self-Service Tools">get a <abbr title="University of Texas Electronic Identity">UT EID</abbr></a>)<br />
 						(<a href="https://youtu.be/EePa27mGuGE" target="_blank" title="Creating a UT EID (YouTube video instructions)">video instructions</a>)</p>
 				</div>
-				<div class="col-md-4 col-sm-12" style="text-align:center;">
-					<h4 class="camp-subhead" style="margin:10px 10px 30px 10px; padding:0px;">
+				<div class="col-md-4 col-sm-12">
+					<h4 class="camp-subhead">
 						PROGRAM FORMS</h4>
 					<p>
 						<em>Release and Indemnification Form:</em></p>
-					<p>
-						<a href=" https://www.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=6aa21f10-26a2-4ccc-bb3c-0bb9ba4665f4&amp;env=na1&amp;acct=d40a37d5-d708-44dd-9ea7-aab378b81326&amp;v=2" target="_blank">Minors Required Documents</a><br />
-						(17 years old and under)</p>
-					<p>
-						<a href="https://www.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=5964ea9d-f8d1-45e4-a116-1e76b0512332&amp;env=na1&amp;acct=d40a37d5-d708-44dd-9ea7-aab378b81326&amp;v=2" target="_blank">Menores Requeridos Documentos</a><br />
-						(17 años y menores)</p>
+					<ul class="info-list">
+						<li>
+							<a href=" https://www.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=6aa21f10-26a2-4ccc-bb3c-0bb9ba4665f4&amp;env=na1&amp;acct=d40a37d5-d708-44dd-9ea7-aab378b81326&amp;v=2" target="_blank">Minors Required Documents</a><br />
+						(17 years old and under)</li>
+						<li>
+							<a href="https://www.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=5964ea9d-f8d1-45e4-a116-1e76b0512332&amp;env=na1&amp;acct=d40a37d5-d708-44dd-9ea7-aab378b81326&amp;v=2" target="_blank">Menores Requeridos Documentos</a><br />
+						(17 años y menores)</li>
+					</ul>
 				</div>
-				<div class="col-md-4 col-sm-12" style="text-align:center;">
-					<h4 class="camp-subhead" style="margin:10px 10px 30px 10px; padding:0px;">
+				<div class="col-md-4 col-sm-12">
+					<h4 class="camp-subhead">
 						CAMP PROGRAM</h4>
 					<p>
 						<em>Y.P.P. Communication Plan:</em></p>
-					<p>
-						<a href="/documents/1084364/1736606/Comm+Plan+-+Cybersecurity+CompTIA.pdf" target="_blank">English</a></p>
-					<p>
-						<a href="/documents/1084364/1736606/Comm+Plan+-+Cybersecurity+CompTIA+-+SPANISH.pdf" target="_blank">Español</a></p>
-				</div>
-				<p style="font-size: 5em; text-align: center;">
-					&nbsp;</p>
-				<h4 class="camp-subhead" style="margin:10px 10px 30px 10px; padding:0px; text-align:center;">
-					Frequently Asked Questions</h4>
-				<div aria-multiselectable="table" class="panel-group" id="faq" role="tablist">
-					<div class="panel panel-default">
-						<div class="panel-heading" id="dates" role="tab">
-							<h4 class="panel-title">
-								<a aria-controls="dates-answer" aria-expanded="true" class="collapsed" data-parent="#dates" data-toggle="collapse" href="#dates-answer" role="button"> <strong>Q:</strong> What are the dates of the program?</a></h4>
-						</div>
-						<div aria-labelledby="dates" class="panel-collapse collapse" id="dates-answer" role="tabpanel">
-							<div class="panel-body">
-								<strong>A:</strong> June 22 – September 6, 2020. Participants who complete practice exam will receive an exam code the week of September 6, 2020 to take the CompTIA Security + Certification Exam.</div>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading" id="location" role="tab">
-							<h4 class="panel-title">
-								<a aria-controls="location-answer" aria-expanded="true" class="collapsed" data-parent="#location" data-toggle="collapse" href="#location-answer" role="button"> <strong>Q:</strong> What is the eligibility of the Code@TACC Cybersecurity Certification Program?</a></h4>
-						</div>
-						<div aria-labelledby="location" class="panel-collapse collapse" id="location-answer" role="tabpanel">
-							<div class="panel-body">
-								<strong>A:</strong> This program is open only to past TACC summer camp participants.</div>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading" id="ages" role="tab">
-							<h4 class="panel-title">
-								<a aria-controls="ages-answer" aria-expanded="true" class="collapsed" data-parent="#ages" data-toggle="collapse" href="#ages-answer" role="button"> <strong>Q:</strong> How can I contact the UT Austin Code@TACC Cybersecurity Certification Program Team?</a></h4>
-						</div>
-						<div aria-labelledby="ages" class="panel-collapse collapse" id="ages-answer" role="tabpanel">
-							<div class="panel-body">
-								<strong>A:</strong> Please email our office at <a href="mailto:outreach@tacc.utexas.edu" target="_blank">outreach@tacc.utexas.edu</a> or call 512-553-2502.</div>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading" id="involvement" role="tab">
-							<h4 class="panel-title">
-								<a aria-controls="involvement-answer" aria-expanded="true" class="collapsed" data-parent="#involvement" data-toggle="collapse" href="#involvement-answer" role="button"> <strong>Q:</strong> Where will the program be located?</a></h4>
-						</div>
-						<div aria-labelledby="involvement" class="panel-collapse collapse" id="involvement-answer" role="tabpanel">
-							<div class="panel-body">
-								<strong>A:</strong> This program will take place over the internet, virtually.</div>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading" id="costs" role="tab">
-							<h4 class="panel-title">
-								<a aria-controls="costs-answer" aria-expanded="true" class="collapsed" data-parent="#costs" data-toggle="collapse" href="#costs-answer" role="button"> <strong>Q:</strong> Do I need to have access to Wifi?</a></h4>
-						</div>
-						<div aria-labelledby="costs" class="panel-collapse collapse" id="costs-answer" role="tabpanel">
-							<div class="panel-body">
-								<strong>A:</strong> Participants who notify TACC will have an opportunity to receive a hotspot. Hotspots are limited and will be given out on a first request basis.</div>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading" id="contact" role="tab">
-							<h4 class="panel-title">
-								<a aria-controls="contact-answer" aria-expanded="true" class="collapsed" data-parent="#contact" data-toggle="collapse" href="#contact-answer" role="button"> <strong>Q:</strong> Do I have to have my own computer or laptop?</a></h4>
-						</div>
-						<div aria-labelledby="contact" class="panel-collapse collapse" id="contact-answer" role="tabpanel">
-							<div class="panel-body">
-								<strong>A:</strong> Participants can use a windows or mac computer. If participants do not have the necessary equipment such as laptops, they can be loaned from TACC.</div>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading" id="supervision" role="tab">
-							<h4 class="panel-title">
-								<a aria-controls="supervision-answer" aria-expanded="true" class="collapsed" data-parent="#supervision" data-toggle="collapse" href="#supervision-answer" role="button"> <strong>Q:</strong> Who will be supervising me during the program?</a></h4>
-						</div>
-						<div aria-labelledby="supervision" class="panel-collapse collapse" id="supervision-answer" role="tabpanel">
-							<div class="panel-body">
-								<strong>A:</strong> Students will be supervised on the calls by college counselors. Counselors have been background checked (also checked through the national sex offender registry) and have received child protection training.</div>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading" id="laptop" role="tab">
-							<h4 class="panel-title">
-								<a aria-controls="laptop-answer" aria-expanded="true" class="collapsed" data-parent="#laptop" data-toggle="collapse" href="#laptop-answer" role="button"> <strong>Q:</strong> Can I leave the program early?</a></h4>
-						</div>
-						<div aria-labelledby="laptop" class="panel-collapse collapse" id="laptop-answer" role="tabpanel">
-							<div class="panel-body">
-								<strong>A:</strong> Participants are expected to continue until the end of the program.</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="dress-code col-sm-12">
-					<!-- <p style="font-size: 5em; text-align: center;">
-						<emclass="fa fa-ban" aria-hidden="true"></em></p> -->
-					<h2 class="camp-subhead" style="padding:0px; text-align:center; margin:75px 0px 50px 0px; padding:0px;">
-						TACC Dress Policy</h2>
-					<p>
-						Participants have the right to dress as they choose as long as their dress meets the approved dress and grooming regulations, does not disrupt activities, is not obscene or defamatory, and does not endanger the physical health or safety of themselves or others.</p>
-					<p>
-						Participants have the responsibility to dress and groom in such a manner so as to reflect cleanliness, modesty, safety and good taste; become familiar with and adhere to approved dress and grooming expectations of the Texas Advanced Computing Center (TACC).</p>
-					<p>
-						TACC's summer participant dress code standards are designed to promote an appropriate environment for individuals who are preparing themselves for life. We ask that students not wear the following:</p>
-					<p>
-						If a student's personal appearance or form of dress violates these standards, the student will be allowed to correct the problem. Many details and styles of clothing cannot be covered in the dress code; therefore the administration (including counselors) of TACC reserves the right to make to final determination concerning appropriateness of a student's attire.</p>
-					<ul>
+					<ul class="info-list">
 						<li>
-							Any clothing that reveals undergarments including boxer shorts.</li>
+							<a href="/documents/1084364/1736606/Comm+Plan+-+Cybersecurity+CompTIA.pdf" target="_blank">English</a></li>
 						<li>
-							Skirts/Shorts that are not within 1 inch of the students fingertips when their arms are extended by their side.</li>
-						<li>
-							Any clothing that reveals a student's stomach, torso, chest, breasts or cleavage.</li>
-						<li>
-							Halter tops, tube tops, half shirts, see through blouses or backless apron garments.</li>
-						<li>
-							Clothing, accessories, or tattoos with references to alcohol, drugs, sex, tobacco, vulgar language, violence, gang related affiliations or other symbols that distract from the learning environment.</li>
-						<li>
-							Clothing, jewelry, shoes, chains, or other accessories that would endanger student's safety or distract from the learning environment are not acceptable.</li>
-						<li>
-							Any bedroom attire is prohibited outside of the dorms; pajama tops or bottoms, slippers, etc...</li>
+							<a href="/documents/1084364/1736606/Comm+Plan+-+Cybersecurity+CompTIA+-+SPANISH.pdf" target="_blank">Español</a></li>
 					</ul>
 				</div>
 			</div>
-			<hr />
-			<div class="row">
-				<div class="col-sm-12">
-					<h2 style="text-align:center; margin:75px 0px 25px 0px; padding:0px;">
-						Funding</h2>
-					<p style="text-align:center">
-						The camp was funded with the generosity from Cisco University Research Program Fund and Silicon Valley Community Foundation.</p>
-					<!-- Gallery removed 2020-09. Restoration proposed 2021-04. --><!--<style id="o-gallery-styles" type="text/css">
-						/*
-						Gallery (Object)
-			
-						A gallery of apps to launch, images to view, etc.
-			
-						Markup:
-						<ul class="o-gallery">
-							<li>…</li>
-							<li>…</li>
-						</ul>
-						*/
-						/* WARNING: Duplicated in other pages */
-						/* WARNING: Re-built in other pages */
-						.o-gallery {
-							--grid-gap: 30px;
-							--min-item-width: 300px;
-			
-							display: grid;
-							grid-gap: var(--grid-gap);
-							grid-template-columns: repeat(auto-fit, minmax(var(--min-item-width), 1fr));
-							justify-items: center;
-							align-items: center;
-						}
-						</style>
-						<style id="s-gallery-styles" type="text/css">
-						/*
-						Gallery (Scope)
-			
-						Styles often added for instances of `o-gallery`, but independent of `o-gallery` layout.
-						*/
-						/* WARNING: Duplicated in other pages */
-						.s-gallery li {
-							list-style-type: none;
-						}
-						.s-gallery + p {
-							margin: 20px auto 10px;
-							text-align: center;
-						}
-						</style>
-						<style id="cybersecurity-unique-gallery-styles" type="text/css">
-						.o-gallery {
-							--grid-gap: 25px;
-							/* FAQ: This variable is borrowed from `.s-gallery` */
-							--min-item-width: var(--smallest-image-width);
-			
-							margin: 25px auto 0;
-						}
-						.s-gallery {
-							--smallest-image-width: 310px;
-							--smallest-image-height: 106px;
-						}
-						.s-gallery li > img {
-							max-width: var(--smallest-image-width);
-							max-height: var(--smallest-image-height);
-						}</style>
-						<ul class="o-gallery  s-gallery">
-							<li>
-								<img alt="Silicon Valley Logo" src="/documents/1084364/1822769/silicon-valley-logo.png" /></li>
-							<li>
-								<img alt="CISCO Logo" src="/documents/1084364/1822769/cisco-logo-blue-2016.png" /></li>
-						</ul>
-						<p class="small">These are all contributors to our goals, and shall get the same general dimensions for space on the site, but none are highlighted more than others.</p>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h2 class="camp-subhead">
+				Frequently Asked Questions</h2>
+			<!-- SPECIFIC TO THIS CAMP -->
+			<div aria-multiselectable="table" class="panel-group" id="connected-camp-faq" role="tablist">
+				<div class="panel panel-default">
+					<div class="panel-heading" id="dates" role="tab">
+						<h4 class="panel-title">
+							<a aria-controls="dates-answer" aria-expanded="true" class="collapsed" data-parent="#connected-camp-faq" data-toggle="collapse" href="#dates-answer" role="button"> <strong>Q:</strong> What are the dates of the program?</a></h4>
+					</div>
+					<div aria-labelledby="dates" class="panel-collapse collapse" id="dates-answer" role="tabpanel">
+						<div class="panel-body">
+							<strong>A:</strong> June 22 – September 6, 2020. Participants who complete practice exam will receive an exam code the week of September 6, 2020 to take the CompTIA Security + Certification Exam.</div>
 					</div>
 				</div>
-			<hr />
-			<div class="row">
-				<div class="col-sm-12">
-					<h2 style="text-align:center; margin:75px 0px 25px 0px; padding:0px;">
-						Related Links</h2>
-					<div class="col-sm-6">
-						<a aria-label="Learn more about TACC's K-12 programs." href="https://www.tacc.utexas.edu/education/stem-programs" target="_blank"><img alt="Stem Programs - Educational Programs for Students K-12" class="img-responsive img-banners" src="https://www.tacc.utexas.edu/documents/1084364/1158641/K-12-Programs.jpg" /></a></div>
-					<div class="col-sm-6">
-						<a aria-label="An article about the 2017 CODE@TACC Connected Experience." href="https://www.tacc.utexas.edu/-/buildings-vs-earthquakes-high-school-students-learn-the-science" target="_blank"><img alt="Code at TACC: Connected-Experience Structural Engineering at UT" class="img-responsive img-banners" src="https://www.tacc.utexas.edu/documents/1084364/1158641/DS-Banner.jpg" /></a></div>
+				<div class="panel panel-default">
+					<div class="panel-heading" id="location" role="tab">
+						<h4 class="panel-title">
+							<a aria-controls="location-answer" aria-expanded="true" class="collapsed" data-parent="#connected-camp-faq" data-toggle="collapse" href="#eligibility-answer" role="button"> <strong>Q:</strong> What is the eligibility of the Code@TACC Cybersecurity Certification Program?</a></h4>
+					</div>
+					<div aria-labelledby="eligibility" class="panel-collapse collapse" id="eligibility-answer" role="tabpanel">
+						<div class="panel-body">
+							<strong>A:</strong> This program is open only to past TACC summer camp participants.</div>
+					</div>
 				</div>
 			</div>
-			<!-- closing retro-body-wrapper --><!-- extra div to break page in the same way as /cybersecurity which does NOT have extra padding at page bottom --></div>
+		</div>
 	</div>
 </div>
