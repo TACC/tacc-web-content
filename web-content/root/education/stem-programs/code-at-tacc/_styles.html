@@ -113,6 +113,7 @@ p.centered img {
 h2.camp-subhead {
 	margin:75px 0px 50px 0px;
 }
+h3.camp-subhead,
 h4.camp-subhead {
 	margin: 10px 10px 30px 10px;
 }
@@ -262,14 +263,9 @@ Markup:
 h2.data-banner__title {
 	margin: 0 auto;
 }
-
-/* FAQ: This markup exists because not all `tacc-new-theme:/…/tacc-base.css` `h2` styles do not affect `.h2` (which would have allowed markup `<p class="data-banner__content  h2">`), and changing them to do so now (a) could have unexpected consequences and (b) requires deploy which is to be limited to only as necessary. */
-h2 > .data-banner__title {
-	display: inline-block;
-}
-h2 > .data-banner__title + a.data-banner__title-content,
-h2 > .data-banner__title + span.data-banner__title-content {
+h2 > .data-banner__title-content {
 	display: block;
+	font-size: smaller;
 }
 
 /* Borders for center column */
