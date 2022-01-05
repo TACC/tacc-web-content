@@ -1,5 +1,8 @@
 <code>Styles for 2021 "Code@TACC …" Pages</code>
 <style id="style--code-at-tacc" type="text/css">
+
+/* ELEMENTS - Global */
+
 body {
 	background: #f4f4f4; /* Fallback */
 	background: linear-gradient(#f4f4f4, #dadada); /* Standard */
@@ -9,31 +12,53 @@ abbr[title] {
 	border-bottom: none;
 }
 
-p {
+
+
+
+
+/* ELEMENTS - Main Content */
+
+#main-content p {
 	font-family: "Helvetica Neue","Helvetica",sans-serif;
 	line-height:1.5;
+}
+#main-content p:not(.small) {
 	font-size:15px;
 }
 
-th{
+#main-content th {
 	font-weight:lighter;
 	font-size: 1em;
 }
 
-img {
+#main-content img {
 	/* `alt` text for images that do not load */
 	font-size: small;
 	color: #999;
 }
-p.centered img {
+#main-content p.centered img {
 	margin: 0 auto;
 }
 
-.container {
+
+
+
+
+/* BOOTSTRAP - Main Content */
+
+#main-content .container {
 	width:90%;
-	margin: 0px auto 0px auto;
-	padding:0px 5%;
+	padding-inline: 5%;
 }
+#main-content .container:first-child:not(.camp-faq-container) {
+	padding-top: 2.5%;
+}
+
+
+
+
+
+/* COMPONENTS - Possibly Outdated */
 
 .headers{
 	padding-left: 30%;
@@ -78,6 +103,10 @@ p.centered img {
 }
 
 
+
+
+
+/* COMPONENTS - From Wesley */
 
 .camp-name {
 	display: block;
@@ -125,6 +154,10 @@ h4.camp-subhead {
 
 
 
+
+
+/* COMPONENTS - Possibly Outdated (More) */
+
 .img-banners{
 	margin:0;
 	padding:0;
@@ -132,6 +165,12 @@ h4.camp-subhead {
 	border:none;
 	text-align: center;
 }
+
+
+
+
+
+/* MEDIA QUERIES */
 
 @media (max-width: 1200px) {
 	.rwd-codetacc{}
@@ -207,6 +246,12 @@ h4.camp-subhead {
 		margin-bottom: 20px;
 	}
 }
+
+
+
+
+
+/* COMPONENTS - From Wesley (More) */
 
 
 
