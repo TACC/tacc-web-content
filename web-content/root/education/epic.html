@@ -45,7 +45,6 @@ Style guide: components.weteachcs
     font-size: 100%;
 }
 
-/* WARNING: Scopes objects */
 .weteachcs-content .o-gallery > .weteachcs-card {
     margin: 0;
 }</style>
@@ -133,38 +132,46 @@ Style guide: components.weteachcs.card
     margin-top: 0.5em;
 }</style>
 <section class="weteachcs-content">
-    <div class="weteachcs-card weteachcs-card--highlight">
-        <div class="row">
-            <figure class="col-sm-12  weteachcs-card__figure">
-                <img class="img-responsive  weteachcs-card__media" src="/documents/1084364/1761473/epic-4c-2020-logo-with-text.svg" /></figure>
-            <p class="col-sm-12  weteachcs-card__content">
-                EPIC's mission is to broaden participation in K20 computing pathways through research, outreach, professional development, and policy advocacy. To achieve this mission, we partner with school districts, institutions of higher education, industry leaders, and federal, state and local government entities who are also dedicated to expanding access and opportunity for traditionally underrepresented students in computing. EPIC also provides evaluation and technology services to external entities to help advance their STEM education research and outreach.</p>
-        </div>
-    </div>
-    <h3>
-        Components of EPIC</h3>
-    <!--<div class="row">
+	<div class="weteachcs-card weteachcs-card--highlight">
+		<div class="row">
+			<figure class="col-sm-12  weteachcs-card__figure">
+				<img class="img-responsive  weteachcs-card__media" src="/documents/1084364/1761473/epic-4c-2020-logo-with-text.svg" /></figure>
+			<p class="col-sm-12  weteachcs-card__content">
+				EPIC's mission is to broaden participation in K20 computing pathways through research, outreach, professional development, and policy advocacy. To achieve this mission, we partner with school districts, institutions of higher education, industry leaders, and federal, state and local government entities who are also dedicated to expanding access and opportunity for traditionally underrepresented students in computing. EPIC also provides evaluation and technology services to external entities to help advance their STEM education research and outreach.</p>
+		</div>
+	</div>
+	<h3>
+		Components of EPIC</h3>
+	<!--<div class="row">
     <div class="col-sm-6">-->
-    <h4><a href="/epic/weteachcs">WeTeach_CS</a></h4>
-    <p>The WeTeach_CS project trains K-12 educators to improve high quality CS experiences for a broad and diverse range of students. WeTeach_CS is increasing the number of CS certified high school teachers, increasing the number of high schools offering CS courses, increasing the number and diversity of students enrolled in CS courses, and expanding access to computational thinking, coding and programming experiences for all students in K-8. WeTeach_CS educates, empowers and inspires K-12 teachers to realize the vision of CSforAll.</p>
-    <h4><a href="/epic/research">Research</a></h4>
-    <p>EPIC supports several research projects related to broadening participation in CS education.</p>
-    <!--</div>
+	<h4>
+		<a href="/epic/weteachcs">WeTeach_CS</a></h4>
+	<p>
+		The WeTeach_CS project trains K-12 educators to improve high quality CS experiences for a broad and diverse range of students. WeTeach_CS is increasing the number of CS certified high school teachers, increasing the number of high schools offering CS courses, increasing the number and diversity of students enrolled in CS courses, and expanding access to computational thinking, coding and programming experiences for all students in K-8. WeTeach_CS educates, empowers and inspires K-12 teachers to realize the vision of CSforAll.</p>
+	<h4>
+		<a href="/epic/research">Research</a></h4>
+	<p>
+		EPIC supports several research projects related to broadening participation in CS education.</p>
+	<!--</div>
     <div class="col-sm-6">
     <a href="/documents/1084364/1761473/epic-team-1000.jpg/" target="_blank"><img style="margin-bottom:0px; border:none;" src="/documents/1084364/1761473/epic-team-1000.jpg/" class="img-responsive" /></a>
     <p style="margin-top:3px; font-size:12px;"><i>The EPIC team at TACC. [click for a larger version]</i></p>
     </div>
     </div>-->
-    <h4><a href="/epic/stem-evaluation-services">STEM Evaluation Services</a></h4>
-    <p>EPIC's STEM Evaluation Services division assists researchers and practitioners with rigorous, high-quality external evaluation services that are customized to serve the unique needs of every client. Our team has extensive experience designing and conducting research and evaluations with a wide variety of clients, including PreK-12 school systems, higher education, non-profit organizations, corporations, and government agencies.</p>
-    <h4><a href="/epic/technology-services">Technology Services</a></h4>
-    <p>EPIC's Technology Services division designs and supports a variety of custom web applications to assist in operational processes needed to run an effective research, service, governmental, or non-profit organization. We work with partners and clients to create secure web forms, payment gateways, registration systems, and web-based compliance reporting systems. Our applications are secured using enterprise-level security standards and updated regularly. Below are examples of projects our team currently services.</p>
-    <p>
-        <img class="img-responsive" src="/documents/1084364/1761473/epic-team-1000.jpg/" style="border:none; margin:20px 0px;" /></p>
-    <h3>
-        Contact</h3>
-    <style id="o-gallery-styles" type="text/css">
-    /*
+	<h4>
+		<a href="/epic/stem-evaluation-services">STEM Evaluation Services</a></h4>
+	<p>
+		EPIC's STEM Evaluation Services division assists researchers and practitioners with rigorous, high-quality external evaluation services that are customized to serve the unique needs of every client. Our team has extensive experience designing and conducting research and evaluations with a wide variety of clients, including PreK-12 school systems, higher education, non-profit organizations, corporations, and government agencies.</p>
+	<h4>
+		<a href="/epic/technology-services">Technology Services</a></h4>
+	<p>
+		EPIC's Technology Services division designs and supports a variety of custom web applications to assist in operational processes needed to run an effective research, service, governmental, or non-profit organization. We work with partners and clients to create secure web forms, payment gateways, registration systems, and web-based compliance reporting systems. Our applications are secured using enterprise-level security standards and updated regularly. Below are examples of projects our team currently services.</p>
+	<p>
+		<img class="img-responsive" src="/documents/1084364/1761473/epic-team-1000.jpg/" style="border:none; margin:20px 0px;" /></p>
+	<h3>
+		Contact</h3>
+	<style id="o-gallery-styles" type="text/css">
+/*
     Gallery (Object)
 
     A gallery of apps to launch, images to view, etc.
@@ -202,12 +209,9 @@ Style guide: components.weteachcs.card
     /* On wide viewport, more columns */
     @media only screen and (min-width: 768px) {
         .o-gallery--shrink-wrap { grid-template-columns: repeat(3, minmax(var(--item-min-width), 1fr)); }
-    }</style>
-    <div class="o-gallery o-gallery--shrink-wrap">
-        <figure class="weteachcs-card weteachcs-card--highlight">
-            <img class="img-responsive  weteachcs-card__media" src="/documents/1084364/1085221/carol-fletcher.jpg/">
-            <figcaption class="weteachcs-card__content">
-                <a href="/about/directory/carol-fletcher">Carol L. Fletcher</a>, Ph.D., serves as EPIC Director.</figcaption>
-        </figure>
-    </div>
+    }	</style>
+	<div class="o-gallery o-gallery--shrink-wrap">
+		<figure class="weteachcs-card weteachcs-card--highlight">
+			<img class="img-responsive  weteachcs-card__media" src="/documents/1084364/1085221/carol-fletcher.jpg/" /> <figcaption class="weteachcs-card__content"> <a href="/about/directory/carol-fletcher">Carol L. Fletcher</a>, Ph.D., serves as EPIC Director.</figcaption></figure>
+	</div>
 </section>
