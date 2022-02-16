@@ -1,0 +1,58 @@
+<p>
+	<!-- FAQ: Borrow `lfr-meta-actions` to ensure CMS users see this note, but not normal users --><!-- HACK: The text shows in incognito mode..., so I have added `display: none` until I fix that --></p>
+<p class="lfr-meta-actions" style="display: none">
+	<code>Newsletter Styles<br />
+	<small>(this text only appears for CMS editors)</small></code>
+	<style id="epic-newsletter-styles" type="text/css">
+/* Set generic styles */
+.portlet-column-content .portlet-asset-publisher .asset-teaser {
+  padding: 10px 1em 0; /* tweaked until it looks okay */
+  border: 1px solid rgb(221, 221, 221);
+
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+
+  /* copied from `.list-group, .portlet-navigation .nav-menu > .layouts` (via `tacc-new-theme/css/main.css`) */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.075);
+}
+.portlet-column-content .portlet-asset-publisher .asset-teaser .asset-small-image {
+  /* override `tacc-new-theme/css/main.css` */
+  padding: 0;
+  max-width: 100%;
+}
+/* Style the `h3` as an `h4` to match content */
+.portlet-column-content .portlet-asset-publisher .asset-teaser .asset-title {
+  /* copied from `h4` (via `tacc-new-theme/css/main.css`) */
+  font-size: 1.43em;
+  color: rgb(0, 51, 153);
+  padding: 0;
+  font-family: "HelveticaNeueLTStd-BdCn","Helvetica Neue","Helvetica",sans-serif;
+
+  /* copied from `h4, .h4, h5, .h5, h6, .h6` (via `tacc-new-theme/css/main.css`) */
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  /* undo `h3` (via `tacc-new-theme/css/main.css`) */
+  border: unset;
+
+  /* undo `.portlet-asset-publisher .asset-title` (via `html/portlet/asset_publisher/css/main.css`) */
+  text-transform: unset;
+}
+/* Apply heading color to internal hyperlink */
+.portlet-column-content .portlet-asset-publisher .asset-teaser .asset-title a {
+  /* copied from `h4` (via `tacc-new-theme/css/main.css`) */
+  /* color: rgb(0, 51, 153); */
+}
+/* Hide the byline */
+.portlet-column-content .portlet-asset-publisher .asset-teaser .news-story header {
+  display: none;
+}
+/* Undo all news story text styles */
+.portlet-column-content .portlet-asset-publisher .asset-teaser .lead {
+  /* undo `line-height` from many `…/main.css` files */
+  line-height: unset;
+  /* undo `font-size` from many `…/main.css` files */
+  font-size: unset;
+  /* undo `.lead` (via `tacc-new-theme/css/main.css`) */
+  font-weight: unset;
+}	</style>
+</p>
