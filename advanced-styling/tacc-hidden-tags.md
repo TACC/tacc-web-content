@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Ensure that a "Web Content Display" can be hidden from website users.
+Hide a "Web Content Display" from non-editor users.
 
 ### Use Case
 

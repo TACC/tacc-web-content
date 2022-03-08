@@ -1,0 +1,58 @@
+<!-- SEE: https://www.tacc.utexas.edu/news/tacc-in-the-news -->
+<p>
+	<strong>JavaScript <code>findLinksAndSetTargets()</code></strong><br />
+	(to open ext. links in new window)</p>
+<script type="text/javascript">
+(function () {
+  /**
+  * Set external links (automatically discovered) to open in new tab
+  * @param {HTMLElement|Document} [scopeElement=document] - The element within which to search for links
+  */
+  function findLinksAndSetTargets(scopeElement) {
+    const scope = (scopeElement || document);
+    let href = '';
+
+    const links = scope.getElementsByTagName('a');
+    [ ...links ].forEach( function setTarget(link) {
+      if ( ! link.href) {
+        return false;
+      }
+      if (link.href.indexOf('javascript') === 0) {
+        return false;
+      }
+
+      // FAQ: I am literally double-checking, because I don't trust JavaScript
+      const isExternal = (link.origin !== document.location.origin);
+      const isInternal = (link.host === document.location.host);
+      const shouldOpenInNewWindow = ( ! isInternal && isExternal);
+
+      if ( shouldOpenInNewWindow ) {
+        if (link.target !== '_blank') {
+          link.target = '_blank';
+          href = _truncate(link.href, 15, 15, 33)
+          console.debug(`Link ${href} now opens in new tab`);
+        }
+      }
+    });
+  }
+
+  /**
+  * Truncate text in the middle given characters and length
+  * @param {string} text - Text to truncate
+  * @param {number} startChars - Number of characters to show at start of output
+  * @param {number} endChars - Number of characters to show at end of output
+  * @param {number} [maxLength=0] - Maximum length of output text
+  */
+  function _truncate(text, startChars, endChars, maxLength = 0) {
+    if (text.length > maxLength) {
+        var start = text.substring(0, startChars);
+        var end = text.substring(text.length - endChars, text.length);
+        return start + '...' + end;
+    }
+    return text;
+  }
+
+  const scopeEls = document.getElementsByClassName('js-find-links-set-targets');
+  [...scopeEls].forEach(scopeEl => findLinksAndSetTargets(scopeEl));
+})();
+</script>
