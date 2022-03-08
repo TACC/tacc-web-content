@@ -21,3 +21,4 @@ Hide a "Web Content Display" from non-editor users.
 5. Via the tab navigation, open "Advanced Styling".
 6. In "Enter your custom CSS class names.", enter "tacc-hidden-tags"
 7. In "Enter your custom CSS.", paste the contents of `./tacc-hidden-tags.css`.
+8. Save choice and close window.

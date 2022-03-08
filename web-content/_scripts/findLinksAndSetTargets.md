@@ -27,7 +27,12 @@ Have a list of links (like an "Asset Publisher") that go to external sites.
 
 8. Add "Web Content Display" to the page.
 9. Show "JavaScript - Open Ext. Links in New Window (Find Links & Set Targets)".\*
-10. Save choice and close window.
+10. From the "WEB CONTENT DISPLAY" toolbar, click wrench icon a.k.a. "Options".
+11. From the dropdown menu, click "Look and feel".
+12. Via the tab navigation, open "Advanced Styling".
+13. In "Enter your custom CSS class names.", enter "tacc-hidden-tags"
+14. In "Enter your custom CSS.", paste the contents of `/advanced-styling/tacc-hidden-tags.css`.
+15. Save choice and close window.
 
 <sub>\* If such web content—or similarly-named web content—does not exist, create it with the content from [./findLinksAndSetTargets.html][script]</sub>
 
