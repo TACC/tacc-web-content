@@ -31,4 +31,4 @@ Have a list of links (like an "Asset Publisher") that go to external sites.
 
 <sub>\* If such web content—or similarly-named web content—does not exist, create it with the content from [./findLinksAndSetTargets.html][script]</sub>
 
-[script]: https://github.com/TACC/tacc-web-content/blob/main/web-content/_scripts/findLinksAndSetTargets.html
+[script]: https://github.com/TACC/tacc-web-content/blob/3346072/web-content/_scripts/findLinksAndSetTargets.html
