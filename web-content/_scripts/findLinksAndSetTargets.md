@@ -26,5 +26,9 @@ Have a list of links (like an "Asset Publisher") that go to external sites.
 ### Load JavaScript to Process Links
 
 8. Add "Web Content Display" to the page.
-9. Show "JavaScript - Open Ext. Links in New Window (Find Links & Set Targets)".
+9. Show "JavaScript - Open Ext. Links in New Window (Find Links & Set Targets)".\*
 10. Save choice and close window.
+
+<sub>\* If such web content—or similarly-named web content—does not exist, create it with the content from [./findLinksAndSetTargets.html][script]</sub>
+
+[script]: https://github.com/TACC/tacc-web-content/blob/main/web-content/_scripts/findLinksAndSetTargets.html
