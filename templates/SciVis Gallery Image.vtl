@@ -1,63 +1,62 @@
 <style>
-.grid {
-       background-color: #000000;
+.asset-full-content.no-title {
+    width: 215px;
+    float: left;
+    background-color: #000000
+}
+.portlet-asset-publisher .asset-full-content .asset-content {
+    margin-right: 10px;
 }
 
-.asset-full-content.no-title {
-       width: 215px;
-       float: left;
-       background-color: #000000
-      
+.grid {
+    background-color: #000000;
+}
+.separator {
+    display: none;
+}
+.header-title {
+    display: none;
+}
+.name {
+    width: 200px;
+    margin-top: -40px;
+    background-color: #000000;
+    opacity: .6;
+    height: 40px;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 12px;
+    padding-left: 3px;
 }
 
 .thumb {
-      margin-left: -15px;
-      margin-bottom: -20px;
-      margin-top: 5px;
-      margin-right: -10px;
+    margin-left: -15px;
+    margin-bottom: -20px;
+    margin-top: 5px;
+    margin-right: -10px;
 }
-
-.portlet-asset-publisher .asset-full-content .asset-content {
-       
-       margin-right: 10px;
-       
-}
-
-.separator {
-       display: none;
-}
-
-.header-title {
-        display: none;
-}
-
-.name {
-       width: 200px;
-       margin-top: -40px;
-       background-color: #000000;
-       opacity: .6;
-       height: 40px;
-       color: #ffffff;
-       font-weight: 300;
-       font-size: 12px;
-       padding-left: 3px;
-}
-
 .thumb img {
 	border: none;
 	outline: none;
 	display: block;
 	position: relative;
-        width: 200px;
-        height:200px;
+    width: 200px;
+    height:200px;
 }
 
 .showme {
-      display:none;
-      position:relative;
-      float:left;
-      width: 100%;
-      
+    display:none;
+    position:relative;
+    float:left;
+    width: 100%;
+}
+.showme h6 {
+    display: inline;
+    color: #fff;
+}
+.showme h6::after {
+    content: " - ";
+    display: inline;
 }
 
 .og-close {
@@ -67,40 +66,51 @@
     font-weight: 100;
     margin-top: -60px;
     position: relative;
-    z-index: 1000; 
-    
+    z-index: 1000;
 }
-
-
-
 .close {
-   color:#555;
+    color:#555;
 }
-
 .close:hover {
-   color: #fff;
+    color: #fff;
 }
 
 .science .visualization .creators {
-     color: #ccc;
+    color: #ccc;
 }
-
-
 </style>
 
 
 
 <div class="grid">
-     <div class="thumb">
-         
-          <a class="imglink" href="#$img-name.getData().toLowerCase().replace(" ", "-")"><img src ="${thumb-src.getData()}" alt="${alt.getData()}"/><div class="name">$img-name.getData()</div></a>
-             <div class="showme">
-                  <div class="img-name">$img-name.getData()</div>
-                   <span class="og-close"><div class="close">X</div></span>
-                  <div class="large-src"><img style="max-width: 100%;" src="${large-src.getData()}"/></div>
-                  <div class="science"><h6 style="display: inline; color: #fff;">Science Behind the Image - </h6>$science.getData()</div>
-                  <div class="visualization"><h6 style="display: inline; color: #fff;">Visualization Behind the Image - </h6>$visualization.getData()</div>
-                  <div class="creators">$creators.getData()</div>
+    <div class="thumb">
+        <a class="imglink" href="#$img-name.getData().toLowerCase().replace(" ", "-")"><img src ="${thumb-src.getData()}" alt="${alt.getData()}"/><div class="name">$img-name.getData()</div></a>
+        <div class="showme">
+            #set ( $sciData = $science.getData() )
+            #set ( $visData = $visualization.getData() )
+            #set ( $creData = $creators.getData() )
+            <div class="img-name">$img-name.getData()</div>
+            <span class="og-close"><div class="close">X</div></span>
+            <div class="large-src">
+                <img style="max-width: 100%;" src="${large-src.getData()}"/>
             </div>
-      </div>
+            #if ( $sciData )
+            <div class="science">
+                <h6>Science Behind the Image</h6>
+                $sciData
+            </div>
+            #end
+            #if ( $visData )
+            <div class="visualization">
+                <h6>Visualization Behind the Image</h6>
+                $visData
+            </div>
+            #end
+            #if ( $creData )
+            <div class="creators">
+                $creData
+            </div>
+            #end
+        </div>
+    </div>
 </div>
