@@ -81,15 +81,16 @@
 </style>
 
 
+#set ( $sciData = $science.getData() )
+#set ( $visData = $visualization.getData() )
+#set ( $creData = $creators.getData() )
+#set ( $imgName = $img-name.getData() )
 
 <div class="grid">
     <div class="thumb">
-        <a class="imglink" href="#$img-name.getData().toLowerCase().replace(" ", "-")"><img src ="${thumb-src.getData()}" alt="${alt.getData()}"/><div class="name">$img-name.getData()</div></a>
+        <a class="imglink" href="#$imgName.toLowerCase().replace(" ", "-")"><img src ="${thumb-src.getData()}" alt="${alt.getData()}"/><div class="name">$imgName</div></a>
         <div class="showme">
-            #set ( $sciData = $science.getData() )
-            #set ( $visData = $visualization.getData() )
-            #set ( $creData = $creators.getData() )
-            <div class="img-name">$img-name.getData()</div>
+            <div class="img-name">$imgName</div>
             <span class="og-close"><div class="close">X</div></span>
             <div class="large-src">
                 <img style="max-width: 100%;" src="${large-src.getData()}"/>
