@@ -36,17 +36,16 @@ Text content elements, e.g. `<div>`, `<p>`, `<ul>`, `<ol>`, `<dl>`.
 Style guide: Scopes.TextFigurePair
 */
 /* Elements */
+.s-text-figure-pair:not(.clearfix) > :is(img, figure, video, audio, iframe) {
+    margin-bottom: 1em;
+}
 /* For "mobile" */
 @media (max-width: 767.98px) {
     .s-text-figure-pair {
         display: flex;
         flex-direction: column;
     }
-    .s-text-figure-pair > img,
-    .s-text-figure-pair > figure,
-    .s-text-figure-pair > video,
-    .s-text-figure-pair > audio,
-    .s-text-figure-pair > iframe {
+    .s-text-figure-pair > :is(img, figure, video, audio, iframe) {
         order: 1;
     }
 }</style>
