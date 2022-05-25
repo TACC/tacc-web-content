@@ -1,13 +1,17 @@
+<!-- To unlock restricted content -->
+<!-- https://github.com/TACC/tacc-web-content/blob/main/bad-javacript/tacc-insecure-access-form.md -->
+
 <noscript>
   <p>
     This content is password-protected. JavaScript is required to enter the password.<p>
 </noscript>
 
+<!-- To help editor find access form after they unlock content -->
 <!-- https://github.com/TACC/tacc-web-content/blob/main/advanced-styling/tacc-hidden-tags.md -->
-<!-- FAQ: This helps editor find access form after they unlock content. -->
 <p class="tacc-hidden-tags">
    This is the access form. This text should be hidden from user via  <code>tacc-hidden-tags</code>.<p>
 
+<!-- To preview edits to this, remove attribute "hidden" (restore when done) -->
 <form id="access-form" hidden>
   <fieldset>
     <legend>Content Restricted to Authorized Visitors</legend>
@@ -55,10 +59,12 @@
 </script>
 
 <!-- IMPORTANT -->
+<!-- 0. Place restricted content BEFORE this form. -->
+<!-- <div hidden class="restricted-content"> ... </div> -->
 <!-- 1. Wrap restricted content with this container -->
 <!-- <div hidden class="restricted-content"> ... </div> -->
-<!-- 1.5 (Optional) Define placeholder content with this class -->
+<!-- 2. (Optional) Mark placeholder content (BEFORE this form) with class -->
 <!-- <... class="placeholder-content"> ... </...> -->
-<!-- 2. Add this after the wrapped restricted content -->
+<!-- 3. Add this password script BEFORE this form. -->
 <!-- <script>window.restrictedContentPassword = 'YOUR_PASSWORD';</script> -->
-<!-- 3. Change "YOUR_PASSWORD" to a password from the client. -->
+<!-- 4. Change "YOUR_PASSWORD" to a password from the client. -->
