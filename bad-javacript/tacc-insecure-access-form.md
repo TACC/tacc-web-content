@@ -6,7 +6,7 @@ Hide page contents from user unless they are authorized (have password).
 
 ## Important
 
-This is __not__ a secure form. Do __not__ use this to protect secure information.
+This is __not__ a secure solution. Do __not__ use this to protect secure information.
 
 ## Caveats
 
