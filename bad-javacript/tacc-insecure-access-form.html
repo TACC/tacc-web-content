@@ -1,0 +1,64 @@
+<noscript>
+  <p>
+    This content is password-protected. JavaScript is required to enter the password.<p>
+</noscript>
+
+<!-- https://github.com/TACC/tacc-web-content/blob/0988f46/advanced-styling/tacc-hidden-tags.md -->
+<!-- FAQ: This helps editor find access form after they unlock content. -->
+<p class="tacc-hidden-tags">
+   This is the access form. This text should be hidden from user via  <code>tacc-hidden-tags</code>.<p>
+
+<form id="access-form" hidden>
+  <fieldset>
+    <legend>Content Restricted to Authorized Visitors</legend>
+    <p>
+      <small>Authorized visitors received a password to unlock this content.</small></p>
+    <label for="password">
+      Password (required)</label>
+    <input type="password" name="password" required />
+    <button type="submit" name="button" value="cancel">
+      Unlock Content</button>
+    <p id="access-error" hidden>
+      The password entered is invalid.</p>
+  </fieldset>
+</form>
+
+<script>
+  const PASSWORD = window.restrictedContentPassword;
+
+  const form = document.querySelector('#access-form');
+  const error = document.querySelector('#access-error');
+  const placeholder = document.querySelectorAll('.placeholder-content');
+  const contents = document.querySelectorAll('.restricted-content');
+
+  // show form to JavaScript users
+  form.hidden = false;
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const entry = form.elements['password'].value;
+
+    // hide error from previous submission
+    error.hidden = true;
+
+    if (entry === PASSWORD) {
+      // show contents, hide placeholder and form
+      contents.forEach( content => { content.hidden = false; });
+      placeholder.forEach( content => { content.hidden = true; });
+      form.hidden = true;
+    } else {
+      // inform user of failure
+      error.hidden = false;
+    }
+  })
+</script>
+
+<!-- IMPORTANT -->
+<!-- 1. Wrap restricted content with this container -->
+<!-- <div hidden class="restricted-content"> ... </div> -->
+<!-- 1.5 (Optional) Define placeholder content with this class -->
+<!-- <... class="placeholder-content"> ... </...> -->
+<!-- 2. Add this after the wrapped restricted content -->
+<!-- <script>window.restrictedContentPassword = 'YOUR_PASSWORD';</script> -->
+<!-- 3. Change "YOUR_PASSWORD" to a password from the client. -->
