@@ -52,17 +52,31 @@
 <p>
 	Subject to change.</p>
 <style>
-.hpc-lead-table.tableborder td {
-  vertical-align: top; /* override tacc-new-theme/css/main.css */
-}
 .hpc-lead-table tr:nth-child(even):not(.highlight) {
   background-color: unset; /* overrride tacc-new-theme/css/main.css */
 }
 .hpc-lead-table tr.highlight {
   background-color: #eaf3ff; /* mimic tacc-new-theme/css/main.css */
 }
+
+.hpc-lead-table.tableborder td {
+  vertical-align: top; /* override tacc-new-theme/css/main.css */
+}
 .hpc-lead-table td span {
   /* font-style: italic; *//* "will be led by TACC or someone TBD" */
+}
+.hpc-lead-table tr:not(.highlight) td.time-range {
+  white-space: nowrap;
+}
+.hpc-lead-table td:empty {
+  background-color: #eaf3ff80;
+}
+
+.hpc-lead-table .event-above {
+	border-bottom-color: #1f2f9a20;
+}
+.hpc-lead-table .event-below {
+	border-top-color: #1f2f9a20; /* in case browser renders bottom over top */
 }
 </style>
 <table class="tableborder hpc-lead-table">
@@ -78,21 +92,19 @@
 				<strong>Wednesday (14th)</strong></td>
 		</tr>
 		<tr>
-			<td>
-				08:30<!-- (__:30, __:30, __:30)--></td>
-			<td>
+			<td rowspan="2" class="time-range">
+				08:30<!-- (__:30, __:30, __:30)-->—10:00<!-- (__:00, __:00, __:00)--></td>
+			<td class="event-above">
 				Introduction</td>
 			<td rowspan="2">
 				Technology Evaluation and Benchmarking</td>
-			<td>
+			<td class="event-above">
 				Group Exercise 2</td>
 		</tr>
 		<tr>
-			<td>
-				10:00<!-- (__:00, __:00, __:00)--></td>
-			<td>
+			<td class="event-below">
 				Your HPC in Context, Strategic Aspects, and Stakeholders</td>
-			<td>
+			<td class="event-below">
 				<span>Special Guest Speaker</span></td>
 		</tr>
 		<tr class="highlight">
@@ -102,9 +114,9 @@
 				<strong>BREAK</strong></td>
 		</tr>
 		<tr>
-			<td>
-				10:30<!-- (__:30, __:30, __:30)--></td>
-			<td>
+			<td rowspan="2" class="time-range">
+				10:30<!-- (__:30, __:30, __:30)-->—12:00<!-- (__:00, __:00, __:00)--></td>
+			<td class="event-above">
 				Delivery Models (incl. Cloud)</td>
 			<td rowspan="2">
 				<strong>Procurement Part 1:</strong><br />
@@ -115,9 +127,7 @@
 				Quiz & Prizes</td>
 		</tr>
 		<tr>
-			<td>
-				12:00<!-- (__:00, __:00, __:00)--></td>
-			<td>
+			<td class="event-below">
 				Metrics</td>
 		</tr>
 		<tr class="highlight">
@@ -127,9 +137,9 @@
 				<strong>LUNCH (provided)</strong></td>
 		</tr>
 		<tr>
-			<td>
-				&ensp;1:00<!-- (__:00, __:00, __:00)--></td>
-			<td>
+			<td rowspan="2" class="time-range">
+				&nbsp;&nbsp;1:00<!-- (__:00, __:00, __:00)-->—2:30<!-- (__:30, __:30, __:30)--></td>
+			<td class="event-above">
 				Cost Models (inc. TCO), Cost Recovery or Funding Models, Operating Models</td>
 			<td rowspan="2">
 				<strong>Procurement Part 2:</strong><br />
@@ -138,39 +148,41 @@
 				Tutor Team Available for Questions &amp; Advice</td>
 		</tr>
 		<tr>
-			<td>
-				&ensp;2:30<!-- (__:30, __:30, __:30)--></td>
-			<td>
+			<td class="event-below">
 				Worked Examples of Cost Models</td>
 		</tr>
 		<tr class="highlight">
 			<td>
-				<strong>&ensp;2:30</strong></td>
+				<strong>&nbsp;&nbsp;2:30</strong></td>
 			<td colspan="3">
 				<strong>BREAK</strong></td>
 		</tr>
 		<tr>
-			<td>
-				&ensp;3:00<!-- (__:00, __:00, __:00)--></td>
-			<td>
+			<td rowspan="2" class="time-range">
+				&nbsp;&nbsp;3:00<!-- (__:00, __:00, __:00)-->—4:30<!-- (__:30, __:30, __:30)--></td>
+			<td class="event-above">
 				Value (incl. value models)<br />
 				&amp; Reporting</td>
-			<td>
+			<td class="event-above">
 				<span>The TACC Model (Dan Stanzione)</span></td>
-			<td rowspan="3"></td>
+			<td rowspan="4"></td>
 		</tr>
 		<tr>
-			<td>
-				&ensp;4:30<!-- (__:30, __:30, __:30)--></td>
-			<td>
+			<td class="event-below">
 				Worked Examples<br />
 				&amp; Group Exercise 1</td>
-			<td>
+			<td class="event-below">
 				<span>TACC Datacenter Tour</span></td>
 		</tr>
 		<tr class="highlight">
 			<td>
-				<strong>&ensp;6:00<!-- (__:00, __:00, __:00)--></strong></td>
+				<strong>&nbsp;&nbsp;4:30</strong></td>
+			<td colspan="2">
+				<strong>ADJOURN</strong></td>
+		</tr>
+		<tr class="highlight">
+			<td>
+				<strong>&nbsp;&nbsp;6:00<!-- (__:00, __:00, __:00)--></strong></td>
 			<td>
 				<strong>GROUP DINNER 1</strong></td>
 			<td>
