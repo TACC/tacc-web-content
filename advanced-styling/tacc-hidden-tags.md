@@ -22,5 +22,5 @@ Hide a "Web Content Display" from non-editor users.
 6. Add the class "tacc-hidden-tags" as needed:
     - __A.__ To hide the entire content, in "Enter your custom CSS class names.", enter "tacc-hidden-tags".
     - __B.__ To hide just some content, add class "tacc-hidden-tags" only to such content.
-7. In "Enter your custom CSS.", paste the contents of `./tacc-hidden-tags.css`.
+7. In "Enter your custom CSS.", paste the contents of [`./tacc-hidden-tags.css`](`./tacc-hidden-tags.css`).
 8. Save choice and close window.
