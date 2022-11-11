@@ -92,22 +92,25 @@
     .o-gallery--shrink-wrap {
         --item-min-width: auto;
     }
+    .o-gallery figure {
+        max-width: max-content; /* to prevent figure gray background stretch */
+    }
     /* On very narrow viewport, no columns */
     /* WARNING: Custom standard breakpoint: 359px / 360px */
     /* SEE: https://ricostacruz.com/til/css-media-query-breakpoints */
     @media only screen and (max-width: 359px) {
-        .o-gallery--shrink-wrap { grid-template-columns: repeat(1, minmax(var(--item-min-width), 1fr)); }
+        .o-gallery--shrink-wrap { grid-template-columns: 0.75fr }
     }
     /* On narrow viewport, less columns */
     @media only screen and (min-width: 360px) and (max-width: 767px) {
-        .o-gallery--shrink-wrap { grid-template-columns: repeat(2, minmax(var(--item-min-width), 2fr)); }
+        .o-gallery--shrink-wrap { grid-template-columns: repeat(1, minmax(var(--item-min-width), 1fr)); }
     }
     /* On wide viewport, more columns */
     @media only screen and (min-width: 768px) {
-        .o-gallery--shrink-wrap { grid-template-columns: repeat(3, minmax(var(--item-min-width), 1fr)); }
+        .o-gallery--shrink-wrap { grid-template-columns: repeat(2, minmax(var(--item-min-width), 2fr)); }
     }	</style>
 	<div class="o-gallery o-gallery--shrink-wrap" style="--min-item-width: 225px">
 		<figure class="weteachcs-card weteachcs-card--highlight">
-			<img class="img-responsive  weteachcs-card__media" src="/documents/1084364/1085221/amy-carrell.jpg/" /> <figcaption class="weteachcs-card__content"> <a href="/about/directory/amy-carrell">Amy Carrell</a> serves as Director of Outreach for EPIC and can assist you with questions about WeTeach_CS professional development services.</figcaption></figure>
+			<img class="img-responsive  weteachcs-card__media" src="/documents/1084364/1085221/nikki-hendricks.jpg" /> <figcaption class="weteachcs-card__content"> <strong><a href="/about/directory/nikki-hendricks">Nikki Hendricks</a></strong><br />Cybersecurity Education Specialist<br /><a hhref="mailto:nhendricks@tacc.utexas.edu">nhendricks@tacc.utexas.edu</a></figcaption></figure>
 	</div>
 </section>
